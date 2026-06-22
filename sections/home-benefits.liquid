@@ -1,0 +1,110 @@
+{%- liquid
+  assign s = section.settings
+-%}
+<style>
+  #shopify-section-{{ section.id }} .cmn-ben {
+    background-color: {{ s.background_color }};
+    color: {{ s.text_color }};
+    padding-block: {{ s.padding_top }}px {{ s.padding_bottom }}px;
+    --color: {{ s.text_color }};
+  }
+  #shopify-section-{{ section.id }} .cmn-ben__wrap { max-width: 1320px; margin-inline: auto; padding-inline: 24px; }
+  #shopify-section-{{ section.id }} .cmn-ben__heading { margin: 0 0 2.5rem; }
+  #shopify-section-{{ section.id }} .cmn-ben__group-title { margin: 0 0 2rem; }
+  #shopify-section-{{ section.id }} .cmn-ben__group + .cmn-ben__group { margin-top: 3.5rem; }
+  #shopify-section-{{ section.id }} .cmn-ben__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; }
+  #shopify-section-{{ section.id }} .cmn-ben__item { text-align: left; }
+  #shopify-section-{{ section.id }} .cmn-ben__icon { width: 116px; height: 116px; margin-bottom: 1.25rem; }
+  #shopify-section-{{ section.id }} .cmn-ben__icon img { width: 100%; height: 100%; object-fit: contain; display: block; }
+  #shopify-section-{{ section.id }} .cmn-ben__item-title { margin: 0 0 0.75rem; }
+  #shopify-section-{{ section.id }} .cmn-ben__item-text p { margin: 0; }
+  @media screen and (max-width: 749px) {
+    #shopify-section-{{ section.id }} .cmn-ben__grid { grid-template-columns: 1fr; gap: 40px; }
+  }
+</style>
+
+<div class="cmn-ben">
+  <div class="cmn-ben__wrap">
+    {%- if s.heading != blank -%}
+      <h2 class="cmn-ben__heading">{{ s.heading }}</h2>
+    {%- endif -%}
+
+    {%- assign group_keys = 'oameni,case' | split: ',' -%}
+    {%- for key in group_keys -%}
+      {%- assign has_items = false -%}
+      {%- for block in section.blocks -%}
+        {%- if block.settings.group == key -%}{%- assign has_items = true -%}{%- endif -%}
+      {%- endfor -%}
+      {%- if has_items -%}
+        <div class="cmn-ben__group">
+          {%- if key == 'oameni' and s.group1_title != blank -%}
+            <h3 class="cmn-ben__group-title">{{ s.group1_title }}</h3>
+          {%- elsif key == 'case' and s.group2_title != blank -%}
+            <h3 class="cmn-ben__group-title">{{ s.group2_title }}</h3>
+          {%- endif -%}
+          <div class="cmn-ben__grid">
+            {%- for block in section.blocks -%}
+              {%- if block.settings.group == key -%}
+                <div class="cmn-ben__item" {{ block.shopify_attributes }}>
+                  {%- if block.settings.icon != blank -%}
+                    <div class="cmn-ben__icon">
+                      {{ block.settings.icon | image_url: width: 192 | image_tag: loading: 'lazy', widths: '96, 192' }}
+                    </div>
+                  {%- endif -%}
+                  {%- if block.settings.title != blank -%}
+                    <h4 class="cmn-ben__item-title">{{ block.settings.title }}</h4>
+                  {%- endif -%}
+                  {%- if block.settings.text != blank -%}
+                    <div class="cmn-ben__item-text">{{ block.settings.text }}</div>
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Home benefits",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Section heading", "default": "Caminota pentru oameni și case" },
+    { "type": "text", "id": "group1_title", "label": "Group 1 title", "default": "Pentru oameni" },
+    { "type": "text", "id": "group2_title", "label": "Group 2 title", "default": "Pentru case" },
+    { "type": "header", "content": "Appearance" },
+    { "type": "color", "id": "background_color", "label": "Background", "default": "#b1a45a" },
+    { "type": "color", "id": "text_color", "label": "Text / icon color", "default": "#ffffff" },
+    { "type": "range", "id": "padding_top", "label": "Padding top", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 88 },
+    { "type": "range", "id": "padding_bottom", "label": "Padding bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 88 }
+  ],
+  "blocks": [
+    {
+      "type": "benefit",
+      "name": "Benefit",
+      "settings": [
+        { "type": "select", "id": "group", "label": "Group", "options": [{ "value": "oameni", "label": "Pentru oameni" }, { "value": "case", "label": "Pentru case" }], "default": "oameni" },
+        { "type": "image_picker", "id": "icon", "label": "Icon (white line image)" },
+        { "type": "text", "id": "title", "label": "Title" },
+        { "type": "richtext", "id": "text", "label": "Text" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home benefits",
+      "blocks": [
+        { "type": "benefit", "settings": { "group": "oameni", "title": "Oferă un climat plăcut", "text": "<p>Argila absorbe excesul de umiditate, precum și substanțele organice volatile din aerul din casă. Astfel, Caminota oferă un climat plăcut și sănătos, fără mucegai sau alți dăunători.</p>" } },
+        { "type": "benefit", "settings": { "group": "oameni", "title": "Ocrotește natura", "text": "<p>Caminota este produsă 100% din materiale naturale și locale și nu conține deloc ciment. Astfel amprenta de carbon a unui sac de Caminota este de zeci de ori mai mică decât tencuiala convențională.</p>" } },
+        { "type": "benefit", "settings": { "group": "oameni", "title": "Este ușor de aplicat", "text": "<p>Materialele sunt prietenoase cu omul, adică pot fi aplicate cu ușurință de orice “nemeseriaș”/amator. Orice greșeală se repară cu apă, iată o propoziție de ținut minte.</p>" } },
+        { "type": "benefit", "settings": { "group": "case", "title": "Lasă pereții să respire", "text": "<p>Casele inspiră atunci când pereții respiră. Caminota este permeabilă, adică permite trecerea vaporilor prin materiale, astfel că își dă aportul la evitarea apariției condensului.</p>" } },
+        { "type": "benefit", "settings": { "group": "case", "title": "Ocrotește casa", "text": "<p>Datorită relației speciale dintre argilă și apă, Caminota reglează umiditatea dinăuntrul pereților. Așa se face că elementele structurale, îndeosebi cele din lemn, sunt în siguranță.</p>" } },
+        { "type": "benefit", "settings": { "group": "case", "title": "Întreține siguranța", "text": "<p>În cazul în care apar infiltrații de apă sau probleme structurale, Caminota ne poate indica acest lucru. Astfel, se poate interveni repede, cât pagubele sunt mici și cu bani mai puțini.</p>" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

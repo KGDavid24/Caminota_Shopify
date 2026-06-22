@@ -66,6 +66,34 @@
           "background": "#ffffff",
           "foreground": "#000000"
         }
+      },
+      {
+        "type": "header",
+        "content": "Brand colors"
+      },
+      {
+        "type": "color",
+        "id": "brand_olive",
+        "label": "Brand — Olive (text / footer)",
+        "default": "#606452"
+      },
+      {
+        "type": "color",
+        "id": "brand_cream",
+        "label": "Brand — Cream (section background)",
+        "default": "#f4f2e4"
+      },
+      {
+        "type": "color",
+        "id": "brand_gold",
+        "label": "Brand — Gold (primary / accent)",
+        "default": "#b1a45a"
+      },
+      {
+        "type": "color",
+        "id": "brand_green",
+        "label": "Brand — Green (accent)",
+        "default": "#627434"
       }
     ]
   },

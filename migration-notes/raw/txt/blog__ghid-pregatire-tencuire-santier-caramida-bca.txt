@@ -1,0 +1,100 @@
+# Pregătirea pentru tencuire a caselor de cărămidă cu goluri și BCA
+Tutoriale
+14 Nov
+Written By Contact Caminota
+Capitole
+Introducere
+Ordinea lucrărilor
+Lucrări de pregătire
+Lista de verificare
+Acest articol face parte din seria Tencuirea la interior a caselor de cărămidă cu goluri și BCA, cu Tencuiala Caminota. Lista completă cu articolele din această serie se găsește la final.
+## 1. Introducere
+Notă: Pașii descriși în acest ghid sunt validați pentru tencuirea caselor din cărămidă cu goluri sau BCA, folosind mortare pe bază de lut din gama Caminota. Dacă folosiți alte tipuri de tencuieli, pot apărea mici diferențe în procedură, cum ar fi la etapa de amorsare.
+Tencuirea pereților din cărămidă cu goluri sau BCA este o activitate repetitivă, destul de solicitantă din punct de vedere fizic. Atunci când ne apucăm de tencuit, concentrarea trebuie sa fie pe eficiența mișcărilor și dozarea efortului, nu pe rezolvarea unor situații complexe.
+Spre exemplu, o casă de cărămidă sau BCA cu 120 mp suprafață utilă, are în jur de 250 mp de pereți interiori, iar la o încărcare medie de 1,5cm și consum specific de 16 kg/mp/cm, avem 6.000 kg de tencuială. 6 tone care trebuie manevrate pe șantier, amestecate cu apă, cărate la fiecare colț al casei și urcate pe pereți, în doar câteva zile.
+Deci ultimul lucru pe care vrem să îl facem atunci când tencuim, este sa rezolvăm detalii, precum:
+Cum o să stea materialul în golul ăsta?
+Cum închid tencuiala pe tâmplărie?
+Ce se întâmplă la colț? Dar la intersecția a 2 buiandrugi?
+Cum fac la golul de ușă interioară?
+E ca și cum un bucătar s-ar apuca să gătească fără să fi pregătit ingredientele dinainte. În loc să gătească, tot taie, caută, curăță, fuge repede la magazin să mai ia un ingredient — și masa e gata când oaspeții deja au plecat. Așa se simte și tencuiala făcută fără pregătiri, doar că în loc să plece oaspeții riști să îți plece constructorii de pe șantier.
+Pentru că în timpul necesar rezolvării unei astfel de situații, care probabil presupune și deplasarea la un magazin de materiale de construcții, probabil se tencuia o cameră de 4x4m, cu tot cu tavan.
+De aceea este important să conștientizăm cât de importantă este pregătirea pentru tencuire. Cu o pregătire adecvată, doi amatori pot tencui o casă într-o săptămână. Dar prin contrast, a începe tencuirea fără detalii rezolvate, va duce la prelungirea lucrărilor chiar și la 1-2 luni, irosind zile prețioase din viața meseriașilor și a beneficiarilor, ca să nu mai vorbim de explozia bugetelor.
+Deci în cele mai multe cazuri, pregătirea casei pentru tencuială, poate dura cel puțin la fel de mult cât tencuitul în sine. Dar dacă nu o facem la momentul potrivit, poate duce la o durată de 3-4 ori mai mare a lucrărilor, cu pierderi semnificative de nervi și buget.
+Cu riscul de a repeta: tencuitul casei este o lucrare solicitantă dpdv fizic, deci ar trebui scurtată pe cât posibil. Mult mai avantajos este sa alocăm mai mult timp pregătirilor, care presupun efort mult mai mic și implicit costuri orare mai mici.
+## 2. Ordinea lucrărilor - ce lucrări trebuie să fie finalizate înainte de tencuială, aferente altor specialități
+### Tâmplărie
+Montarea tâmplăriei în goluri pretencuite, cu sau fără precadre. Tencuirea golurilor se poate face cu orice material și asigura un suport pentru lipirea benzilor de etanșare.
+Etanșarea tâmplăriei cu benzi de etanșare tencuibile;
+View fullsize
+Tâmplarie etanșată corect cu benzi
+Tâmplărie etanșată corect cu benzi gol pretencuit
+Tâmplărie etanșată corect benzi gol pretencuit
+Tâmplărie etanșată corect cu benzi
+### Instalații electrice
+Asigurarea accesului la curent electric pentru lucrări în condițiile legii, nu tras de la vecinul de la 100m cu prelungitoare casnice. Această cerință este critică în special pentru tencuitul mecanizat;
+Realizarea traseelor pentru de instalații electrice;
+Dacă se tencuiesc și tavanele, atunci traseele pentru corpurile iluminat de tavan se vor face la nivelul șapei de la etajul superior, cu perforarea plăcii doar în zona de montare a corpului de iluminat.
+Important: nu este recomandat a se tencui un tavan care are montate cabluri electrice, întrucât grosimea tencuielii pentru întreg tavanul va fi dată de acele cabluri.
+Tavan de beton cu instalație electrică colțare betonieră pompă
+Tavan cu instalații electrice astupate și colțare
+Trasee electrice astupate, colțar, tavan
+Montarea cutiilor pentru doze, prize și întrerupătoare;
+Prinderea capetelor de cablu electric în interiorul cutiilor și protejarea temporară a acestora cu bucăți de carton sau alte materiale potrivite;
+### Instalații sanitare, încălzire, șapă
+Pot fi făcute și după tencuială, dar vor fi necesare reparații la tencuială, înainte de finisaje
+Instalații sanitare montate și protejate corespunzător cu dopuri/capace;
+Instalația de încălzire realizată și protejată corespunzător;
+Șape turnate
+Găuri pentru instalații pontaj greșit (șuruburi)
+Gol tâmplărie pretencuit etanșat corect cu pontaj greșit (șuruburi)
+IMPORTANT:
+Dacă sunteți beneficiar: asigurați-vă că cereți și primiți de la celelalte specialități elementele de mai sus! Nu cereți unei meserii să rezolve lipsurile altei meserii, pentru că veți pierde la CCT (Cost, Calitate, Termen).
+Dacă sunteți meseriaș: verificați cerințele anterioare sunt îndeplinite corespunzător și nu există obstacole sau detalii de nerezolvat când tencuiți. În caz contrar, puteți amâna lucrarea sau oferi lucrări suplimentare de pregătire, cu timp și costuri suficiente pentru a nu risca demotivarea echipei (care e de altă meserie), respectiv evitarea unei lucrări de mântuială.
+### Curățenie
+Ne asigurăm că:
+Nu vor exista la nivelul pardoselii resturi de la alte etape ale construcției.
+Nu vor fi piese de mobilier sau alte obiecte depozitate în casă, pentru că vor îngreuna munca: protejarea corespunzătoare, mutarea schelelor sau a scărilor, grija suplimentară a muncitorilor de a nu zgâria/sparge ceva etc.
+Avem loc special amenajat pentru deșeuri (menajere / șantier), astfel încât gestionarea acestora să nu fie o complicație suplimentară în timpul lucrărilor.
+Există grup sanitar: trebuie asigurate condițiile minime pe șantier, astfel încât nevoile fiziologice și igiena să nu reprezinte o complicație suplimentară în timpul lucrărilor. Trebuie să existe sursă de apă curată (chiar și nepotabilă) și toaletă (ecologică închiriată, compost etc).
+Aspectele legate de curățenie și igienă trebuie avute în vedere de ambele părți la momentul negocierii unei lucrări.
+## 3. Lucrări de pregătire pentru tencuire
+#### Umplerea golurilor
+Umplere șanțuri instalații
+Umplere găuri sau rosturi exagerate
+Umplerea se face cu Caminota Tencuială cu Paie, sau cu alt mortar.
+Găuri umplute. profil pontaj montat, amorsat cu beton contact
+Găuri instalații umplute
+### Curățare, verificare și protejare a zonei de lucru
+Curățarea pereților de resturi de beton scurse de la turnări, care pot afecta planeitatea peretelui
+Înlăturarea ciocurilor de beton apărute din deficiențe de cofrare, care pot afecta planeitatea peretelui. Dacă se tencuiesc și tavanele, atunci această etapă este foarte importantă.
+Înlăturarea tuturor resturilor de montaj: cuie, sârme, lemne etc.
+Verificare: glisați un dreptar pe peretele brut și observați dacă se agață în ceva.
+Cablurile electrice care ies din perete fără cutie (ex. Pentru corpuri de iluminat) se vor prinde cu o propta (lemn, cui) și/sau bandă adezivă astfel încât să nu atârne pe perete;
+Protejarea tâmplăriei și a altor obiecte (ex.distribuitor încălzire pardoseală, tablou electric etc.) cu folie de protecție adecvată.
+### Montare profile
+Montarea profilelor de legătură cu tâmplăria. În mod normal, la interior se folosesc profile fără plasă, dar dacă se consideră că ar putea fi probleme de aderență în zona benzilor de etanșare, se pot monta cele cu plasă.
+Dacă se dorește tencuirea la drept, atunci se vor monta colțare de tencuială și profile de pontaj.
+Dacă se dorește un aspect rustic sau cu forme organice, atunci se recomandă montarea reperelor pentru plinta de pardoseală.
+Gol pretencuit, profil legatură tâmplarie etanșat corect, benzi colțar tencuiala
+Profil legatură cu tâmplăria, colțar tencuială, amorsa beton contact
+Profil pontaj, colțar tencuiala legatură cu tâmplăria
+Profil legatură cu tâmplaria etanșat corect, colțar, beton contact
+Profile pontaj montate corect
+### Amorsare
+Pereții de cărămidă nu trebuie amorsați.
+Pereții de BCA vor fi amorsați cu amorsă de profunzime (ex. Ceresit CT17).
+Suprafețele mari de beton, dar in special tavanele, vor fi amorsate cu amorsa tip Beton Contact.
+Profil legatură cu tamplaria, colțar tencuială, amorsat beton contact
+Profil legatură cu tâmplaria, colțar tencuială, amorsat beton contact
+Profil pontaj pereti, tavan amorsat beton contact
+Profil pontaj, tavan amorsat beton contact, tâmplărie etanșată corect benzi
+## 4. Lista de verificare
+Recomandăm ca beneficiarii să parcurgă această listă de verificare împreună cu echipa de execuție, pentru a stabili clar responsabilitățile din șantier. Astfel se pot evita multe din neînțelegerile și întârzierile care apar de multe ori.
+Descarcă aici lista de verificare
+#tehnologie
+Contact Caminota
+Previous
+## De ce alegem Caminota IzoBârne pentru umplerea golurilor la casele de lemn
+Next
+## Curățarea pereților zugrăviți cu var - tutorial cu video

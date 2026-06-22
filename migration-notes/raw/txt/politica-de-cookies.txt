@@ -1,0 +1,58 @@
+# Politica de cookies
+INTRODUCERE
+Prezenta Politică privind fișierele cookies se aplică tuturor utilizatorilor paginii de internet caminota.ro. Informațiile prezentate în continuare au ca scop informarea utilizatorilor acestei pagini de internet cu privire la plasarea, utilizarea și administrarea cookie-urilor în contextul navigării pe această pagină de internet.
+Eco Living Project SRL colectează date de identificare nepersonală pentru a-ți furniza cele mai bune servicii personalizate.
+Folosim cookies proprii, cât și plasate de terți, pentru a îmbunătăți experiența de navigare a tuturor vizitatorilor, precum și pentru a măsura eficiența website-ului.
+Site-ul nostru utilizează cookies proprii, precum și cookies plasate de terți. Acestea ne oferă un feedback valoros asupra modului în care, site-ul este utilizat de către vizitatori și ne permit includerea de conținut de pe alte site-uri, astfel încât putem să monitorizăm și să îmbunătățim eficiența website-ului, precum și a campaniilor de publicitate online.
+Utilizarea modulelor cookie pe acest site nu este strict necesară, însă o parte din funcții sau din conținut nu vor fi disponibile dacă nu permiteți utilizarea cookie-urilor.
+CE SUNT MODULELE COOKIE?
+Folosim termenul „cookies” pentru a ne referi la modulele cookie și la tehnologiile similare prin intermediul cărora pot fi colectate informații în mod automat.
+Un modul cookie reprezintă un fișier text de mici dimensiuni, trimis de un server unui navigator web (browser) și apoi trimis înapoi (nemodificat) de către navigator, de fiecare dată când accesează acel server.
+Un cookie este format din 2 părți: nume și conținut (valoare). Durata de existență a unui cookie este determinată. Din punct de vedere tehnic, doar serverul web care a trimis cookie-ul îl poate accesa din nou, în momentul în care un utilizator revizitează website-ul respectiv.
+Cookie-urile nu solicită informații cu caracter personal, pentru a putea fi utilizate si, în cele mai multe cazuri, nu identifică personal utilizatorii de internet.
+PENTRU CE SCOPURI SUNT UTILIZATE COOKIES PRIN INTERMEDIUL ACESTEI PAGINI DE INTERNET?
+Pe site-ul nostru folosim module cookie, cu scopul de a monitoriza și îmbunătăți eficiența website-ului precum și a campaniilor de publicitate online.
+Cookie-urile sunt utilizate pentru a furniza utilizatorilor acestei pagini de internet o experiență mai bună de navigare și servicii adaptate nevoilor și interesului fiecărui utilizator în parte și anume pentru:
+furnizarea de statistici anonime cu privire la modul în care este utilizată această pagină de internet către Eco Living Project SRL, în calitate de deținător al acestei pagini de internet;
+anticiparea unor eventuale bunuri care vor fi în viitor puse la dispoziția utilizatorilor prin intermediul acestei pagini de internet, în funcție de serviciile / produsele accesate.
+Pe baza feedback-ului transmis prin cookies în legătură cu modul în care se utilizează această pagină de internet, Eco Living Project SRL poate adopta măsuri pentru ca această pagină de internet să fie mai eficientă și mai accesibilă pentru utilizatori.
+CARE ESTE DURATA DE VIATA A COOKIE-URILOR?
+Durata de viață a cookie-urilor poate varia, depinzând de scopul pentru care este plasat. Există următoarele categorii de cookie-uri care determină și durata de viață a acestora:
+Site-ul nostru foloseste 2 categorii de module cookie:
+Cookie-uri de Sesiune
+Cookie-uri Persistente, atât proprii cât și plasate de terți.
+COOKIE-URI DE SESIUNE
+Sunt stocate temporar până când, utilizatorul părăsește website-ul sau închide fereastra browser-ului sau până când sunt șterse de către serverul web. Folosim această categorie de module cookie, pentru a salva și afișa utilizatorului datele completate de el, în cadrul formularelor din site, în cazul în care au survenit erori la transmiterea acestora. În momentul în care formularul s-a transmis cu succes, aceste module cookie de sesiune sunt șterse automat.
+COOKIE-URI PERSISTENTE
+Sunt stocate pe harddisk-ul utilizatorului, pentru o durată de existență prestabilită. Acestea includ și modulele cookie plasate de un alt website, decât al nostru, cunoscute sub numele de „third party cookies” (cookie-uri plasate de terți). Folosim cookie-uri persistente proprii, pentru a salva preferințele de navigare ale vizitatorului pe acest website. Acestea au o durata de existență de 30 de zile.
+CE SUNT COOKIE-URI PLASATE DE TERȚI?
+Terții furnizori ai cookie-urilor trebuie să respecte, de asemenea, regulile în materie de protecție a datelor și Politica de Confidențialitate disponibilă pe această pagină de internet.
+Aceste cookie-uri pot proveni de la următorii terți: Google, Facebook si Linkedin. Prin acceptul dumneavoastră, cookie-urile vor fi utilizate pentru următoarele scopuri:
+Analiza vizitatorilor. De fiecare dată când un utilizator accesează acest site, aplicația de Analytics generează un cookie. Acest cookie ne spune dacă ați mai vizitat acest site până acum și permite monitorizarea utilizatorilor unici, care ne vizitează și cât de des o fac. Ca și aplicație de Analytics folosim soluția Google Analytics cu extensia „anonymizeIp()“, ce anonimizează toate adresele IP ale vizitatorilor;
+Mai multe detalii: aici. Nu colectăm și nu procesăm nicio informație, pe baza căreia utilizatorul ar putea fi identificat. Puteți refuza utilizarea de module cookie de către Google Analytics, prin descărcarea și instalarea modulului Google Analytics Opt-out Browser Add-on. Mai multe detalii: aici.
+Desfășurarea și analiza campaniilor de publicitate online. Eco Living Project SRL desfășoară campanii de publicitate online, prin intermediul platformelor oferite de Google și Facebook. Aceste platforme stochează cookie-uri, ce permit măsurarea eficienței campaniilor noastre de publicitate online și pentru a afișa pe alte site-uri, reclame adaptate la presupusele interese ale vizitatorilor.
+Includerea de conținut multimedia. Unele pagini ale site-ului au incluse clipuri video de pe platforma Youtube. În cazul în care cookie-urile sunt blocate pe acest site, respectivul conținut nu va fi afișat.
+COOKIE-URI PLASATE DE SERVICIILE GOOGLE FOLOSITE:
+Google Conversion Tracking – este un serviciu de analiză al Google, destinat măsurării eficienței campaniilor noastre de publicitate online efectuate prin Google AdWords. În acest context, Google setează un modul cookie pe computerul/ echipamentul mobil al vizitatorului, atunci când acesta accesează un anunț Google și ajunge în website-ul nostru.
+Aceste module cookie nu sunt coroborate cu identificarea personală. Cu ajutorul Google Conversion Tracking, putem identifica faptul că cineva a făcut clic pe anunțul nostru publicitar și a fost astfel redirecționat către pagina noastră. Datele colectate cu Google Conversion Tracking servesc exclusiv la întocmirea de statistici privind eficiența și îmbunătățirea campaniilor noastre de publicitate online prin Google AdWords. Nu colectăm și nu procesăm nicio informație pe baza căreia utilizatorul ar putea fi identificat.
+Google Remarketing – prin aceste tehnologii, utilizatorii care au vizitat deja paginile noastre web pot fi abordați din nou prin publicitate orientată pe celelalte pagini ale rețelei de parteneri ai Google.
+Google Analytics – serviciu care ne permite sa analizam si sa modificam forma si continutul website-ului, folosind date analitice inregistrate ale utilizatorilor in timpul vizitei pe website-ul nostru.
+Dacă nu doriți să primiți publicitate pe bază de interese, acest lucru se poate dezactiva accesând această pagină. Informații suplimentare și informații privind dezactivarea serviciilor publicitare Google, disponibile aici.
+COOKIE-URI PLASATE DE SERVICIILE FACEBOOK FOLOSITE:
+Facebook Conversion Pixels – Prin intermediul acestuia putem identifica faptul că, un utilizator a accesat website-ul nostru prin intermediul unui anunț publicitar din Facebook. Datele colectate cu Facebook Conversion Pixel servesc exclusiv la eficiența și îmbunătățirea campaniilor noastre de publicitate online pe Facebook. Nu colectăm și nu procesăm nicio informație, pe baza căreia utilizatorul ar putea fi identificat.
+Facebook Remarketing – Prin tehnologia Facebook Remarketing, utilizatorii care au vizitat paginile noastre web pot fi abordați din nou prin publicitate orientată pe Facebook. Nu colectăm și nu procesăm nicio informație despre utilizatorii Facebook cărora li se adresează publicitatea orientată și nu avem posibilitatea de a identifica utilizatori individuali.
+Mai multe informații privind scopurile și volumul de colectare și prelucrare a datelor cu caracter personal de către Facebook: aici. Politica Facebook de utilizare cookies: aici.
+PARTICULARIZAREA SETĂRILOR BROWSERULUI ÎN CEEA CE PRIVEȘTE COOKIE-URILE
+În cazul în care utilizarea cookie-urilor nu este deranjantă iar calculatorul sau echipamentul tehnic utilizat pentru navigarea pe această pagină de internet este folosit doar de către dumneavoastră, pot fi setate termene lungi de expirare pentru stocrarea istoricului de navigare.
+În cazul în care calculatorul sau echipamentul tehnic utilizat pentru navigarea pe această pagină de internet este folosit de mai multe persoane, poate fi luată în considerare setarea pentru ștergerea datelor individuale de navigare de fiecare dată când browserul este închis.
+CUM POT FI OPRITE COOKI-URILE?
+Dezactivarea și refuzul de a primi cookies pot face această pagină de internet dificil de vizitat, atrăgând după sine limitări ale posibilităților de utilizare ale acesteia.
+Utilizatorii își pot configura browserul să respingă fișierele cookie sau să fie acceptate cookies de la o pagină de internet anume.
+Toate browserele moderne oferă posibilitatea de a schimba setările cookie-urilor. Aceste setări pot fi accesate, ca regulă, în secțiunea „opțiuni” sau în meniul de „preferințe” al browserului tău.
+Pentru a înțelege aceste setări, următoarele linkuri pot fi folositoare:
+Cookie settings in Internet Explorer
+Cookie settings in Firefox
+Cookie settings in Chrome
+Cookie settings in Safari
+Totuși, refuzarea sau dezactivarea cookie-urilor nu înseamnă că nu veți mai primi publicitate online – ci doar ca aceasta nu va fi adaptată preferințelor și interesele dumneavoastră, evidențiate prin comportamentul de navigare.
+Pentru orice întrebări suplimentare cu privire la modul în sunt utilizate cookie-urile prin intermediul acestei pagini de internet, vă rugăm să vă adresați la: contact@caminota.ro

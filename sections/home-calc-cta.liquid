@@ -1,0 +1,59 @@
+{%- liquid
+  assign s = section.settings
+-%}
+<style>
+  #shopify-section-{{ section.id }} .cmn-cta {
+    background-color: {{ s.background_color }};
+    padding-block: {{ s.padding_top }}px {{ s.padding_bottom }}px;
+  }
+  #shopify-section-{{ section.id }} .cmn-cta__inner {
+    max-width: 820px;
+    margin-inline: auto;
+    padding-inline: 24px;
+    text-align: center;
+  }
+  #shopify-section-{{ section.id }} .cmn-cta__heading { margin: 0 0 1.75rem; }
+  #shopify-section-{{ section.id }} .cmn-cta__button { margin-bottom: 1.75rem; }
+  #shopify-section-{{ section.id }} .cmn-cta__body p:first-child { font-weight: 700; }
+  #shopify-section-{{ section.id }} .cmn-cta__phone { margin-top: 1.25rem; font-weight: 700; }
+  #shopify-section-{{ section.id }} .cmn-cta__phone a { color: {{ settings.brand_gold }}; text-decoration: none; }
+</style>
+
+<div class="cmn-cta">
+  <div class="cmn-cta__inner">
+    {%- if s.heading != blank -%}
+      <h2 class="cmn-cta__heading">{{ s.heading }}</h2>
+    {%- endif -%}
+    {%- if s.button_label != blank -%}
+      <div class="cmn-cta__button">
+        <a class="button" {% if s.button_link != blank %}href="{{ s.button_link }}"{% endif %}>{{ s.button_label }}</a>
+      </div>
+    {%- endif -%}
+    {%- if s.body != blank -%}
+      <div class="cmn-cta__body">{{ s.body }}</div>
+    {%- endif -%}
+    {%- if s.phone_number != blank -%}
+      <p class="cmn-cta__phone">{{ s.phone_label }} <a href="tel:{{ s.phone_number | remove: ' ' }}">{{ s.phone_number }}</a></p>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Home calc CTA",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Solicită un calcul personalizat" },
+    { "type": "text", "id": "button_label", "label": "Button label", "default": "Cere ofertă" },
+    { "type": "url", "id": "button_link", "label": "Button link" },
+    { "type": "richtext", "id": "body", "label": "Body", "default": "<p>Ne uităm concret pe proiectul tău și îți recomandăm soluția potrivită, nu doar un calcul generic. Te ajutăm să faci lucrurile bine din prima: detalii corecte de execuție, compatibilitate între straturi și soluții verificate pe șantiere reale, ca să eviți greșeli costisitoare.</p>" },
+    { "type": "text", "id": "phone_label", "label": "Phone label", "default": "Dacă vrei să discutăm direct, ne poți suna:" },
+    { "type": "text", "id": "phone_number", "label": "Phone number", "default": "0745055558" },
+    { "type": "header", "content": "Appearance" },
+    { "type": "color", "id": "background_color", "label": "Background", "default": "#ffffff" },
+    { "type": "range", "id": "padding_top", "label": "Padding top", "min": 0, "max": 160, "step": 4, "unit": "px", "default": 72 },
+    { "type": "range", "id": "padding_bottom", "label": "Padding bottom", "min": 0, "max": 160, "step": 4, "unit": "px", "default": 48 }
+  ],
+  "presets": [{ "name": "Home calc CTA" }]
+}
+{% endschema %}

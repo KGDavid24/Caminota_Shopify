@@ -1,0 +1,13 @@
+/* ==========================================================================
+   Caminota — global overrides layered on top of Horizon.
+   Keep project-wide tweaks here rather than editing core theme files.
+   ========================================================================== */
+
+/* Header: hide cart & account icons. The live brand site has no e-commerce
+   chrome (ordering happens via the external calculator), so the header is
+   just logo + nav. Re-enable by removing this rule if a cart is needed. */
+.header-actions__cart-icon,
+.action__cart,
+.account-button {
+  display: none !important;
+}

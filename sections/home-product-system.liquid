@@ -1,0 +1,72 @@
+{%- liquid
+  assign s = section.settings
+-%}
+<style>
+  #shopify-section-{{ section.id }} .cmn-prod {
+    background-color: {{ s.background_color }};
+    padding-block: {{ s.padding_top }}px {{ s.padding_bottom }}px;
+  }
+  #shopify-section-{{ section.id }} .cmn-prod__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: center;
+    max-width: 1320px;
+    margin-inline: auto;
+    padding-inline: 24px;
+  }
+  #shopify-section-{{ section.id }} .cmn-prod__media img { width: 100%; height: auto; display: block; }
+  {% if s.image_position == 'right' %}
+  #shopify-section-{{ section.id }} .cmn-prod__media { order: 2; }
+  {% endif %}
+  #shopify-section-{{ section.id }} .cmn-prod__cta { margin-top: 1.5rem; }
+  #shopify-section-{{ section.id }} .cmn-prod__footnote { margin-top: 1rem; font-size: 0.85rem; font-style: italic; opacity: 0.85; }
+  @media screen and (max-width: 749px) {
+    #shopify-section-{{ section.id }} .cmn-prod__inner { grid-template-columns: 1fr; gap: 32px; }
+    #shopify-section-{{ section.id }} .cmn-prod__media { order: -1; }
+  }
+</style>
+
+<div class="cmn-prod">
+  <div class="cmn-prod__inner">
+    <div class="cmn-prod__media">
+      {%- if s.image != blank -%}
+        {{ s.image | image_url: width: 1200 | image_tag: loading: 'lazy', sizes: '(min-width: 750px) 50vw, 100vw', widths: '500, 800, 1100' }}
+      {%- endif -%}
+    </div>
+    <div class="cmn-prod__content">
+      {%- if s.body != blank -%}
+        <div class="cmn-prod__body">{{ s.body }}</div>
+      {%- endif -%}
+      {%- if s.button_label != blank -%}
+        <div class="cmn-prod__cta">
+          <a class="button" {% if s.button_link != blank %}href="{{ s.button_link }}"{% endif %}{% if s.button_new_tab %} target="_blank" rel="noopener"{% endif %}>{{ s.button_label }}</a>
+        </div>
+      {%- endif -%}
+      {%- if s.footnote != blank -%}
+        <p class="cmn-prod__footnote">{{ s.footnote }}</p>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Home product system",
+  "tag": "section",
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "Image" },
+    { "type": "select", "id": "image_position", "label": "Image position", "options": [{ "value": "left", "label": "Left" }, { "value": "right", "label": "Right" }], "default": "left" },
+    { "type": "richtext", "id": "body", "label": "Body", "default": "<p>Sistemul Caminota este compus din trei produse certificate și 100% naturale: Caminota Tencuială cu Paie, Caminota Finisaj Rustic și vopseaua pe bază de var.</p><p>Materialele sunt ideale atât pentru casele noi, cât și pentru repararea sau renovarea caselor tradiționale, pentru pereți din zidărie de cărămidă sau BCA, chirpici, paiantă, lut, lemn, paie sau hempcrete.</p><p>Caminota deține Agrement Tehnic, certificat ISO 9001 și respectă standardul german pentru mortare de argilă DIN 18947 - clasa SII. Dezvoltat si produs în România.</p>" },
+    { "type": "text", "id": "button_label", "label": "Button label", "default": "Comandă o mostră Caminota prin eMag*" },
+    { "type": "url", "id": "button_link", "label": "Button link" },
+    { "type": "checkbox", "id": "button_new_tab", "label": "Open button in new tab", "default": true },
+    { "type": "text", "id": "footnote", "label": "Footnote", "default": "* Pentru cantități mai mari livrăm direct din fabrică la șantier, contactați-ne!" },
+    { "type": "header", "content": "Appearance" },
+    { "type": "color", "id": "background_color", "label": "Background", "default": "#f4f2e4" },
+    { "type": "range", "id": "padding_top", "label": "Padding top", "min": 0, "max": 160, "step": 4, "unit": "px", "default": 48 },
+    { "type": "range", "id": "padding_bottom", "label": "Padding bottom", "min": 0, "max": 160, "step": 4, "unit": "px", "default": 72 }
+  ],
+  "presets": [{ "name": "Home product system" }]
+}
+{% endschema %}

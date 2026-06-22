@@ -1,0 +1,8 @@
+# Heavy / regenerable binaries — kept locally as staging, not committed.
+raw/*.html
+raw/*.xml
+assets/images/
+assets/images-shopify/
+assets/_excluded-template-stock/
+
+# Kept in git: extracted page text (raw/txt/), CSV maps, manifests, PDFs, helper scripts.
