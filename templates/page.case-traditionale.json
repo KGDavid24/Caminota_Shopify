@@ -1,0 +1,192 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "intro": {
+      "type": "page-intro",
+      "settings": {
+        "heading": "Case tradiționale",
+        "body": "<p>Sistemul Caminota este soluția de tencuire recomandată la casele vechi, tradiționale, și desăvârșește tot ceea ce reprezintă acestea. Fie că este vorba despre reparații sau renovarea pereților din chirpici, paiantă, lut, lemn sau cărămidă, Tencuiala și Finisajul Caminota fac casă bună. Materialele sunt ambalate în sac, iar la fața locului trebuie doar amestecate cu apă.</p>",
+        "background_image": "shopify://shop_images/case-traditionale.jpg",
+        "focal_point": "center",
+        "overlay_color": "#606452",
+        "overlay_opacity": 65,
+        "fallback_color": "#606452",
+        "text_color": "#ffffff",
+        "content_width": 880,
+        "content_inset": 220,
+        "frame_color": "#ffffff",
+        "frame_inline": 72,
+        "corner_radius": 0,
+        "min_height": 620,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "video": {
+      "type": "page-video",
+      "settings": {
+        "youtube_id": "FJBZua2gxJQ",
+        "caption": "Testimonial video — casă tradițională din jud. Arad",
+        "subcaption": "<p>Finisaje Caminota și termoizolație de la <a href=\"https://placidepaie.ro\" target=\"_blank\" rel=\"noopener\">placidepaie.ro</a></p>",
+        "video_width": 660,
+        "background_color": "#606452",
+        "text_color": "#ffffff",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "prod_tencuiala": {
+      "type": "product-feature",
+      "blocks": {
+        "g1": { "type": "gallery_image", "settings": { "image": "shopify://shop_images/traditionale-tencuiala-02.jpg" } },
+        "g2": { "type": "gallery_image", "settings": { "image": "shopify://shop_images/traditionale-tencuiala-03.jpg" } },
+        "g3": { "type": "gallery_image", "settings": { "image": "shopify://shop_images/traditionale-tencuiala-16.jpg" } },
+        "g4": { "type": "gallery_image", "settings": { "image": "shopify://shop_images/traditionale-tencuiala-12.jpg" } },
+        "g5": { "type": "gallery_image", "settings": { "image": "shopify://shop_images/traditionale-tencuiala-13.jpg" } },
+        "g6": { "type": "gallery_image", "settings": { "image": "shopify://shop_images/traditionale-tencuiala-01.jpg" } },
+        "g7": { "type": "gallery_image", "settings": { "image": "shopify://shop_images/traditionale-tencuiala-08.jpg" } },
+        "g8": { "type": "gallery_image", "settings": { "image": "shopify://shop_images/traditionale-tencuiala-09.jpg" } }
+      },
+      "block_order": ["g1", "g2", "g3", "g4", "g5", "g6", "g7", "g8"],
+      "settings": {
+        "heading": "Tencuiala Caminota",
+        "image": "shopify://shop_images/t-fata.png",
+        "image_position": "left",
+        "body": "<p>Tencuiala Caminota se așterne pe ziduri pentru a înfrumuseța și proteja. Pe de o parte, obține suprafața netedă, cu aspect plăcut, iar pe de cealaltă, oferă suport straturilor de finisaj. După preferințe, poate fi aplicată manual cu gletiera sau mecanizat.</p>",
+        "composition": "argilă, nisip, fibre lignocelulozice din paie",
+        "benefits": "compatibilă cu pereții caselor tradiționale, reglează umiditatea aerului, permite trecerea vaporilor.",
+        "download_label": "Descarcă fișa tehnică și instrucțiunile",
+        "download_link": "",
+        "download2_label": "",
+        "download2_link": "",
+        "background_color": "#f4f2e4",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "prod_finisaj": {
+      "type": "product-feature",
+      "blocks": {
+        "g1": { "type": "gallery_image", "settings": { "image": "shopify://shop_images/traditionale-finisaj-02.jpg" } },
+        "g2": { "type": "gallery_image", "settings": { "image": "shopify://shop_images/traditionale-finisaj-03.jpg" } },
+        "g3": { "type": "gallery_image", "settings": { "image": "shopify://shop_images/traditionale-finisaj-04.jpg" } },
+        "g4": { "type": "gallery_image", "settings": { "image": "shopify://shop_images/traditionale-finisaj-05.jpg" } },
+        "g5": { "type": "gallery_image", "settings": { "image": "shopify://shop_images/traditionale-finisaj-06.jpg" } },
+        "g6": { "type": "gallery_image", "settings": { "image": "shopify://shop_images/traditionale-finisaj-07.jpg" } },
+        "g7": { "type": "gallery_image", "settings": { "image": "shopify://shop_images/traditionale-finisaj-01.jpg" } },
+        "g8": { "type": "gallery_image", "settings": { "image": "shopify://shop_images/traditionale-finisaj-08.jpg" } }
+      },
+      "block_order": ["g1", "g2", "g3", "g4", "g5", "g6", "g7", "g8"],
+      "settings": {
+        "heading": "Finisajul Caminota",
+        "image": "shopify://shop_images/f-fata.png",
+        "image_position": "left",
+        "body": "<p>Finisajul Caminota acoperă și protejează tencuiala, oferindu-i o textură uniformă și dă astfel finețe peretelui. Procesul de aplicare este precum al tinciului, cu deosebirea că finisajul Caminota este natural, iar drișcuirea se poate face oricând.</p>",
+        "composition": "argilă, nisip",
+        "benefits": "material natural, aspect modern, permite trecerea vaporilor, reglează umiditatea aerului.",
+        "download_label": "Descarcă fișa tehnică și instrucțiunile",
+        "download_link": "",
+        "download2_label": "",
+        "download2_link": "",
+        "background_color": "#b1a45a",
+        "heading_color": "#ffffff",
+        "text_color": "#ffffff",
+        "link_color": "#ffffff",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "prod_vopsea": {
+      "type": "product-feature",
+      "blocks": {
+        "g1": { "type": "gallery_image", "settings": { "image": "shopify://shop_images/traditional-vopsea-02.jpg" } },
+        "g2": { "type": "gallery_image", "settings": { "image": "shopify://shop_images/traditional-vopsea-01.jpg" } },
+        "g3": { "type": "gallery_image", "settings": { "image": "shopify://shop_images/traditional-vopsea-03.jpg" } },
+        "g4": { "type": "gallery_image", "settings": { "image": "shopify://shop_images/traditional-vopsea-04.jpg" } },
+        "g5": { "type": "gallery_image", "settings": { "image": "shopify://shop_images/traditional-vopsea-06.jpg" } },
+        "g6": { "type": "gallery_image", "settings": { "image": "shopify://shop_images/traditional-vopsea-07.jpg" } },
+        "g7": { "type": "gallery_image", "settings": { "image": "shopify://shop_images/traditional-vopsea-08.jpg" } },
+        "g8": { "type": "gallery_image", "settings": { "image": "shopify://shop_images/traditional-vopsea-09.jpg" } }
+      },
+      "block_order": ["g1", "g2", "g3", "g4", "g5", "g6", "g7", "g8"],
+      "settings": {
+        "heading": "Vopsea BioCalce Tinteggio",
+        "image": "shopify://shop_images/vopsea-var-kerakoll.jpg",
+        "image_max_width": 660,
+        "image_position": "left",
+        "body": "<p>Kerakoll Biocalce® Tinteggio este o vopsea murală naturală pe bază de var pur și pigmenți minerali naturali, cu o formulă ecologică și compatibilă cu mediul. Produsul este recomandat atât pentru construcții sustenabile (Green Building), cât și pentru lucrări de restaurare a clădirilor istorice.</p>",
+        "composition": "var, ulei de pin",
+        "benefits": "sprijină sănătatea mediului interior, permite trecerea vaporilor, nu permite trecerea apei lichide, este un bacteriostatic și fungistatic natural.",
+        "download_label": "Descarcă fișa tehnică",
+        "download_link": "",
+        "download2_label": "Descarcă culorile",
+        "download2_link": "",
+        "background_color": "#ffffff",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "sample": {
+      "type": "page-sample-cta",
+      "settings": {
+        "image": "shopify://shop_images/mostra-caminota-emag.jpg",
+        "image_max_width": 520,
+        "image_position": "left",
+        "heading": "Probează Caminota",
+        "body": "<p>Înainte de a lua o decizie, e normal să vrei să vezi și să atingi materialul. Așa că facem să-ți fie mai ușor și îți punem la dispoziție posibilitatea de a încerca mai întâi Caminota. Comandă de pe eMAG un kit de încercare, iar după o zi-două poți proba produsele. Noi nu mai zicem nimic, le lăsăm pe ele să-ți vorbească.</p>",
+        "button_label": "Comandă o mostră de Caminota",
+        "button_link": "https://www.emag.ro/tencuieli-decorative-soclu/brand/caminota/c?ref=bc",
+        "footnote": "* Pentru cantități mai mari livrăm direct din fabrică la șantier, contactați-ne!",
+        "background_color": "#ffffff",
+        "button_bg": "#606452",
+        "button_text": "#ffffff",
+        "footnote_color": "#000000",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "calc": {
+      "type": "home-calc-cta",
+      "settings": {
+        "heading": "Solicită un calcul personalizat",
+        "button_label": "Cere ofertă",
+        "button_link": "https://comenzi.caminota.ro",
+        "body": "<p><strong>Ne uităm concret pe proiectul tău și îți recomandăm soluția potrivită, nu doar un calcul generic.</strong> Te ajutăm să faci lucrurile bine din prima: detalii corecte de execuție, compatibilitate între straturi și soluții verificate pe șantiere reale, ca să eviți greșeli costisitoare.</p>",
+        "phone_label": "Dacă vrei să discutăm direct, ne poți suna:",
+        "phone_number": "0745055558",
+        "background_color": "#f4f2e4",
+        "padding_top": 72,
+        "padding_bottom": 96
+      }
+    },
+    "testimonial": {
+      "type": "testimonial-quote",
+      "settings": {
+        "body": "<p>“Suntem o familie cu doi copii mici pe care vrem să îi creștem într-un mod cât mai sănătos. Din acest motiv am căutat o casă în apropiere de Arad, la Zădăreni, deasupra pădurii Luncii Mureșului. Am găsit o casă veche, din văiugă, care se potrivea perfect cu ceea ce aveam noi nevoie.</p><p>Când am început renovarea/restaurarea acesteia, ne-am confruntat cu una dintre cele mai mari probleme ale caselor vechi—restaurarea tencuielii de pe pereți. După o perioadă relativ lungă de căutări am ajuns la concluzia că, „soluția tradițională” cu plasă de rabiț și tencuială de ciment nu este o soluție pentru pereții noștri, ci că, de fapt, este cel mai rău lucru care l-am putea face.</p><p>Am înțeles că ideal ar fi să înlocuim tencuiala veche pe bază de argilă cu una nouă, tot de argilă. Am descoperit Caminota și am știut aproape imediat că am găsit soluția pentru problema noastră! În clipa de față locuim într-o casă care a reînviat, și odată cu ea, și noi.”</p>",
+        "author": "— Dani, Zădăreni, Arad",
+        "background_color": "#606452",
+        "text_color": "#ffffff",
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
+    }
+  },
+  "order": [
+    "intro",
+    "video",
+    "prod_tencuiala",
+    "prod_finisaj",
+    "prod_vopsea",
+    "sample",
+    "calc",
+    "testimonial"
+  ]
+}

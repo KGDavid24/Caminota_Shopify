@@ -1,0 +1,132 @@
+{%- liquid
+  assign s = section.settings
+  assign zz_count = 26
+  capture zz_fill
+    echo 'M0,9'
+    for i in (1..zz_count)
+      assign vx = i | times: 46 | minus: 23
+      assign px = i | times: 46
+      echo ' L'
+      echo vx
+      echo ',34 L'
+      echo px
+      echo ',9'
+    endfor
+    echo ' L1196,0 L0,0 Z'
+  endcapture
+  capture zz_line
+    echo '0,9'
+    for i in (1..zz_count)
+      assign vx = i | times: 46 | minus: 23
+      assign px = i | times: 46
+      echo ' '
+      echo vx
+      echo ',34 '
+      echo px
+      echo ',9'
+    endfor
+  endcapture
+-%}
+<style>
+  #shopify-section-{{ section.id }} .cmn-blist {
+    position: relative;
+    background-color: {{ s.background_color }};
+    padding-block: {{ s.padding_top }}px {{ s.padding_bottom }}px;
+  }
+  #shopify-section-{{ section.id }} .cmn-blist__zigzag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 36px;
+    display: block;
+  }
+  #shopify-section-{{ section.id }} .cmn-blist__wrap {
+    max-width: 900px;
+    margin-inline: auto;
+    padding-inline: 24px;
+  }
+  #shopify-section-{{ section.id }} .cmn-blist__heading { text-align: left; margin: 0 0 2.5rem; color: {{ s.heading_color }}; }
+  #shopify-section-{{ section.id }} .cmn-blist__lead { text-align: center; font-weight: 700; font-size: 1.15rem; line-height: 1.6; margin: 0 0 2.5rem; color: {{ s.text_color }}; }
+  #shopify-section-{{ section.id }} .cmn-blist__list { list-style: none; margin: 0; padding: 0; }
+  #shopify-section-{{ section.id }} .cmn-blist__item {
+    display: flex;
+    gap: 0.85rem;
+    align-items: flex-start;
+    margin-bottom: 1.1rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: {{ s.text_color }};
+  }
+  #shopify-section-{{ section.id }} .cmn-blist__item svg { flex-shrink: 0; width: 22px; height: 22px; margin-top: 2px; fill: {{ s.check_color }}; }
+  #shopify-section-{{ section.id }} .cmn-blist__bullet { flex-shrink: 0; color: {{ s.check_color }}; font-size: 1.3rem; line-height: 1.2; }
+  #shopify-section-{{ section.id }} .cmn-blist__closing { text-align: center; font-weight: 700; font-size: 1.1rem; line-height: 1.6; margin: 2.5rem 0 0; color: {{ s.text_color }}; }
+</style>
+
+<div class="cmn-blist">
+  {%- if s.top_divider -%}
+    <svg class="cmn-blist__zigzag" viewBox="0 0 1196 36" preserveAspectRatio="none" aria-hidden="true">
+      <path d="{{ zz_fill }}" fill="{{ s.divider_above_color }}"></path>
+      <polyline points="{{ zz_line }}" fill="none" stroke="{{ settings.brand_gold }}" stroke-width="3"></polyline>
+    </svg>
+  {%- endif -%}
+  <div class="cmn-blist__wrap">
+    {%- if s.heading != blank -%}
+      <h2 class="cmn-blist__heading">{{ s.heading }}</h2>
+    {%- endif -%}
+    {%- if s.lead != blank -%}
+      <p class="cmn-blist__lead">{{ s.lead }}</p>
+    {%- endif -%}
+    {%- if section.blocks.size > 0 -%}
+      <ul class="cmn-blist__list">
+        {%- for block in section.blocks -%}
+          {%- if block.settings.text != blank -%}
+            <li class="cmn-blist__item" {{ block.shopify_attributes }}>
+              {%- if s.marker == 'bullet' -%}
+                <span class="cmn-blist__bullet" aria-hidden="true">&bull;</span>
+              {%- elsif s.marker == 'check' -%}
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
+              {%- endif -%}
+              <span>{{ block.settings.text }}</span>
+            </li>
+          {%- endif -%}
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+    {%- if s.closing != blank -%}
+      <p class="cmn-blist__closing">{{ s.closing }}</p>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Benefits list",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading" },
+    { "type": "text", "id": "lead", "label": "Lead (bold intro)" },
+    { "type": "text", "id": "closing", "label": "Closing statement" },
+    { "type": "header", "content": "Appearance" },
+    { "type": "color", "id": "background_color", "label": "Background", "default": "#f4f2e4" },
+    { "type": "color", "id": "heading_color", "label": "Heading color", "default": "#606452" },
+    { "type": "color", "id": "text_color", "label": "Text color", "default": "#606452" },
+    { "type": "select", "id": "marker", "label": "List marker", "options": [{ "value": "check", "label": "Checkmark" }, { "value": "bullet", "label": "Bullet" }, { "value": "none", "label": "None" }], "default": "check" },
+    { "type": "color", "id": "check_color", "label": "Marker color", "default": "#b1a45a" },
+    { "type": "checkbox", "id": "top_divider", "label": "Zigzag top divider", "default": false },
+    { "type": "color", "id": "divider_above_color", "label": "Divider color (section above)", "default": "#f4f2e4" },
+    { "type": "range", "id": "padding_top", "label": "Padding top", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 96 },
+    { "type": "range", "id": "padding_bottom", "label": "Padding bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 96 }
+  ],
+  "blocks": [
+    {
+      "type": "benefit",
+      "name": "Benefit",
+      "settings": [
+        { "type": "text", "id": "text", "label": "Benefit text" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Benefits list" }]
+}
+{% endschema %}

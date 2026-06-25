@@ -1,0 +1,57 @@
+{%- liquid
+  assign s = section.settings
+-%}
+<style>
+  #shopify-section-{{ section.id }} .cmn-quote {
+    background-color: {{ s.background_color }};
+    color: {{ s.text_color }};
+    padding-block: {{ s.padding_top }}px {{ s.padding_bottom }}px;
+  }
+  #shopify-section-{{ section.id }} .cmn-quote__inner {
+    max-width: 1240px;
+    margin-inline: auto;
+    padding-inline: 24px;
+  }
+  #shopify-section-{{ section.id }} .cmn-quote__body {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    font-style: italic;
+  }
+  #shopify-section-{{ section.id }} .cmn-quote__body p { margin: 0 0 1.25rem; }
+  #shopify-section-{{ section.id }} .cmn-quote__author {
+    margin: 1.5rem 0 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    color: {{ s.author_color }};
+  }
+</style>
+
+<div class="cmn-quote">
+  <div class="cmn-quote__inner">
+    {%- if s.body != blank -%}
+      <div class="cmn-quote__body">{{ s.body }}</div>
+    {%- endif -%}
+    {%- if s.author != blank -%}
+      <p class="cmn-quote__author">{{ s.author }}</p>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Testimonial quote",
+  "tag": "section",
+  "settings": [
+    { "type": "richtext", "id": "body", "label": "Quote", "default": "<p>“Suntem o familie cu doi copii mici pe care vrem să îi creștem într-un mod cât mai sănătos. Din acest motiv am căutat o casă în apropiere de Arad, la Zădăreni, deasupra pădurii Luncii Mureșului. Am găsit o casă veche, din văiugă, care se potrivea perfect cu ceea ce aveam noi nevoie.</p><p>Când am început renovarea/restaurarea acesteia, ne-am confruntat cu una dintre cele mai mari probleme ale caselor vechi—restaurarea tencuielii de pe pereți. După o perioadă relativ lungă de căutări am ajuns la concluzia că, „soluția tradițională” cu plasă de rabiț și tencuială de ciment nu este o soluție pentru pereții noștri, ci că, de fapt, este cel mai rău lucru care l-am putea face.</p><p>Am înțeles că ideal ar fi să înlocuim tencuiala veche pe bază de argilă cu una nouă, tot de argilă. Am descoperit Caminota și am știut aproape imediat că am găsit soluția pentru problema noastră! În clipa de față locuim într-o casă care a reînviat, și odată cu ea, și noi.”</p>" },
+    { "type": "text", "id": "author", "label": "Author", "default": "— Dani, Zădăreni, Arad" },
+    { "type": "header", "content": "Appearance" },
+    { "type": "color", "id": "background_color", "label": "Background", "default": "#606452" },
+    { "type": "color", "id": "text_color", "label": "Text color", "default": "#ffffff" },
+    { "type": "color", "id": "author_color", "label": "Author color", "default": "#b1a45a" },
+    { "type": "range", "id": "padding_top", "label": "Padding top", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 96 },
+    { "type": "range", "id": "padding_bottom", "label": "Padding bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 96 }
+  ],
+  "presets": [{ "name": "Testimonial quote" }]
+}
+{% endschema %}

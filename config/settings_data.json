@@ -9,11 +9,14 @@
  */
 {
   "current": {
-    "logo": "shopify://shop_images/top-logo.png",
-    "logo_height": 52,
-    "logo_height_mobile": 40,
-    "page_background_color": "{{ settings.color_palette.background }}",
-    "page_width": "wide",
+    "logo": "shopify://shop_images/logo_deschis-removebg-preview.png",
+    "logo_height": 66,
+    "logo_height_mobile": 48,
+    "favicon": "shopify://shop_images/Caminota_favicon.png",
+    "brand_olive": "#606452",
+    "brand_cream": "#f4f2e4",
+    "brand_gold": "#b1a45a",
+    "brand_green": "#627434",
     "page_text_color": "{{ settings.color_palette.foreground }}",
     "type_body_font": "open_sans_n4",
     "type_subheading_font": "open_sans_n6",
@@ -45,6 +48,8 @@
     "type_font_h6": "subheading",
     "type_size_h6": "12",
     "type_line_height_h6": "display-loose",
+    "page_background_color": "{{ settings.color_palette.background }}",
+    "page_width": "wide",
     "page_transition_enabled": false,
     "transition_to_main_product": false,
     "card_hover_effect": "none",
@@ -103,14 +108,11 @@
     "variant_button_border_width": 1,
     "variant_button_radius": 14,
     "variant_button_width": "equal-width-buttons",
+    "content_for_index": [],
     "color_palette": {
       "background": "#ffffff",
       "foreground": "#606452"
-    },
-    "brand_olive": "#606452",
-    "brand_cream": "#f4f2e4",
-    "brand_gold": "#b1a45a",
-    "brand_green": "#627434"
+    }
   },
   "presets": {
     "Horizon": {

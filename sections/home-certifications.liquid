@@ -6,15 +6,19 @@
     background-color: {{ s.background_color }};
     padding-block: {{ s.padding_top }}px {{ s.padding_bottom }}px;
   }
-  #shopify-section-{{ section.id }} .cmn-cert__wrap { max-width: 1320px; margin-inline: auto; padding-inline: 24px; }
-  #shopify-section-{{ section.id }} .cmn-cert__heading { text-align: center; margin: 0 0 2.5rem; }
-  #shopify-section-{{ section.id }} .cmn-cert__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+  #shopify-section-{{ section.id }} .cmn-cert__wrap { margin-inline: auto; padding-inline: 24px; }
+  #shopify-section-{{ section.id }} .cmn-cert__heading { text-align: center; margin: 0 0 4rem; }
+  #shopify-section-{{ section.id }} .cmn-cert__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
   #shopify-section-{{ section.id }} .cmn-cert__card {
     background-color: {{ s.card_color }};
-    padding: 2.5rem 1.5rem;
+    padding: 1.5rem 1rem;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  #shopify-section-{{ section.id }} .cmn-cert__title { margin: 0 0 1.5rem; }
+  #shopify-section-{{ section.id }} .cmn-cert__title { margin: 0 0 1rem; font-size: 1.4rem; }
   @media screen and (max-width: 749px) {
     #shopify-section-{{ section.id }} .cmn-cert__grid { grid-template-columns: 1fr; gap: 24px; }
   }
@@ -34,7 +38,7 @@
           {%- if block.settings.button_label != blank -%}
             {%- assign target = block.settings.button_link -%}
             {%- if block.settings.file != blank -%}{%- assign target = block.settings.file -%}{%- endif -%}
-            <a class="button" {% if target != blank %}href="{{ target }}"{% endif %} target="_blank" rel="noopener">{{ block.settings.button_label }}</a>
+            <a class="button" style="display: block; width: fit-content; margin-inline: auto;" {% if target != blank %}href="{{ target }}"{% endif %} target="_blank" rel="noopener">{{ block.settings.button_label }}</a>
           {%- endif -%}
         </div>
       {%- endfor -%}
@@ -51,8 +55,8 @@
     { "type": "header", "content": "Appearance" },
     { "type": "color", "id": "background_color", "label": "Background", "default": "#ffffff" },
     { "type": "color", "id": "card_color", "label": "Card background", "default": "#f4f2e4" },
-    { "type": "range", "id": "padding_top", "label": "Padding top", "min": 0, "max": 160, "step": 4, "unit": "px", "default": 48 },
-    { "type": "range", "id": "padding_bottom", "label": "Padding bottom", "min": 0, "max": 160, "step": 4, "unit": "px", "default": 72 }
+    { "type": "range", "id": "padding_top", "label": "Padding top", "min": 0, "max": 240, "step": 4, "unit": "px", "default": 120 },
+    { "type": "range", "id": "padding_bottom", "label": "Padding bottom", "min": 0, "max": 240, "step": 4, "unit": "px", "default": 180 }
   ],
   "blocks": [
     {

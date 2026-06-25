@@ -1,22 +1,53 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero": {
       "type": "home-hero",
       "settings": {
-        "image": "shopify://shop_images/landing-top.jpg"
+        "image": "shopify://shop_images/landing-top.jpg",
+        "heading": "caminota",
+        "tagline": "Case care inspiră.",
+        "body": "<p><strong>caminotă, s.f.</strong> = 1. Tencuială naturală pe bază de argilă, pentru case tradiționale și locuințe moderne. 2. Fig. Îmbrăcăminte naturală și sănătoasă pentru orice perete.</p>",
+        "button_label": "",
+        "button_link": "",
+        "background_color": "#f4f2e4"
       }
     },
     "calc_cta": {
       "type": "home-calc-cta",
       "settings": {
-        "button_link": "https://comenzi.caminota.ro"
+        "heading": "Solicită un calcul personalizat",
+        "button_label": "Cere ofertă",
+        "button_link": "https://comenzi.caminota.ro",
+        "body": "<p><strong>Ne uităm concret pe proiectul tău și îți recomandăm soluția potrivită, nu doar un calcul generic.</strong> Te ajutăm să faci lucrurile bine din prima: detalii corecte de execuție, compatibilitate între straturi și soluții verificate pe șantiere reale, ca să eviți greșeli costisitoare.</p>",
+        "phone_label": "Dacă vrei să discutăm direct, ne poți suna:",
+        "phone_number": "0745055558",
+        "background_color": "#ffffff",
+        "padding_top": 72,
+        "padding_bottom": 112
       }
     },
     "product_system": {
       "type": "home-product-system",
       "settings": {
         "image": "shopify://shop_images/saci-tencuiala-finisaj-caminota.jpg",
-        "button_link": "https://www.emag.ro/tencuieli-decorative-soclu/brand/caminota/c?ref=bc"
+        "image_position": "left",
+        "body": "<p>Sistemul Caminota este compus din trei produse certificate și 100% naturale: Caminota Tencuială cu Paie, Caminota Finisaj Rustic și vopseaua pe bază de var.</p><p>Materialele sunt ideale atât pentru casele noi, cât și pentru repararea sau renovarea caselor tradiționale, pentru pereți din zidărie de cărămidă sau BCA, chirpici, paiantă, lut, lemn, paie sau hempcrete.</p><p>Caminota deține Agrement Tehnic, certificat ISO 9001 și respectă standardul german pentru mortare de argilă DIN 18947 - clasa SII. Dezvoltat si produs în România.</p>",
+        "button_label": "Comandă o mostră Caminota prin eMag*",
+        "button_link": "https://www.emag.ro/tencuieli-decorative-soclu/brand/caminota/c?ref=bc",
+        "button_new_tab": true,
+        "footnote": "* Pentru cantități mai mari livrăm direct din fabrică la șantier, contactați-ne!",
+        "background_color": "#f4f2e4",
+        "padding_top": 48,
+        "padding_bottom": 72
       }
     },
     "solutions": {
@@ -43,7 +74,17 @@
           }
         }
       },
-      "block_order": ["card_traditionale", "card_moderne"]
+      "block_order": [
+        "card_traditionale",
+        "card_moderne"
+      ],
+      "settings": {
+        "heading": "Caminota face casă bună cu",
+        "columns": 2,
+        "background_color": "#ffffff",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
     },
     "benefits": {
       "type": "home-benefits",
@@ -103,7 +144,23 @@
           }
         }
       },
-      "block_order": ["b_climat", "b_natura", "b_aplicat", "b_respire", "b_ocroteste", "b_siguranta"]
+      "block_order": [
+        "b_climat",
+        "b_natura",
+        "b_aplicat",
+        "b_respire",
+        "b_ocroteste",
+        "b_siguranta"
+      ],
+      "settings": {
+        "heading": "Caminota pentru oameni și case",
+        "group1_title": "Pentru oameni",
+        "group2_title": "Pentru case",
+        "background_color": "#b1a45a",
+        "text_color": "#ffffff",
+        "padding_top": 128,
+        "padding_bottom": 88
+      }
     },
     "certifications": {
       "type": "home-certifications",
@@ -113,39 +170,108 @@
           "settings": {
             "title": "Fișe tehnice și instrucțiuni",
             "button_label": "Link",
-            "button_link": "/pages/instructiuni-tencuiala"
+            "button_link": "/pages/instructiuni-tencuiala",
+            "file": ""
           }
         },
         "c_agrement": {
           "type": "cert",
           "settings": {
             "title": "Agrement tehnic",
-            "button_label": "Download"
+            "button_label": "Download",
+            "button_link": "",
+            "file": ""
           }
         },
         "c_iso": {
           "type": "cert",
           "settings": {
             "title": "Certificat ISO 9001:2015",
-            "button_label": "Download"
+            "button_label": "Download",
+            "button_link": "",
+            "file": ""
           }
         }
       },
-      "block_order": ["c_fise", "c_agrement", "c_iso"]
+      "block_order": [
+        "c_fise",
+        "c_agrement",
+        "c_iso"
+      ],
+      "settings": {
+        "heading": "Certificări și alte tehnicalități",
+        "background_color": "#ffffff",
+        "card_color": "#f4f2e4",
+        "padding_top": 120,
+        "padding_bottom": 180
+      }
     },
     "mission": {
       "type": "home-mission",
-      "settings": {}
+      "settings": {
+        "background_image": "shopify://shop_images/Aro_Ha_0393.webp",
+        "heading": "Misiune",
+        "body": "<p>Misiunea sau menirea noastră este de a pune umărul la <strong>“transhumanța” societății spre sustenabilitate</strong>, unde sustenabilitate = utilizarea responsabilă a resurselor naturale fără a conduce la epuizarea acestora sau la degradarea mediului înconjurător pentru generațiile care urmează.</p><p>Cum? Creând și punând la dispoziția creației (a se citi casei) tale <strong>produse manufăcute din natură</strong>, prietenoase cu mediul, dar și cu bugetul. Sistemul Caminota este compus din <strong>produse naturale, ecologice și locale</strong>, a căror producție necesită un consum de energie de zeci de ori mai mic decât materialele pe bază de ciment.</p>",
+        "text_color": "#ffffff",
+        "fallback_color": "#606452",
+        "overlay_color": "#2c2e25",
+        "overlay_opacity": 45,
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
     },
     "partners": {
       "type": "home-partners",
       "blocks": {
-        "l1": { "type": "logo", "settings": {} },
-        "l2": { "type": "logo", "settings": {} },
-        "l3": { "type": "logo", "settings": {} },
-        "l4": { "type": "logo", "settings": {} }
+        "logo_pVweTq": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/partner-01.jpg",
+            "link": ""
+          }
+        },
+        "l1": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/partner-02.jpg",
+            "link": ""
+          }
+        },
+        "l2": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/logo-eco-living-project.jpg",
+            "link": ""
+          }
+        },
+        "l3": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/sevarex.png",
+            "link": ""
+          }
+        },
+        "l4": {
+          "type": "logo",
+          "settings": {
+            "link": ""
+          }
+        }
       },
-      "block_order": ["l1", "l2", "l3", "l4"]
+      "block_order": [
+        "logo_pVweTq",
+        "l1",
+        "l2",
+        "l3",
+        "l4"
+      ],
+      "settings": {
+        "heading": "Parteneri",
+        "logo_height": 88,
+        "background_color": "#ffffff",
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
     }
   },
   "order": [

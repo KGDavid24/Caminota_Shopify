@@ -1,0 +1,237 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "intro": {
+      "type": "page-intro",
+      "settings": {
+        "heading": "Tencuieli din argilă pentru case moderne",
+        "body": "<p>În casele moderne, materialele de construcție trebuie să ofere performanță tehnică predictibilă, dar și un climat interior sănătos pe termen lung. Tencuielile din argilă Caminota sunt 100% naturale, certificate și compatibile cu sistemele constructive moderne.</p><p>Materialele sunt livrate sub formă de sistem complet, ambalate în saci și se prepară simplu, doar cu apă, direct pe șantier — pentru un proces controlat, curat și ușor de integrat în execuția unei case noi.</p>",
+        "background_image": "shopify://shop_images/case-moderne.jpg",
+        "focal_point": "center",
+        "overlay_color": "#ffffff",
+        "overlay_opacity": 70,
+        "fallback_color": "#606452",
+        "text_color": "#606452",
+        "body_weight": "700",
+        "body_size": 19,
+        "content_width": 1000,
+        "content_inset": 220,
+        "frame_color": "#ffffff",
+        "frame_inline": 72,
+        "corner_radius": 0,
+        "min_height": 620,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "calc": {
+      "type": "home-calc-cta",
+      "settings": {
+        "heading": "Solicită un calcul personalizat",
+        "button_label": "Cere ofertă",
+        "button_link": "https://comenzi.caminota.ro",
+        "body": "<p><strong>Ne uităm concret pe proiectul tău și îți recomandăm soluția potrivită, nu doar un calcul generic.</strong> Te ajutăm să faci lucrurile bine din prima: detalii corecte de execuție, compatibilitate între straturi și soluții verificate pe șantiere reale, ca să eviți greșeli costisitoare.</p>",
+        "phone_label": "Dacă vrei să discutăm direct, ne poți suna:",
+        "phone_number": "0745055558",
+        "background_color": "#ffffff",
+        "padding_top": 72,
+        "padding_bottom": 96
+      }
+    },
+    "systems": {
+      "type": "feature-rows",
+      "blocks": {
+        "s1": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/finisaj-din-argila-caminota.png",
+            "image_position": "right",
+            "number": "1.",
+            "title": "Cărămidă cu goluri și BCA",
+            "subtitle": "Cele mai des întâlnite sisteme constructive.",
+            "body": "<p>În cazul zidăriei din cărămidă cu goluri, compatibilitatea dintre argila arsă din suport și argila naturală Caminota permite ca întreaga masă a peretelui să funcționeze unitar, maximizând reglarea pasivă a umidității și aportul de inerție termică.</p>",
+            "link_label": "Vezi detalii și galerie foto",
+            "link_url": "/pages/caramida-cu-goluri-si-bca"
+          }
+        },
+        "s2": {
+          "type": "row",
+          "settings": {
+            "image_asset": "case-moderne-timberframe.webp",
+            "image_position": "right",
+            "number": "2.",
+            "title": "Timberframe",
+            "subtitle": "Structură de lemn",
+            "body": "<p>Sistem natural, respirabil, eficient energetic și eficient financiar. Cel mai simplu sistem constructiv pentru a ajunge la standardul nZeb.</p>",
+            "link_label": "Vezi detalii și galerie foto",
+            "link_url": ""
+          }
+        },
+        "s3": {
+          "type": "row",
+          "settings": {
+            "image_asset": "case-moderne-panouri-paie.webp",
+            "image_position": "right",
+            "number": "3.",
+            "title": "Panouri de paie presate",
+            "subtitle": "Cel mai natural și sănătos sistem de casă pasivă",
+            "body": "<p>Structura casei este și termoizolație, cu o grosime de 40 cm. Masivitatea tencuielii Caminota la interior asigură acumulare esențiala de temperatură și umiditate. Astfel se obține cu ușurință Autorizația de Construire la standardul nZeb.</p>",
+            "link_label": "Vezi detalii și galerie foto",
+            "link_url": ""
+          }
+        },
+        "s4": {
+          "type": "row",
+          "settings": {
+            "image_asset": "case-moderne-hempcrete.webp",
+            "image_position": "right",
+            "number": "4.",
+            "title": "Hempcrete, baloți de paie, Light Straw Clay",
+            "subtitle": "Materiale locale, lucrări în regie proprie (DIY)",
+            "body": "<p>Sistemul Caminota este o completare firească a acestor case, fiind cel puțin la fel de natural și de ușor de pus în operă de către oricine ca restul casei.</p>",
+            "link_label": "Vezi detalii și galerie foto",
+            "link_url": ""
+          }
+        },
+        "s5": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/finisaj-din-argila-caminota.png",
+            "image_position": "right",
+            "number": "5.",
+            "title": "Gips carton, OSB și plăci de fibră lemnoasă",
+            "subtitle": "Caminota pe placaje",
+            "body": "<p>O soluție naturală de acoperire pentru cele mai comune placaje. Oferă posibilitatea transformării unui spațiu obișnuit într-un design de excepție.</p>",
+            "link_label": "Vezi detalii și galerie foto",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5"
+      ],
+      "settings": {
+        "heading": "Sisteme constructive moderne compatibile cu tencuielile Caminota.",
+        "intro": "",
+        "row_gap": 80,
+        "background_color": "#f4f2e4",
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
+    },
+    "sample": {
+      "type": "page-sample-cta",
+      "settings": {
+        "image": "shopify://shop_images/mostra-caminota-emag.jpg",
+        "image_max_width": 520,
+        "image_position": "left",
+        "heading": "Probează Caminota",
+        "body": "<p>Înainte de a lua o decizie, e normal să vrei să vezi și să atingi materialul. Așa că facem să-ți fie mai ușor și îți punem la dispoziție posibilitatea de a încerca mai întâi Caminota. Comandă de pe eMAG un kit de încercare, iar după o zi-două poți proba produsele. Noi nu mai zicem nimic, le lăsăm pe ele să-ți vorbească.</p>",
+        "button_label": "Comandă o mostră de Caminota",
+        "button_link": "https://www.emag.ro/tencuieli-decorative-soclu/brand/caminota/c?ref=bc",
+        "footnote": "* Pentru cantități mai mari livrăm direct din fabrică la șantier, contactați-ne!",
+        "background_color": "#ffffff",
+        "heading_color": "#606452",
+        "text_color": "#606452",
+        "button_bg": "#606452",
+        "button_text": "#ffffff",
+        "footnote_color": "#000000",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "benefits": {
+      "type": "benefits-list",
+      "blocks": {
+        "b0": {
+          "type": "benefit",
+          "settings": {
+            "text": "Creează un <strong>climat interior sănătos și stabil</strong>, încă din prima zi de locuire."
+          }
+        },
+        "b1": {
+          "type": "benefit",
+          "settings": {
+            "text": "Materialul <strong>reglează pasiv umiditatea</strong> (absoarbe excesul și îl eliberează treptat), menținând aerul confortabil <strong>fără uscăciune iarna</strong> și fără condens."
+          }
+        },
+        "b2": {
+          "type": "benefit",
+          "settings": {
+            "text": "<strong>Protejează structura</strong> casei dar și alte finisaje prin gestionarea vaporilor de apă și reglarea umidității."
+          }
+        },
+        "b3": {
+          "type": "benefit",
+          "settings": {
+            "text": "Argila <strong>neutralizează mirosurile, adsoarbe compușii organici volatili (COV) și îi transferă către exterior (respiră)</strong>, contribuind la un aer curat pentru întreaga familie."
+          }
+        },
+        "b4": {
+          "type": "benefit",
+          "settings": {
+            "text": "Iarna <strong>masivitatea termică unică a argilei oferă acumulare de căldură</strong> și face ca sistemul de încălzire să funcționeze mai eficient, reducând consumul de energie."
+          }
+        },
+        "b5": {
+          "type": "benefit",
+          "settings": {
+            "text": "Vara <strong>aducem răcoarea caselor tradiționale în casele moderne</strong> prin creșterea masivității termice și scăderea umidității relative."
+          }
+        },
+        "b6": {
+          "type": "benefit",
+          "settings": {
+            "text": "<strong>Îmbunătățește izolarea fonică</strong> și adaugă masă utilă pereților."
+          }
+        },
+        "b7": {
+          "type": "benefit",
+          "settings": {
+            "text": "Oferă libertate de design prin <strong>texturi variate și forme organice,</strong> imposibil de reprodus cu materiale sintetice."
+          }
+        }
+      },
+      "block_order": [
+        "b0",
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5",
+        "b6",
+        "b7"
+      ],
+      "settings": {
+        "heading": "Beneficiile reale ale tencuielilor de argilă în construcțiile moderne",
+        "lead": "",
+        "closing": "Totul într-o soluție 100% naturală, ecologică și durabilă, ideală pentru construcții moderne orientate spre confort, sănătate și sustenabilitate.",
+        "background_color": "#606452",
+        "heading_color": "#b1a45a",
+        "text_color": "#ffffff",
+        "check_color": "#b1a45a",
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
+    }
+  },
+  "order": [
+    "intro",
+    "calc",
+    "systems",
+    "sample",
+    "benefits"
+  ]
+}

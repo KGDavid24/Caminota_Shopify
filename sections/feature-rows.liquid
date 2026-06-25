@@ -1,0 +1,120 @@
+{%- liquid
+  assign s = section.settings
+-%}
+<style>
+  #shopify-section-{{ section.id }} .cmn-rows {
+    background-color: {{ s.background_color }};
+    padding-block: {{ s.padding_top }}px {{ s.padding_bottom }}px;
+  }
+  #shopify-section-{{ section.id }} .cmn-rows__wrap {
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 24px;
+  }
+  #shopify-section-{{ section.id }} .cmn-rows__heading { text-align: left; margin: 0 0 7rem; color: {{ settings.brand_olive }}; }
+  #shopify-section-{{ section.id }} .cmn-rows__intro { text-align: center; max-width: 820px; margin: 0 auto 4rem; font-size: 1.1rem; line-height: 1.7; }
+  #shopify-section-{{ section.id }} .cmn-rows__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: center;
+    padding-bottom: {{ s.row_gap }}px;
+    margin-bottom: {{ s.row_gap }}px;
+    border-bottom: 1px solid rgba(96, 100, 82, 0.2);
+  }
+  #shopify-section-{{ section.id }} .cmn-rows__row:last-child { padding-bottom: 0; margin-bottom: 0; border-bottom: none; }
+  #shopify-section-{{ section.id }} .cmn-rows__row--noimage { grid-template-columns: 1fr; max-width: 820px; margin-inline: auto; }
+  #shopify-section-{{ section.id }} .cmn-rows__media { display: flex; justify-content: flex-start; }
+  #shopify-section-{{ section.id }} .cmn-rows__media img { width: 100%; max-width: 460px; height: auto; display: block; border-radius: 4px; }
+  #shopify-section-{{ section.id }} .cmn-rows__media--right { order: 2; justify-content: flex-end; }
+  #shopify-section-{{ section.id }} .cmn-rows__title { margin: 0 0 1rem; color: {{ settings.brand_olive }}; }
+  #shopify-section-{{ section.id }} .cmn-rows__title a { color: inherit; text-decoration: underline; text-decoration-color: {{ settings.brand_olive }}; }
+  #shopify-section-{{ section.id }} .cmn-rows__subtitle { margin: 0 0 1rem; text-decoration: underline; font-size: 1.2rem; color: {{ settings.brand_olive }}; }
+  #shopify-section-{{ section.id }} .cmn-rows__body { font-size: 1.2rem; line-height: 1.7; text-align: justify; font-weight: 600; color: {{ settings.brand_olive }}; }
+  #shopify-section-{{ section.id }} .cmn-rows__cta { margin-top: 1.75rem; text-align: center; }
+  #shopify-section-{{ section.id }} .cmn-rows__btn.button {
+    background-color: {{ settings.brand_gold }};
+    color: #ffffff;
+    width: fit-content;
+    margin-inline: auto;
+    padding-inline: 2rem;
+    padding-block: 0.9rem;
+  }
+  @media screen and (max-width: 749px) {
+    #shopify-section-{{ section.id }} .cmn-rows__row { grid-template-columns: 1fr; gap: 24px; }
+    #shopify-section-{{ section.id }} .cmn-rows__media--right { order: -1; }
+    #shopify-section-{{ section.id }} .cmn-rows__media { justify-content: center; }
+  }
+</style>
+
+<div class="cmn-rows">
+  <div class="cmn-rows__wrap">
+    {%- if s.heading != blank -%}
+      <h2 class="cmn-rows__heading">{{ s.heading }}</h2>
+    {%- endif -%}
+    {%- if s.intro != blank -%}
+      <div class="cmn-rows__intro">{{ s.intro }}</div>
+    {%- endif -%}
+
+    {%- for block in section.blocks -%}
+      {%- assign b = block.settings -%}
+      {%- capture content -%}
+        {%- if b.title != blank -%}<h3 class="cmn-rows__title">{% if b.number != blank %}{{ b.number }} {% endif %}{% if b.link_url != blank %}<a href="{{ b.link_url }}">{{ b.title }}</a>{% else %}{{ b.title }}{% endif %}</h3>{%- endif -%}
+        {%- if b.subtitle != blank -%}<p class="cmn-rows__subtitle" style="color: #606452 !important; text-decoration-color: #606452 !important;">{{ b.subtitle }}</p>{%- endif -%}
+        {%- if b.body != blank -%}<div class="cmn-rows__body">{{ b.body }}</div>{%- endif -%}
+        {%- if b.link_label != blank -%}<div class="cmn-rows__cta"><a class="button cmn-rows__btn" {% if b.link_url != blank %}href="{{ b.link_url }}"{% endif %}>{{ b.link_label }}</a></div>{%- endif -%}
+      {%- endcapture -%}
+      {%- capture media_img -%}
+        {%- if b.image != blank -%}
+          {{ b.image | image_url: width: 1000 | image_tag: loading: 'lazy', sizes: '(min-width: 750px) 46vw, 100vw', widths: '400, 700, 1000' }}
+        {%- elsif b.image_asset != blank -%}
+          <img src="{{ b.image_asset | asset_url }}" loading="lazy" alt="{{ b.title | escape }}">
+        {%- endif -%}
+      {%- endcapture -%}
+      {%- if b.image != blank or b.image_asset != blank -%}
+        <div class="cmn-rows__row" {{ block.shopify_attributes }}>
+          <div class="cmn-rows__media{% if b.image_position == 'right' %} cmn-rows__media--right{% endif %}">{{ media_img }}</div>
+          <div class="cmn-rows__content">{{ content }}</div>
+        </div>
+      {%- else -%}
+        <div class="cmn-rows__row cmn-rows__row--noimage" {{ block.shopify_attributes }}>
+          <div class="cmn-rows__content">{{ content }}</div>
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Feature rows",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading" },
+    { "type": "richtext", "id": "intro", "label": "Intro" },
+    { "type": "range", "id": "row_gap", "label": "Row spacing", "min": 24, "max": 120, "step": 4, "unit": "px", "default": 56 },
+    { "type": "header", "content": "Appearance" },
+    { "type": "color", "id": "background_color", "label": "Background", "default": "#ffffff" },
+    { "type": "range", "id": "padding_top", "label": "Padding top", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 96 },
+    { "type": "range", "id": "padding_bottom", "label": "Padding bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 96 }
+  ],
+  "blocks": [
+    {
+      "type": "row",
+      "name": "Row",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image (leave blank for text-only row)" },
+        { "type": "text", "id": "image_asset", "label": "Image asset filename (fallback if no image above)" },
+        { "type": "select", "id": "image_position", "label": "Image position", "options": [{ "value": "left", "label": "Left" }, { "value": "right", "label": "Right" }], "default": "right" },
+        { "type": "text", "id": "number", "label": "Number / eyebrow" },
+        { "type": "text", "id": "title", "label": "Title" },
+        { "type": "text", "id": "subtitle", "label": "Subtitle" },
+        { "type": "richtext", "id": "body", "label": "Body" },
+        { "type": "text", "id": "link_label", "label": "Button label" },
+        { "type": "url", "id": "link_url", "label": "Button URL" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Feature rows" }]
+}
+{% endschema %}

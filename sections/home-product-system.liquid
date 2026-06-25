@@ -40,7 +40,7 @@
       {%- endif -%}
       {%- if s.button_label != blank -%}
         <div class="cmn-prod__cta">
-          <a class="button" {% if s.button_link != blank %}href="{{ s.button_link }}"{% endif %}{% if s.button_new_tab %} target="_blank" rel="noopener"{% endif %}>{{ s.button_label }}</a>
+          <a class="button" style="display: block; width: fit-content; margin-inline: auto;" {% if s.button_link != blank %}href="{{ s.button_link }}"{% endif %}{% if s.button_new_tab %} target="_blank" rel="noopener"{% endif %}>{{ s.button_label }}</a>
         </div>
       {%- endif -%}
       {%- if s.footnote != blank -%}

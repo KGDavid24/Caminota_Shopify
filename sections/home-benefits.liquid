@@ -9,14 +9,14 @@
     --color: {{ s.text_color }};
   }
   #shopify-section-{{ section.id }} .cmn-ben__wrap { max-width: 1320px; margin-inline: auto; padding-inline: 24px; }
-  #shopify-section-{{ section.id }} .cmn-ben__heading { margin: 0 0 2.5rem; }
-  #shopify-section-{{ section.id }} .cmn-ben__group-title { margin: 0 0 2rem; }
+  #shopify-section-{{ section.id }} .cmn-ben__heading { margin: 0 0 2.5rem; color: {{ s.text_color }}; }
+  #shopify-section-{{ section.id }} .cmn-ben__group-title { margin: 0 0 2.5rem; color: {{ s.text_color }}; }
   #shopify-section-{{ section.id }} .cmn-ben__group + .cmn-ben__group { margin-top: 3.5rem; }
   #shopify-section-{{ section.id }} .cmn-ben__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; }
   #shopify-section-{{ section.id }} .cmn-ben__item { text-align: left; }
-  #shopify-section-{{ section.id }} .cmn-ben__icon { width: 116px; height: 116px; margin-bottom: 1.25rem; }
-  #shopify-section-{{ section.id }} .cmn-ben__icon img { width: 100%; height: 100%; object-fit: contain; display: block; }
-  #shopify-section-{{ section.id }} .cmn-ben__item-title { margin: 0 0 0.75rem; }
+  #shopify-section-{{ section.id }} .cmn-ben__icon { width: 380px; max-width: 100%; margin-bottom: 1.5rem; }
+  #shopify-section-{{ section.id }} .cmn-ben__icon img { width: 100%; height: auto; display: block; }
+  #shopify-section-{{ section.id }} .cmn-ben__item-title { margin: 0 0 0.75rem; color: {{ s.text_color }}; }
   #shopify-section-{{ section.id }} .cmn-ben__item-text p { margin: 0; }
   @media screen and (max-width: 749px) {
     #shopify-section-{{ section.id }} .cmn-ben__grid { grid-template-columns: 1fr; gap: 40px; }
@@ -26,7 +26,7 @@
 <div class="cmn-ben">
   <div class="cmn-ben__wrap">
     {%- if s.heading != blank -%}
-      <h2 class="cmn-ben__heading">{{ s.heading }}</h2>
+      <h2 class="cmn-ben__heading" style="margin: 0 0 5.5rem; color: {{ settings.brand_olive }};">{{ s.heading }}</h2>
     {%- endif -%}
 
     {%- assign group_keys = 'oameni,case' | split: ',' -%}
@@ -38,9 +38,9 @@
       {%- if has_items -%}
         <div class="cmn-ben__group">
           {%- if key == 'oameni' and s.group1_title != blank -%}
-            <h3 class="cmn-ben__group-title">{{ s.group1_title }}</h3>
+            <h3 class="cmn-ben__group-title" style="margin: 0 0 4.5rem; color: {{ settings.brand_olive }};">{{ s.group1_title }}</h3>
           {%- elsif key == 'case' and s.group2_title != blank -%}
-            <h3 class="cmn-ben__group-title">{{ s.group2_title }}</h3>
+            <h3 class="cmn-ben__group-title" style="margin: 0 0 4.5rem; color: {{ settings.brand_olive }};">{{ s.group2_title }}</h3>
           {%- endif -%}
           <div class="cmn-ben__grid">
             {%- for block in section.blocks -%}
@@ -48,11 +48,11 @@
                 <div class="cmn-ben__item" {{ block.shopify_attributes }}>
                   {%- if block.settings.icon != blank -%}
                     <div class="cmn-ben__icon">
-                      {{ block.settings.icon | image_url: width: 192 | image_tag: loading: 'lazy', widths: '96, 192' }}
+                      {{ block.settings.icon | image_url: width: 640 | image_tag: loading: 'lazy', widths: '320, 640' }}
                     </div>
                   {%- endif -%}
                   {%- if block.settings.title != blank -%}
-                    <h4 class="cmn-ben__item-title">{{ block.settings.title }}</h4>
+                    <h4 class="cmn-ben__item-title" style="margin: 0 0 0.75rem; color: {{ s.text_color }};">{{ block.settings.title }}</h4>
                   {%- endif -%}
                   {%- if block.settings.text != blank -%}
                     <div class="cmn-ben__item-text">{{ block.settings.text }}</div>
@@ -78,7 +78,7 @@
     { "type": "header", "content": "Appearance" },
     { "type": "color", "id": "background_color", "label": "Background", "default": "#b1a45a" },
     { "type": "color", "id": "text_color", "label": "Text / icon color", "default": "#ffffff" },
-    { "type": "range", "id": "padding_top", "label": "Padding top", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 88 },
+    { "type": "range", "id": "padding_top", "label": "Padding top", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 128 },
     { "type": "range", "id": "padding_bottom", "label": "Padding bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 88 }
   ],
   "blocks": [

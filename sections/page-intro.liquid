@@ -1,0 +1,105 @@
+{%- liquid
+  assign s = section.settings
+  assign overlay = s.overlay_opacity | times: 1.0 | divided_by: 100.0
+-%}
+<style>
+  #shopify-section-{{ section.id }} .cmn-intro {
+    background-color: {{ s.frame_color }};
+    padding: {{ s.padding_top }}px {{ s.frame_inline }}px {{ s.padding_bottom }}px;
+  }
+  #shopify-section-{{ section.id }} .cmn-intro__frame {
+    position: relative;
+    border-radius: {{ s.corner_radius }}px;
+    overflow: hidden;
+    min-height: {{ s.min_height }}px;
+    display: flex;
+    align-items: center;
+    background-color: {{ s.fallback_color }};
+    {% if s.background_image != blank %}
+    background-image: url({{ s.background_image | image_url: width: 2400 }});
+    background-size: cover;
+    background-position: {{ s.focal_point }};
+    {% elsif s.background_asset != blank %}
+    background-image: url({{ s.background_asset | asset_url }});
+    background-size: cover;
+    background-position: {{ s.focal_point }};
+    {% endif %}
+  }
+  #shopify-section-{{ section.id }} .cmn-intro__overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+  #shopify-section-{{ section.id }} .cmn-intro__inner {
+    position: relative;
+    max-width: {{ s.content_width }}px;
+    margin-left: {{ s.content_inset }}px;
+    margin-right: auto;
+    padding-inline: 0 24px;
+    color: {{ s.text_color }};
+    --color: {{ s.text_color }};
+  }
+  #shopify-section-{{ section.id }} .cmn-intro__heading {
+    margin: 0 0 1.5rem;
+    color: {{ s.text_color }};
+    font-size: clamp(2.75rem, 5vw, 4rem);
+    line-height: 1.1;
+  }
+  #shopify-section-{{ section.id }} .cmn-intro__body {
+    font-size: {{ s.body_size }}px;
+    line-height: 1.6;
+    font-weight: {{ s.body_weight }};
+  }
+  @media screen and (max-width: 749px) {
+    #shopify-section-{{ section.id }} .cmn-intro { padding-inline: 16px; }
+    #shopify-section-{{ section.id }} .cmn-intro__inner { padding-inline: 24px; max-width: none; }
+    #shopify-section-{{ section.id }} .cmn-intro__frame { min-height: 460px; }
+  }
+</style>
+
+<div class="cmn-intro">
+  <div class="cmn-intro__frame">
+    <div class="cmn-intro__overlay" style="background-color: {{ s.overlay_color | default: '#606452' }}; opacity: {{ overlay }};"></div>
+    <div class="cmn-intro__inner">
+      {%- if s.heading != blank -%}
+        <h1 class="cmn-intro__heading">{{ s.heading }}</h1>
+      {%- endif -%}
+      {%- if s.body != blank -%}
+        <div class="cmn-intro__body">{{ s.body }}</div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Page intro",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Case tradiționale" },
+    { "type": "richtext", "id": "body", "label": "Body", "default": "<p>Sistemul Caminota este soluția de tencuire recomandată la casele vechi, tradiționale, și desăvârșește tot ceea ce reprezintă acestea. Fie că este vorba despre reparații sau renovarea pereților din chirpici, paiantă, lut, lemn sau cărămidă, Tencuiala și Finisajul Caminota fac casă bună. Materialele sunt ambalate în sac, iar la fața locului trebuie doar amestecate cu apă.</p>" },
+    { "type": "header", "content": "Background image" },
+    { "type": "image_picker", "id": "background_image", "label": "Background image" },
+    { "type": "text", "id": "background_asset", "label": "Background asset filename (fallback)" },
+    { "type": "select", "id": "focal_point", "label": "Image focal point", "options": [{ "value": "center", "label": "Center" }, { "value": "top", "label": "Top" }, { "value": "bottom", "label": "Bottom" }, { "value": "left", "label": "Left" }, { "value": "right", "label": "Right" }], "default": "center" },
+    { "type": "color", "id": "overlay_color", "label": "Overlay color", "default": "#2c2e25" },
+    { "type": "range", "id": "overlay_opacity", "label": "Overlay opacity", "min": 0, "max": 100, "step": 5, "unit": "%", "default": 30 },
+    { "type": "color", "id": "fallback_color", "label": "Fallback (no image)", "default": "#606452" },
+    { "type": "header", "content": "Text" },
+    { "type": "color", "id": "text_color", "label": "Text color", "default": "#ffffff" },
+    { "type": "select", "id": "body_weight", "label": "Body weight", "options": [{ "value": "400", "label": "Regular" }, { "value": "600", "label": "Semibold" }, { "value": "700", "label": "Bold" }], "default": "700" },
+    { "type": "range", "id": "body_size", "label": "Body font size", "min": 14, "max": 28, "step": 1, "unit": "px", "default": 22 },
+    { "type": "range", "id": "content_width", "label": "Text block max width", "min": 400, "max": 1100, "step": 20, "unit": "px", "default": 880 },
+    { "type": "range", "id": "content_inset", "label": "Text left inset", "min": 0, "max": 400, "step": 4, "unit": "px", "default": 220 },
+    { "type": "header", "content": "Frame" },
+    { "type": "color", "id": "frame_color", "label": "Frame color", "default": "#ffffff" },
+    { "type": "range", "id": "frame_inline", "label": "Side margin", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 72 },
+    { "type": "range", "id": "corner_radius", "label": "Corner radius", "min": 0, "max": 24, "step": 1, "unit": "px", "default": 0 },
+    { "type": "range", "id": "min_height", "label": "Min height", "min": 320, "max": 800, "step": 10, "unit": "px", "default": 620 },
+    { "type": "header", "content": "Appearance" },
+    { "type": "range", "id": "padding_top", "label": "Padding top", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 24 },
+    { "type": "range", "id": "padding_bottom", "label": "Padding bottom", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 24 }
+  ],
+  "presets": [{ "name": "Page intro" }]
+}
+{% endschema %}

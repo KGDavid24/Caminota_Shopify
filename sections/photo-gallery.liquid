@@ -1,0 +1,162 @@
+{%- liquid
+  assign s = section.settings
+-%}
+<style>
+  #shopify-section-{{ section.id }} .cmn-gallery {
+    background-color: {{ s.background_color }};
+    padding-block: {{ s.padding_top }}px {{ s.padding_bottom }}px;
+  }
+  #shopify-section-{{ section.id }} .cmn-gallery__wrap {
+    max-width: 1320px;
+    margin-inline: auto;
+    padding-inline: 24px;
+  }
+  #shopify-section-{{ section.id }} .cmn-gallery__heading { margin: 0 0 2.5rem; color: {{ settings.brand_olive }}; }
+  #shopify-section-{{ section.id }} .cmn-gallery__carousel { position: relative; }
+  #shopify-section-{{ section.id }} .cmn-gallery__track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    border-radius: 4px;
+  }
+  #shopify-section-{{ section.id }} .cmn-gallery__track::-webkit-scrollbar { display: none; }
+  #shopify-section-{{ section.id }} .cmn-gallery__slide { flex: 0 0 100%; scroll-snap-align: center; }
+  #shopify-section-{{ section.id }} .cmn-gallery__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    aspect-ratio: {{ s.ratio }};
+  }
+  #shopify-section-{{ section.id }} .cmn-gallery__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.85);
+    color: {{ settings.brand_olive }};
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+  #shopify-section-{{ section.id }} .cmn-gallery__arrow:hover { background: #ffffff; }
+  #shopify-section-{{ section.id }} .cmn-gallery__prev { left: 12px; }
+  #shopify-section-{{ section.id }} .cmn-gallery__next { right: 12px; }
+  #shopify-section-{{ section.id }} .cmn-gallery__thumbs {
+    display: flex;
+    gap: {{ s.gap }}px;
+    margin-top: {{ s.gap }}px;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  #shopify-section-{{ section.id }} .cmn-gallery__thumb {
+    flex: 0 0 auto;
+    width: 90px;
+    aspect-ratio: 3 / 2;
+    padding: 0;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    overflow: hidden;
+    cursor: pointer;
+    background: none;
+  }
+  #shopify-section-{{ section.id }} .cmn-gallery__thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+</style>
+
+<div class="cmn-gallery">
+  <div class="cmn-gallery__wrap" id="cmn-gallery-{{ section.id }}">
+    {%- if s.heading != blank -%}
+      <h2 class="cmn-gallery__heading">{{ s.heading }}</h2>
+    {%- endif -%}
+    {%- if section.blocks.size > 0 -%}
+      <div class="cmn-gallery__carousel">
+        <button class="cmn-gallery__arrow cmn-gallery__prev" aria-label="Anterior" type="button">&lsaquo;</button>
+        <div class="cmn-gallery__track">
+          {%- for block in section.blocks -%}
+            {%- if block.settings.image != blank or block.settings.image_asset != blank -%}
+              <div class="cmn-gallery__slide" {{ block.shopify_attributes }}>
+                {%- if block.settings.image != blank -%}
+                  {{ block.settings.image | image_url: width: 1600 | image_tag: loading: 'lazy', widths: '600, 1000, 1600' }}
+                {%- else -%}
+                  <img src="{{ block.settings.image_asset | asset_url }}" loading="lazy" alt="">
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+        <button class="cmn-gallery__arrow cmn-gallery__next" aria-label="Următor" type="button">&rsaquo;</button>
+      </div>
+      <div class="cmn-gallery__thumbs">
+        {%- for block in section.blocks -%}
+          {%- if block.settings.image != blank or block.settings.image_asset != blank -%}
+            <button class="cmn-gallery__thumb" data-index="{{ forloop.index0 }}" type="button" aria-label="Slide {{ forloop.index }}">
+              {%- if block.settings.image != blank -%}
+                {{ block.settings.image | image_url: width: 200 | image_tag: loading: 'lazy', widths: '120, 200' }}
+              {%- else -%}
+                <img src="{{ block.settings.image_asset | asset_url }}" loading="lazy" alt="">
+              {%- endif -%}
+            </button>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+<script>
+  (function () {
+    var root = document.getElementById('cmn-gallery-{{ section.id }}');
+    if (!root) return;
+    var track = root.querySelector('.cmn-gallery__track');
+    if (!track) return;
+    var slides = root.querySelectorAll('.cmn-gallery__slide');
+    function go(i) {
+      var sl = slides[i];
+      if (sl) track.scrollTo({ left: sl.offsetLeft - track.offsetLeft, behavior: 'smooth' });
+    }
+    var prev = root.querySelector('.cmn-gallery__prev');
+    var next = root.querySelector('.cmn-gallery__next');
+    if (prev) prev.addEventListener('click', function () { track.scrollBy({ left: -track.clientWidth, behavior: 'smooth' }); });
+    if (next) next.addEventListener('click', function () { track.scrollBy({ left: track.clientWidth, behavior: 'smooth' }); });
+    root.querySelectorAll('.cmn-gallery__thumb').forEach(function (t) {
+      t.addEventListener('click', function () { go(parseInt(t.getAttribute('data-index'), 10)); });
+    });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Photo gallery",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading" },
+    { "type": "range", "id": "gap", "label": "Thumbnail gap", "min": 0, "max": 24, "step": 2, "unit": "px", "default": 10 },
+    { "type": "select", "id": "ratio", "label": "Main image ratio", "options": [{ "value": "3 / 2", "label": "Landscape 3:2" }, { "value": "16 / 9", "label": "Wide 16:9" }, { "value": "4 / 3", "label": "Landscape 4:3" }, { "value": "1 / 1", "label": "Square" }], "default": "3 / 2" },
+    { "type": "header", "content": "Appearance" },
+    { "type": "color", "id": "background_color", "label": "Background", "default": "#f4f2e4" },
+    { "type": "range", "id": "padding_top", "label": "Padding top", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 72 },
+    { "type": "range", "id": "padding_bottom", "label": "Padding bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 72 }
+  ],
+  "blocks": [
+    {
+      "type": "photo",
+      "name": "Photo",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "text", "id": "image_asset", "label": "Image asset filename (fallback)" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Photo gallery" }]
+}
+{% endschema %}

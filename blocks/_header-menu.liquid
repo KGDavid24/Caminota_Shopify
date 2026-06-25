@@ -696,6 +696,19 @@
     display: contents;
   }
 
+  .menu-list__link-title {
+    padding-inline: 14px;
+  }
+
+  .menu-list__link {
+    font-weight: 700;
+  }
+
+  .menu-list__link--active .menu-list__link-title {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
   /* Hide product cards in collapsed submenus from the IntersectionObserver that fires product view events */
   .menu-list__list-item:not(:has([aria-expanded='true'])) > .menu-list__submenu product-component {
     display: none;

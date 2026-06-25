@@ -1,0 +1,74 @@
+{%- liquid
+  assign s = section.settings
+-%}
+<style>
+  #shopify-section-{{ section.id }} .cmn-video {
+    background-color: {{ s.background_color }};
+    color: {{ s.text_color }};
+    padding-block: {{ s.padding_top }}px {{ s.padding_bottom }}px;
+  }
+  #shopify-section-{{ section.id }} .cmn-video__inner {
+    max-width: {{ s.video_width }}px;
+    margin-inline: auto;
+    padding-inline: 24px;
+    text-align: center;
+  }
+  #shopify-section-{{ section.id }} .cmn-video__caption { margin: 0 0 0.75rem; color: {{ s.text_color }}; font-size: 1.3rem; font-weight: 600; }
+  #shopify-section-{{ section.id }} .cmn-video__subcaption { margin: 0 0 2rem; font-size: 1.1rem; opacity: 0.9; }
+  #shopify-section-{{ section.id }} .cmn-video__subcaption p { margin: 0; }
+  #shopify-section-{{ section.id }} .cmn-video__subcaption a { color: {{ settings.brand_gold }}; text-decoration: underline; }
+  #shopify-section-{{ section.id }} .cmn-video__frame {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+  }
+  #shopify-section-{{ section.id }} .cmn-video__frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+</style>
+
+<div class="cmn-video">
+  <div class="cmn-video__inner">
+    {%- if s.caption != blank -%}
+      <p class="cmn-video__caption">{{ s.caption }}</p>
+    {%- endif -%}
+    {%- if s.subcaption != blank -%}
+      <div class="cmn-video__subcaption">{{ s.subcaption }}</div>
+    {%- endif -%}
+    {%- if s.youtube_id != blank -%}
+      <div class="cmn-video__frame">
+        <iframe
+          src="https://www.youtube.com/embed/{{ s.youtube_id }}"
+          title="{{ s.caption | escape }}"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Page video",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "youtube_id", "label": "YouTube video ID", "default": "FJBZua2gxJQ" },
+    { "type": "text", "id": "caption", "label": "Caption", "default": "Testimonial video — casă tradițională din jud. Arad" },
+    { "type": "richtext", "id": "subcaption", "label": "Sub-caption", "default": "<p>Finisaje Caminota și termoizolație de la <a href=\"https://placidepaie.ro\" target=\"_blank\" rel=\"noopener\">placidepaie.ro</a></p>" },
+    { "type": "range", "id": "video_width", "label": "Video max width", "min": 400, "max": 1000, "step": 20, "unit": "px", "default": 660 },
+    { "type": "header", "content": "Appearance" },
+    { "type": "color", "id": "background_color", "label": "Background", "default": "#606452" },
+    { "type": "color", "id": "text_color", "label": "Text color", "default": "#ffffff" },
+    { "type": "range", "id": "padding_top", "label": "Padding top", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 72 },
+    { "type": "range", "id": "padding_bottom", "label": "Padding bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 72 }
+  ],
+  "presets": [{ "name": "Page video" }]
+}
+{% endschema %}

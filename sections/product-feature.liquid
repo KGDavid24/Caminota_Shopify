@@ -1,0 +1,147 @@
+{%- liquid
+  assign s = section.settings
+-%}
+<style>
+  #shopify-section-{{ section.id }} .cmn-feat {
+    background-color: {{ s.background_color }};
+    padding-block: {{ s.padding_top }}px {{ s.padding_bottom }}px;
+  }
+  #shopify-section-{{ section.id }} .cmn-feat__wrap {
+    max-width: 1440px;
+    margin-inline: auto;
+    padding-inline: 24px;
+  }
+  #shopify-section-{{ section.id }} .cmn-feat__heading {
+    text-align: center;
+    margin: 0 0 3rem;
+    color: {{ s.heading_color }};
+  }
+  #shopify-section-{{ section.id }} .cmn-feat__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: center;
+  }
+  #shopify-section-{{ section.id }} .cmn-feat__media { text-align: center; }
+  #shopify-section-{{ section.id }} .cmn-feat__media img { max-width: {{ s.image_max_width }}px; width: 100%; height: auto; display: block; margin-inline: auto; }
+  {% if s.image_position == 'right' %}
+  #shopify-section-{{ section.id }} .cmn-feat__media { order: 2; }
+  {% endif %}
+  #shopify-section-{{ section.id }} .cmn-feat__body { font-size: 1.2rem; line-height: 1.7; color: {{ s.text_color }}; }
+  #shopify-section-{{ section.id }} .cmn-feat__spec { margin-top: 1.25rem; line-height: 1.6; font-size: 1.2rem; color: {{ s.text_color }}; }
+  #shopify-section-{{ section.id }} .cmn-feat__spec strong { color: {{ s.heading_color }}; }
+  #shopify-section-{{ section.id }} .cmn-feat__downloads { margin-top: 1.75rem; display: flex; flex-direction: column; align-items: flex-start; gap: 0.85rem; }
+  #shopify-section-{{ section.id }} .cmn-feat__downloads a { color: {{ s.link_color }}; text-decoration: underline; font-weight: 600; }
+
+  #shopify-section-{{ section.id }} .cmn-feat__gallery {
+    margin-top: {{ s.gallery_top }}px;
+    padding-inline: {{ s.gallery_inline }}px;
+    display: grid;
+    grid-template-columns: repeat({{ s.gallery_columns }}, 1fr);
+    gap: {{ s.gallery_gap }}px;
+  }
+  #shopify-section-{{ section.id }} .cmn-feat__gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    aspect-ratio: {{ s.gallery_ratio }};
+  }
+  @media screen and (max-width: 749px) {
+    #shopify-section-{{ section.id }} .cmn-feat__row { grid-template-columns: 1fr; gap: 32px; }
+    #shopify-section-{{ section.id }} .cmn-feat__media { order: -1; }
+    #shopify-section-{{ section.id }} .cmn-feat__gallery { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+
+<div class="cmn-feat">
+  <div class="cmn-feat__wrap">
+    {%- if s.heading != blank -%}
+      <h2 class="cmn-feat__heading">{{ s.heading }}</h2>
+    {%- endif -%}
+    <div class="cmn-feat__row">
+      <div class="cmn-feat__media">
+        {%- if s.image != blank -%}
+          {{ s.image | image_url: width: 1200 | image_tag: loading: 'lazy', sizes: '(min-width: 750px) 50vw, 100vw', widths: '500, 800, 1100' }}
+        {%- endif -%}
+      </div>
+      <div class="cmn-feat__content">
+        {%- if s.body != blank -%}
+          <div class="cmn-feat__body">{{ s.body }}</div>
+        {%- endif -%}
+        {%- if s.composition != blank -%}
+          <p class="cmn-feat__spec"><strong>Compoziție:</strong> {{ s.composition }}</p>
+        {%- endif -%}
+        {%- if s.benefits != blank -%}
+          <p class="cmn-feat__spec"><strong>Beneficii:</strong> {{ s.benefits }}</p>
+        {%- endif -%}
+        {%- if s.download_label != blank or s.download2_label != blank -%}
+          <div class="cmn-feat__downloads">
+            {%- if s.download_label != blank -%}
+              <a {% if s.download_link != blank %}href="{{ s.download_link }}"{% endif %} target="_blank" rel="noopener">{{ s.download_label }}</a>
+            {%- endif -%}
+            {%- if s.download2_label != blank -%}
+              <a {% if s.download2_link != blank %}href="{{ s.download2_link }}"{% endif %} target="_blank" rel="noopener">{{ s.download2_label }}</a>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+
+  {%- if section.blocks.size > 0 -%}
+    <div class="cmn-feat__gallery">
+      {%- for block in section.blocks -%}
+        {%- if block.settings.image != blank -%}
+          <div class="cmn-feat__gallery-item" {{ block.shopify_attributes }}>
+            {{ block.settings.image | image_url: width: 800 | image_tag: loading: 'lazy', widths: '400, 600, 800' }}
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "Product feature",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Tencuiala Caminota" },
+    { "type": "image_picker", "id": "image", "label": "Main image" },
+    { "type": "range", "id": "image_max_width", "label": "Main image max width", "min": 240, "max": 700, "step": 20, "unit": "px", "default": 380 },
+    { "type": "select", "id": "image_position", "label": "Image position", "options": [{ "value": "left", "label": "Left" }, { "value": "right", "label": "Right" }], "default": "left" },
+    { "type": "richtext", "id": "body", "label": "Body", "default": "<p>Tencuiala Caminota se așterne pe ziduri pentru a înfrumuseța și proteja. Pe de o parte, obține suprafața netedă, cu aspect plăcut, iar pe de cealaltă, oferă suport straturilor de finisaj. După preferințe, poate fi aplicată manual cu gletiera sau mecanizat.</p>" },
+    { "type": "text", "id": "composition", "label": "Composition", "default": "argilă, nisip, fibre lignocelulozice din paie" },
+    { "type": "text", "id": "benefits", "label": "Benefits", "default": "compatibilă cu pereții caselor tradiționale, reglează umiditatea aerului, permite trecerea vaporilor." },
+    { "type": "header", "content": "Downloads" },
+    { "type": "text", "id": "download_label", "label": "Download 1 label", "default": "Descarcă fișa tehnică și instrucțiunile" },
+    { "type": "url", "id": "download_link", "label": "Download 1 link" },
+    { "type": "text", "id": "download2_label", "label": "Download 2 label" },
+    { "type": "url", "id": "download2_link", "label": "Download 2 link" },
+    { "type": "header", "content": "Gallery" },
+    { "type": "range", "id": "gallery_columns", "label": "Gallery columns", "min": 2, "max": 5, "step": 1, "default": 4 },
+    { "type": "range", "id": "gallery_gap", "label": "Gallery gap", "min": 0, "max": 24, "step": 2, "unit": "px", "default": 10 },
+    { "type": "range", "id": "gallery_inline", "label": "Gallery side margin", "min": 0, "max": 80, "step": 4, "unit": "px", "default": 24 },
+    { "type": "range", "id": "gallery_top", "label": "Gallery top spacing", "min": 0, "max": 160, "step": 4, "unit": "px", "default": 64 },
+    { "type": "select", "id": "gallery_ratio", "label": "Gallery image ratio", "options": [{ "value": "3 / 2", "label": "Landscape 3:2" }, { "value": "4 / 3", "label": "Landscape 4:3" }, { "value": "1 / 1", "label": "Square" }, { "value": "16 / 9", "label": "Wide 16:9" }], "default": "3 / 2" },
+    { "type": "header", "content": "Appearance" },
+    { "type": "color", "id": "background_color", "label": "Background", "default": "#ffffff" },
+    { "type": "color", "id": "heading_color", "label": "Heading & label color", "default": "#606452" },
+    { "type": "color", "id": "text_color", "label": "Body text color", "default": "#606452" },
+    { "type": "color", "id": "link_color", "label": "Download link color", "default": "#b1a45a" },
+    { "type": "range", "id": "padding_top", "label": "Padding top", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 72 },
+    { "type": "range", "id": "padding_bottom", "label": "Padding bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 72 }
+  ],
+  "blocks": [
+    {
+      "type": "gallery_image",
+      "name": "Gallery image",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Product feature" }]
+}
+{% endschema %}

@@ -11,3 +11,112 @@
 .account-button {
   display: none !important;
 }
+
+/* Header: always paint a solid background. The sticky header otherwise renders
+   transparent and blends into the page — invisible on plain-bg pages, but on
+   image heroes (e.g. the Case tradiționale page-intro) the photo shows through
+   behind the nav. Palette background is white, so force white here. */
+#header-component .header__row--top {
+  background-color: #ffffff !important;
+}
+
+/* Header height: the logo container forces min-height:145px of dead space
+   (the logo image itself is only 48–66px). Lowering it shrinks the header
+   without resizing the logo, wordmark, or menu. Tune this value to taste. */
+#header-component .header-logo {
+  min-height: 90px !important;
+}
+
+/* Benefits section — source icons are wide (642x354 ~1.81:1), so size by
+   width and let height follow the aspect ratio. A square box would letterbox
+   them and make the icon look tiny. */
+.cmn-ben__icon {
+  width: 380px !important;
+  max-width: 100% !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.cmn-ben__icon img {
+  width: 100% !important;
+  height: auto !important;
+  max-width: none !important;
+  display: block !important;
+}
+
+/* Header: compact dropdown instead of full-width mega menu */
+
+/* Position each nav item as the anchor for its own submenu */
+.menu-list__list-item:where(:not([slot='overflow'])) {
+  position: relative !important;
+}
+
+/* Compact submenu — override Horizon's full-width absolute positioning */
+.menu-list__list-item:where(:not([slot='overflow'])) > .menu-list__submenu {
+  width: auto !important;
+  min-width: 0 !important;
+  width: max-content !important;
+  left: auto !important;
+  right: 0 !important;
+  top: 100% !important;
+  clip-path: none !important;
+  padding-inline: 0 !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12) !important;
+  border-radius: 0 0 4px 4px !important;
+  transition: opacity 0.15s ease, visibility 0.15s ease !important;
+  padding-block: 0 !important;
+  margin-top: -32px !important;
+}
+
+/* Compact inner padding, no slide-in transform */
+.menu-list__list-item:where(:not([slot='overflow'])) > .menu-list__submenu .menu-list__submenu-inner {
+  transform: none !important;
+  padding: 16px 14px !important;
+  max-height: none !important;
+  overflow: visible !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+}
+
+/* Simple vertical list instead of wide grid */
+.menu-list__list-item:where(:not([slot='overflow'])) > .menu-list__submenu .mega-menu {
+  width: auto !important;
+  padding-inline: 0 !important;
+  margin-inline: 0 !important;
+  display: block !important;
+}
+.menu-list__list-item:where(:not([slot='overflow'])) > .menu-list__submenu .mega-menu__column {
+  width: auto !important;
+}
+.menu-list__list-item:where(:not([slot='overflow'])) > .menu-list__submenu .mega-menu__grid {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+}
+
+/* Link styling inside compact dropdown */
+.menu-list__list-item:where(:not([slot='overflow'])) > .menu-list__submenu .mega-menu__link {
+  color: #606452 !important;
+  text-align: right !important;
+  white-space: nowrap !important;
+  font-size: 1.1rem !important;
+  padding: 0 !important;
+  justify-content: flex-end !important;
+}
+.menu-list__list-item:where(:not([slot='overflow'])) > .menu-list__submenu .mega-menu__link:hover {
+  color: #333333 !important;
+  text-decoration: underline !important;
+}
+
+/* Hide the full-width underlay bar */
+.header__underlay {
+  display: none !important;
+}
+
+/* Partners section */
+.cmn-partners__item img {
+  max-height: 200px !important;
+  width: auto !important;
+  max-width: 100% !important;
+  display: block !important;
+}
