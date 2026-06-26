@@ -1,0 +1,196 @@
+{%- liquid
+  assign s = section.settings
+  assign ri = 0
+  for block in section.blocks
+    capture c
+      render 'contact-loc-card', block: block
+    endcapture
+    if block.settings.column == 'left'
+      assign lb1 = c
+    else
+      assign ri = ri | plus: 1
+      if ri == 1
+        assign rb1 = c
+      elsif ri == 2
+        assign rb2 = c
+      elsif ri == 3
+        assign rb3 = c
+      endif
+    endif
+  endfor
+-%}
+<style>
+  #shopify-section-{{ section.id }} .cmn-contact {
+    background-color: {{ s.background_color }};
+    padding-block: {{ s.padding_top }}px {{ s.padding_bottom }}px;
+  }
+  #shopify-section-{{ section.id }} .cmn-contact__grid {
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+  #shopify-section-{{ section.id }} .cmn-contact__col { display: flex; flex-direction: column; gap: 32px; }
+  #shopify-section-{{ section.id }} .cmn-contact__header { min-height: {{ s.header_min_height }}px; display: flex; flex-direction: column; justify-content: flex-start; gap: 1rem; }
+  #shopify-section-{{ section.id }} .cmn-contact__heading { margin: 0; text-align: center; color: {{ settings.brand_olive }}; }
+  #shopify-section-{{ section.id }} .cmn-contact__intro { text-align: center; line-height: 1.6; margin: 0; }
+  @media screen and (max-width: 749px) { #shopify-section-{{ section.id }} .cmn-contact__header { min-height: 0; } }
+  #shopify-section-{{ section.id }} .cmn-contact__card { padding: 2rem 1.5rem; text-align: center; }
+  #shopify-section-{{ section.id }} .cmn-contact__card--info { background-color: {{ s.info_card_color }}; }
+  #shopify-section-{{ section.id }} .cmn-contact__card--loc { background-color: {{ s.loc_card_color }}; }
+  #shopify-section-{{ section.id }} .cmn-contact__card p { margin: 0 0 1rem; line-height: 1.5; }
+  #shopify-section-{{ section.id }} .cmn-contact__card p:last-child { margin-bottom: 0; }
+  #shopify-section-{{ section.id }} .cmn-contact__card--info a { color: {{ settings.brand_olive }}; font-weight: 700; text-decoration: underline; }
+  #shopify-section-{{ section.id }} .cmn-contact__region { font-family: var(--font-heading--family); font-size: 1.9rem; color: {{ settings.brand_olive }}; margin: 0 0 1.25rem; }
+  #shopify-section-{{ section.id }} .cmn-contact__company a, #shopify-section-{{ section.id }} .cmn-contact__company { font-weight: 700; color: {{ settings.brand_gold }}; text-decoration: underline; }
+  #shopify-section-{{ section.id }} .cmn-contact__phone a { color: {{ settings.brand_gold }}; text-decoration: underline; }
+  #shopify-section-{{ section.id }} .cmn-contact__leftbottom { display: flex; flex-direction: column; gap: 32px; }
+  #shopify-section-{{ section.id }} .cmn-contact__note { text-align: center; line-height: 1.6; }
+  #shopify-section-{{ section.id }} .cmn-contact__note a { color: {{ settings.brand_gold }}; text-decoration: underline; }
+
+  #shopify-section-{{ section.id }} .cmn-contact__form-heading { margin: 0 0 1.5rem; text-align: center; color: {{ settings.brand_olive }}; }
+  #shopify-section-{{ section.id }} .cmn-form__field { margin-bottom: 1.75rem; }
+  #shopify-section-{{ section.id }} .cmn-form__field label { display: block; margin-bottom: 0.4rem; color: {{ settings.brand_olive }}; }
+  #shopify-section-{{ section.id }} .cmn-form__field label .req { color: rgba(96,100,82,0.6); font-size: 0.85rem; }
+  #shopify-section-{{ section.id }} .cmn-form__field input[type="text"],
+  #shopify-section-{{ section.id }} .cmn-form__field input[type="email"],
+  #shopify-section-{{ section.id }} .cmn-form__field textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgba(96,100,82,0.4);
+    background: transparent;
+    padding: 0.4rem 0;
+    font-family: inherit;
+    font-size: 1rem;
+    color: {{ settings.brand_olive }};
+  }
+  #shopify-section-{{ section.id }} .cmn-form__field textarea { resize: vertical; min-height: 120px; }
+  #shopify-section-{{ section.id }} .cmn-form__gdpr { display: flex; gap: 0.6rem; align-items: flex-start; margin-bottom: 1.5rem; font-size: 0.95rem; }
+  #shopify-section-{{ section.id }} .cmn-form__submit {
+    background-color: {{ settings.brand_gold }};
+    color: #ffffff;
+    border: none;
+    padding: 0.9rem 1.75rem;
+    font-family: inherit;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  #shopify-section-{{ section.id }} .cmn-form__success { color: {{ settings.brand_green }}; font-weight: 700; margin-bottom: 1rem; }
+  @media screen and (max-width: 749px) {
+    #shopify-section-{{ section.id }} .cmn-contact__grid { grid-template-columns: 1fr; }
+  }
+</style>
+
+<div class="cmn-contact">
+  <div class="cmn-contact__grid">
+
+    <!-- Row 1: headings -->
+    <div class="cmn-contact__header">
+      <h1 class="cmn-contact__heading">{{ s.heading }}</h1>
+    </div>
+    <div class="cmn-contact__header">
+      {%- if s.stoc_heading != blank -%}<h2 class="cmn-contact__heading">{{ s.stoc_heading }}</h2>{%- endif -%}
+      {%- if s.stoc_intro != blank -%}<div class="cmn-contact__intro">{{ s.stoc_intro }}</div>{%- endif -%}
+    </div>
+
+    <!-- Row 2: contact card | first right card -->
+    <div class="cmn-contact__card cmn-contact__card--info">
+      {%- if s.phone1 != blank -%}<p>{{ s.phone1_label }} <a href="tel:{{ s.phone1 | remove: ' ' }}">{{ s.phone1 }}</a></p>{%- endif -%}
+      {%- if s.phone2 != blank -%}<p>{{ s.phone2_label }} <a href="tel:{{ s.phone2 | remove: ' ' }}">{{ s.phone2 }}</a></p>{%- endif -%}
+      {%- if s.email != blank -%}<p><a href="mailto:{{ s.email }}">{{ s.email }}</a></p>{%- endif -%}
+    </div>
+    {{ rb1 }}
+
+    <!-- Row 3: left card | second right card -->
+    {{ lb1 }}
+    {{ rb2 }}
+
+    <!-- Row 4: note + form | third right card -->
+    <div class="cmn-contact__leftbottom">
+      {%- if s.note != blank -%}
+        <div class="cmn-contact__note">{{ s.note }}</div>
+      {%- endif -%}
+      <div class="cmn-contact__form">
+        {%- if s.form_heading != blank -%}<h2 class="cmn-contact__form-heading">{{ s.form_heading }}</h2>{%- endif -%}
+        {%- form 'contact' -%}
+          {%- if form.posted_successfully? -%}
+            <p class="cmn-form__success">{{ s.success_text }}</p>
+          {%- endif -%}
+          <div class="cmn-form__field">
+            <label for="cf-name-{{ section.id }}">{{ s.label_name }} <span class="req">(required)</span></label>
+            <input type="text" id="cf-name-{{ section.id }}" name="contact[name]" required>
+          </div>
+          <div class="cmn-form__field">
+            <label for="cf-email-{{ section.id }}">{{ s.label_email }} <span class="req">(required)</span></label>
+            <input type="email" id="cf-email-{{ section.id }}" name="contact[email]" required>
+          </div>
+          <div class="cmn-form__field">
+            <label for="cf-body-{{ section.id }}">{{ s.label_message }} <span class="req">(required)</span></label>
+            <textarea id="cf-body-{{ section.id }}" name="contact[body]" required></textarea>
+          </div>
+          <label class="cmn-form__gdpr">
+            <input type="checkbox" name="contact[gdpr]" required>
+            <span>{{ s.gdpr_text }}</span>
+          </label>
+          <button type="submit" class="cmn-form__submit">{{ s.submit_label }}</button>
+        {%- endform -%}
+      </div>
+    </div>
+    {{ rb3 }}
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Contact page",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Contactează-ne" },
+    { "type": "header", "content": "Contact card" },
+    { "type": "text", "id": "phone1_label", "label": "Phone 1 label", "default": "Consultanță materiale:" },
+    { "type": "text", "id": "phone1", "label": "Phone 1", "default": "0745 055 558" },
+    { "type": "text", "id": "phone2_label", "label": "Phone 2 label", "default": "Comenzi / livrări:" },
+    { "type": "text", "id": "phone2", "label": "Phone 2", "default": "0748 204 324" },
+    { "type": "text", "id": "email", "label": "Email", "default": "contact@caminota.ro" },
+    { "type": "color", "id": "info_card_color", "label": "Contact card color", "default": "#c9bd7e" },
+    { "type": "header", "content": "Stock column" },
+    { "type": "text", "id": "stoc_heading", "label": "Stock heading", "default": "↓ Stoc materiale ↓" },
+    { "type": "richtext", "id": "stoc_intro", "label": "Stock intro", "default": "<p>Vă rugăm să <strong>sunați în prealabil</strong> la numerele afișate pentru a confirma stocurile și programul de lucru.</p>" },
+    { "type": "color", "id": "loc_card_color", "label": "Location card color", "default": "#f4f2e4" },
+    { "type": "header", "content": "Bulgaria / Greece note" },
+    { "type": "richtext", "id": "note", "label": "Note", "default": "<p>For <strong>Bulgaria</strong> and <strong>Greece</strong> inquiries please contact <strong>SEVAREX Ltd.</strong></p><p><a href=\"mailto:info@sevarex.com\">info@sevarex.com</a> | +49 176 44472284</p>" },
+    { "type": "header", "content": "Form" },
+    { "type": "text", "id": "form_heading", "label": "Form heading", "default": "Formular de contact" },
+    { "type": "text", "id": "label_name", "label": "Name label", "default": "Nume și prenume" },
+    { "type": "text", "id": "label_email", "label": "Email label", "default": "Email" },
+    { "type": "text", "id": "label_message", "label": "Message label", "default": "Mesaj" },
+    { "type": "text", "id": "gdpr_text", "label": "GDPR text", "default": "Sunt de acord cu politica de confidențialitate." },
+    { "type": "text", "id": "submit_label", "label": "Submit label", "default": "Trimite mesaj" },
+    { "type": "text", "id": "success_text", "label": "Success text", "default": "Mulțumim! Mesajul tău a fost trimis." },
+    { "type": "header", "content": "Appearance" },
+    { "type": "range", "id": "header_min_height", "label": "Column header min height", "min": 0, "max": 240, "step": 10, "unit": "px", "default": 0 },
+    { "type": "color", "id": "background_color", "label": "Background", "default": "#ffffff" },
+    { "type": "range", "id": "padding_top", "label": "Padding top", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 56 },
+    { "type": "range", "id": "padding_bottom", "label": "Padding bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 80 }
+  ],
+  "blocks": [
+    {
+      "type": "location",
+      "name": "Location",
+      "settings": [
+        { "type": "select", "id": "column", "label": "Column", "options": [{ "value": "left", "label": "Left" }, { "value": "right", "label": "Right" }], "default": "right" },
+        { "type": "text", "id": "region", "label": "Region" },
+        { "type": "text", "id": "company", "label": "Company" },
+        { "type": "url", "id": "company_url", "label": "Company URL" },
+        { "type": "text", "id": "address", "label": "Address" },
+        { "type": "text", "id": "phone", "label": "Phone" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Contact page" }]
+}
+{% endschema %}

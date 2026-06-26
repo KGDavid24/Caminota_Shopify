@@ -5,30 +5,70 @@
       "settings": {
         "heading": "Tencuieli de argilă pe zidărie din cărămidă cu goluri și BCA",
         "body": "<p>Caminota oferă cel mai potrivit sistem de finisaje pentru persoanele cu alergii. Sistemul Caminota lasă pereții să respire în cel mai des întâlnit sistem constructiv la casele noi.</p>",
-        "background_image": "",
         "background_asset": "caramida-hero.webp",
         "focal_point": "center",
         "overlay_color": "#ffffff",
-        "overlay_opacity": 35,
-        "content_width": 880,
-        "content_inset": 220,
-        "corner_radius": 0,
+        "overlay_opacity": 65,
+        "fallback_color": "#606452",
         "text_color": "#606452",
-        "body_weight": "600"
+        "body_weight": "600",
+        "body_size": 22,
+        "content_width": 1100,
+        "content_inset": 220,
+        "frame_color": "#ffffff",
+        "frame_inline": 72,
+        "corner_radius": 0,
+        "min_height": 620,
+        "padding_top": 24,
+        "padding_bottom": 24
       }
     },
     "resurse": {
       "type": "link-list",
       "blocks": {
-        "r1": { "type": "link", "settings": { "label": "Ce e important să știi înainte să te apuci de treabă", "url": "", "bold": true } },
-        "r2": { "type": "link", "settings": { "label": "Timpii de lucru și uscarea tencuielilor de lut", "url": "" } },
-        "r3": { "type": "link", "settings": { "label": "Ce unelte folosim pe șantier", "url": "" } },
-        "r4": { "type": "link", "settings": { "label": "Studiu de caz - casă nouă cu pereți din cărămidă cu goluri, jud. Timiș", "url": "" } }
+        "r1": {
+          "type": "link",
+          "settings": {
+            "label": "Ce e important să știi înainte să te apuci de treabă",
+            "url": "",
+            "bold": true
+          }
+        },
+        "r2": {
+          "type": "link",
+          "settings": {
+            "label": "Timpii de lucru și uscarea tencuielilor de lut",
+            "url": "",
+            "bold": false
+          }
+        },
+        "r3": {
+          "type": "link",
+          "settings": {
+            "label": "Ce unelte folosim pe șantier",
+            "url": "",
+            "bold": false
+          }
+        },
+        "r4": {
+          "type": "link",
+          "settings": {
+            "label": "Studiu de caz - casă nouă cu pereți din cărămidă cu goluri, jud. Timiș",
+            "url": "",
+            "bold": false
+          }
+        }
       },
-      "block_order": ["r1", "r2", "r3", "r4"],
+      "block_order": [
+        "r1",
+        "r2",
+        "r3",
+        "r4"
+      ],
       "settings": {
         "heading": "Resurse utile",
-        "background_color": "#ffffff",
+        "intro": "",
+        "background_color": "#f4f2e4",
         "padding_top": 80,
         "padding_bottom": 56
       }
@@ -36,16 +76,81 @@
     "instructiuni": {
       "type": "link-list",
       "blocks": {
-        "i1": { "type": "link", "settings": { "label": "1.1. Pregătirea pentru tencuire a caselor de cărămidă cu goluri și BCA", "url": "" } },
-        "i2": { "type": "link", "settings": { "label": "1.2. Tencuirea mecanizată", "url": "" } },
-        "i3": { "type": "link", "settings": { "label": "1.3. Tencuirea semi-mecanizată și manuală", "url": "" } },
-        "i4": { "type": "link", "settings": { "label": "1.4. Texturi din lut Caminota - la drept, pensulat, stucco", "url": "" } },
-        "i5": { "type": "link", "settings": { "label": "1.5. Texturi din lut Caminota - finisaj rapid din pompă", "url": "" } },
-        "i6": { "type": "link", "settings": { "label": "1.6. Texturi din lut Caminota - Aspect rustic fin - tehnică de aplicare Tencuială cu paie, Finisaj rustic, vopsea", "url": "" } },
-        "i7": { "type": "link", "settings": { "label": "1.7. Texturi din lut Caminota - Aspect puternic texturat - tehnică de aplicare Tencuială cu paie, Finisaj rustic, vopsea", "url": "" } },
-        "i8": { "type": "link", "settings": { "label": "1.8. Culoarea - Vopseaua naturală de var Biocalce Tinteggio de la Kerakoll și variante", "url": "" } }
+        "i1": {
+          "type": "link",
+          "settings": {
+            "label": "1.1. Pregătirea pentru tencuire a caselor de cărămidă cu goluri și BCA",
+            "url": "",
+            "bold": false
+          }
+        },
+        "i2": {
+          "type": "link",
+          "settings": {
+            "label": "1.2. Tencuirea mecanizată",
+            "url": "",
+            "bold": false
+          }
+        },
+        "i3": {
+          "type": "link",
+          "settings": {
+            "label": "1.3. Tencuirea semi-mecanizată și manuală",
+            "url": "",
+            "bold": false
+          }
+        },
+        "i4": {
+          "type": "link",
+          "settings": {
+            "label": "1.4. Texturi din lut Caminota - la drept, pensulat, stucco",
+            "url": "",
+            "bold": false
+          }
+        },
+        "i5": {
+          "type": "link",
+          "settings": {
+            "label": "1.5. Texturi din lut Caminota - finisaj rapid din pompă",
+            "url": "",
+            "bold": false
+          }
+        },
+        "i6": {
+          "type": "link",
+          "settings": {
+            "label": "1.6. Texturi din lut Caminota - Aspect rustic fin - tehnică de aplicare Tencuială cu paie, Finisaj rustic, vopsea",
+            "url": "",
+            "bold": false
+          }
+        },
+        "i7": {
+          "type": "link",
+          "settings": {
+            "label": "1.7. Texturi din lut Caminota - Aspect puternic texturat - tehnică de aplicare Tencuială cu paie, Finisaj rustic, vopsea",
+            "url": "",
+            "bold": false
+          }
+        },
+        "i8": {
+          "type": "link",
+          "settings": {
+            "label": "1.8. Culoarea - Vopseaua naturală de var Biocalce Tinteggio de la Kerakoll și variante",
+            "url": "",
+            "bold": false
+          }
+        }
       },
-      "block_order": ["i1", "i2", "i3", "i4", "i5", "i6", "i7", "i8"],
+      "block_order": [
+        "i1",
+        "i2",
+        "i3",
+        "i4",
+        "i5",
+        "i6",
+        "i7",
+        "i8"
+      ],
       "settings": {
         "heading": "Instrucțiuni pentru șantier",
         "intro": "<p>Unele articole sunt încă în lucru și nu apar cu link în lista de mai jos, dar toate informațiile sunt disponibile — ne poți contacta.</p>",
@@ -57,17 +162,268 @@
     "galerie": {
       "type": "photo-gallery",
       "blocks": {
-        "g1": { "type": "photo", "settings": { "image_asset": "caramida-gallery-01.webp" } },
-        "g2": { "type": "photo", "settings": { "image_asset": "caramida-gallery-02.webp" } },
-        "g3": { "type": "photo", "settings": { "image_asset": "caramida-gallery-03.webp" } },
-        "g4": { "type": "photo", "settings": { "image_asset": "caramida-gallery-04.webp" } },
-        "g5": { "type": "photo", "settings": { "image_asset": "caramida-gallery-05.webp" } },
-        "g6": { "type": "photo", "settings": { "image_asset": "caramida-gallery-06.webp" } },
-        "g7": { "type": "photo", "settings": { "image_asset": "caramida-gallery-07.webp" } },
-        "g8": { "type": "photo", "settings": { "image_asset": "caramida-gallery-08.webp" } },
-        "g9": { "type": "photo", "settings": { "image_asset": "caramida-gallery-09.webp" } }
+        "g1": {
+          "type": "photo",
+          "settings": {
+            "image_asset": "caramida-gallery-01.webp"
+          }
+        },
+        "g2": {
+          "type": "photo",
+          "settings": {
+            "image_asset": "caramida-gallery-02.webp"
+          }
+        },
+        "g3": {
+          "type": "photo",
+          "settings": {
+            "image_asset": "caramida-gallery-03.webp"
+          }
+        },
+        "g4": {
+          "type": "photo",
+          "settings": {
+            "image_asset": "caramida-gallery-04.webp"
+          }
+        },
+        "g5": {
+          "type": "photo",
+          "settings": {
+            "image_asset": "caramida-gallery-05.webp"
+          }
+        },
+        "g6": {
+          "type": "photo",
+          "settings": {
+            "image_asset": "caramida-gallery-06.webp"
+          }
+        },
+        "g7": {
+          "type": "photo",
+          "settings": {
+            "image_asset": "caramida-gallery-07.webp"
+          }
+        },
+        "g8": {
+          "type": "photo",
+          "settings": {
+            "image_asset": "caramida-gallery-08.webp"
+          }
+        },
+        "g9": {
+          "type": "photo",
+          "settings": {
+            "image_asset": "caramida-gallery-09.webp"
+          }
+        },
+        "g10": {
+          "type": "photo",
+          "settings": {
+            "image_asset": "caramida-gallery-10.webp"
+          }
+        },
+        "g11": {
+          "type": "photo",
+          "settings": {
+            "image_asset": "caramida-gallery-11.webp"
+          }
+        },
+        "g12": {
+          "type": "photo",
+          "settings": {
+            "image_asset": "caramida-gallery-12.webp"
+          }
+        },
+        "g13": {
+          "type": "photo",
+          "settings": {
+            "image_asset": "caramida-gallery-13.webp"
+          }
+        },
+        "g14": {
+          "type": "photo",
+          "settings": {
+            "image_asset": "caramida-gallery-14.webp"
+          }
+        },
+        "g15": {
+          "type": "photo",
+          "settings": {
+            "image_asset": "caramida-gallery-15.webp"
+          }
+        },
+        "g16": {
+          "type": "photo",
+          "settings": {
+            "image_asset": "caramida-gallery-16.webp"
+          }
+        },
+        "g17": {
+          "type": "photo",
+          "settings": {
+            "image_asset": "caramida-gallery-17.webp"
+          }
+        },
+        "g18": {
+          "type": "photo",
+          "settings": {
+            "image_asset": "caramida-gallery-18.webp"
+          }
+        },
+        "g19": {
+          "type": "photo",
+          "settings": {
+            "image_asset": "caramida-gallery-19.webp"
+          }
+        },
+        "g20": {
+          "type": "photo",
+          "settings": {
+            "image_asset": "caramida-gallery-20.webp"
+          }
+        },
+        "g21": {
+          "type": "photo",
+          "settings": {
+            "image_asset": "caramida-gallery-21.webp"
+          }
+        },
+        "g22": {
+          "type": "photo",
+          "settings": {
+            "image_asset": "caramida-gallery-22.webp"
+          }
+        },
+        "g23": {
+          "type": "photo",
+          "settings": {
+            "image_asset": "caramida-gallery-23.webp"
+          }
+        },
+        "g24": {
+          "type": "photo",
+          "settings": {
+            "image_asset": "caramida-gallery-24.webp"
+          }
+        },
+        "g25": {
+          "type": "photo",
+          "settings": {
+            "image_asset": "caramida-gallery-25.webp"
+          }
+        },
+        "g26": {
+          "type": "photo",
+          "settings": {
+            "image_asset": "caramida-gallery-26.webp"
+          }
+        },
+        "g27": {
+          "type": "photo",
+          "settings": {
+            "image_asset": "caramida-gallery-27.webp"
+          }
+        },
+        "g28": {
+          "type": "photo",
+          "settings": {
+            "image_asset": "caramida-gallery-28.webp"
+          }
+        },
+        "g29": {
+          "type": "photo",
+          "settings": {
+            "image_asset": "caramida-gallery-29.webp"
+          }
+        },
+        "g30": {
+          "type": "photo",
+          "settings": {
+            "image_asset": "caramida-gallery-30.webp"
+          }
+        },
+        "g31": {
+          "type": "photo",
+          "settings": {
+            "image_asset": "caramida-gallery-31.webp"
+          }
+        },
+        "g32": {
+          "type": "photo",
+          "settings": {
+            "image_asset": "caramida-gallery-32.webp"
+          }
+        },
+        "g33": {
+          "type": "photo",
+          "settings": {
+            "image_asset": "caramida-gallery-33.webp"
+          }
+        },
+        "g34": {
+          "type": "photo",
+          "settings": {
+            "image_asset": "caramida-gallery-34.webp"
+          }
+        },
+        "g35": {
+          "type": "photo",
+          "settings": {
+            "image_asset": "caramida-gallery-35.webp"
+          }
+        },
+        "g36": {
+          "type": "photo",
+          "settings": {
+            "image_asset": "caramida-gallery-36.webp"
+          }
+        },
+        "g0": {
+          "type": "photo",
+          "settings": {
+            "image_asset": "caramida-gallery-00.webp"
+          }
+        }
       },
-      "block_order": ["g1", "g2", "g3", "g4", "g5", "g6", "g7", "g8", "g9"],
+      "block_order": [
+        "g0",
+        "g1",
+        "g2",
+        "g3",
+        "g4",
+        "g5",
+        "g6",
+        "g7",
+        "g8",
+        "g9",
+        "g10",
+        "g11",
+        "g12",
+        "g13",
+        "g14",
+        "g15",
+        "g16",
+        "g17",
+        "g18",
+        "g19",
+        "g20",
+        "g21",
+        "g22",
+        "g23",
+        "g24",
+        "g25",
+        "g26",
+        "g27",
+        "g28",
+        "g29",
+        "g30",
+        "g31",
+        "g32",
+        "g33",
+        "g34",
+        "g35",
+        "g36"
+      ],
       "settings": {
         "heading": "Galerie foto: sistemul Caminota pe zidărie din cărămidă cu goluri și BCA",
         "gap": 10,
@@ -80,11 +436,30 @@
     "beneficii": {
       "type": "benefits-list",
       "blocks": {
-        "b1": { "type": "benefit", "settings": { "text": "Vaporii de apă sunt absorbiți, stocați temporar și eliberați gradual în întreaga grosime a peretelui, ceea ce duce la o <strong>reglare pasivă eficientă a umidității</strong> fără intervenții mecanice — un efect imposibil de obținut cu vopsele lavabile, gips sau tencuieli pe bază de ciment." } },
-        "b2": { "type": "benefit", "settings": { "text": "La pereții din <strong>cărămidă cu goluri nu este necesară amorsarea</strong> la aplicarea tencuielilor din argilă Caminota spre deosebire de majoritatea finisajelor pe bază de ciment, var-ciment sau ipsos. Suportul absoarbe apa uniform, iar aderența se realizează <strong>natural, prin ancorare mecanică în porii cărămizii</strong>, fără straturi intermediare." } },
-        "b3": { "type": "benefit", "settings": { "text": "În cazul zidăriei din <strong>cărămidă cu goluri</strong>, tencuielile din argilă <strong>Caminota</strong> sunt compatibile nu doar la nivel de aderență, ci la nivel de <strong>comportament fizic al materialelor</strong>. Structura poroasă a cărămizii și natura higroscopică a argilei lucrează împreună, astfel încât peretele nu mai este o succesiune de straturi independente, ci o <strong>masă unitară</strong> care reacționează coerent la variațiile de umiditate și temperatură din interior." } }
+        "b1": {
+          "type": "benefit",
+          "settings": {
+            "text": "Vaporii de apă sunt absorbiți, stocați temporar și eliberați gradual în întreaga grosime a peretelui, ceea ce duce la o <strong>reglare pasivă eficientă a umidității</strong> fără intervenții mecanice — un efect imposibil de obținut cu vopsele lavabile, gips sau tencuieli pe bază de ciment."
+          }
+        },
+        "b2": {
+          "type": "benefit",
+          "settings": {
+            "text": "La pereții din <strong>cărămidă cu goluri nu este necesară amorsarea</strong> la aplicarea tencuielilor din argilă Caminota spre deosebire de majoritatea finisajelor pe bază de ciment, var-ciment sau ipsos. Suportul absoarbe apa uniform, iar aderența se realizează <strong>natural, prin ancorare mecanică în porii cărămizii</strong>, fără straturi intermediare."
+          }
+        },
+        "b3": {
+          "type": "benefit",
+          "settings": {
+            "text": "În cazul zidăriei din <strong>cărămidă cu goluri</strong>, tencuielile din argilă <strong>Caminota</strong> sunt compatibile nu doar la nivel de aderență, ci la nivel de <strong>comportament fizic al materialelor</strong>. Structura poroasă a cărămizii și natura higroscopică a argilei lucrează împreună, astfel încât peretele nu mai este o succesiune de straturi independente, ci o <strong>masă unitară</strong> care reacționează coerent la variațiile de umiditate și temperatură din interior."
+          }
+        }
       },
-      "block_order": ["b1", "b2", "b3"],
+      "block_order": [
+        "b1",
+        "b2",
+        "b3"
+      ],
       "settings": {
         "heading": "Beneficiile specifice ale tencuielilor de argilă pe acest sistem constructiv",
         "lead": "",
@@ -112,6 +487,8 @@
         "button_link": "https://www.emag.ro/tencuieli-decorative-soclu/brand/caminota/c?ref=bc",
         "footnote": "* Pentru cantități mai mari livrăm direct din fabrică la șantier, contactați-ne!",
         "background_color": "#ffffff",
+        "heading_color": "#606452",
+        "text_color": "#606452",
         "button_bg": "#606452",
         "button_text": "#ffffff",
         "footnote_color": "#000000",
@@ -130,9 +507,20 @@
         "phone_number": "",
         "background_color": "#f4f2e4",
         "padding_top": 72,
-        "padding_bottom": 96
+        "padding_bottom": 96,
+        "button_position": "top",
+        "content_width": 1040,
+        "body_weight": "600"
       }
     }
   },
-  "order": ["intro", "resurse", "instructiuni", "galerie", "beneficii", "probeaza", "calc"]
+  "order": [
+    "intro",
+    "resurse",
+    "instructiuni",
+    "galerie",
+    "beneficii",
+    "probeaza",
+    "calc"
+  ]
 }

@@ -7,30 +7,35 @@
     padding-block: {{ s.padding_top }}px {{ s.padding_bottom }}px;
   }
   #shopify-section-{{ section.id }} .cmn-cta__inner {
-    max-width: 880px;
+    max-width: {{ s.content_width }}px;
     margin-inline: auto;
     padding-inline: 24px;
   }
+  #shopify-section-{{ section.id }} .cmn-cta__body { font-weight: {{ s.body_weight }}; }
 #shopify-section-{{ section.id }} .cmn-cta__phone { margin-top: 1.25rem; font-weight: 700; }
   #shopify-section-{{ section.id }} .cmn-cta__phone a { color: {{ settings.brand_gold }}; text-decoration: underline; }
 </style>
 
 <div class="cmn-cta">
+  {%- capture cta_button -%}
+    {%- if s.button_label != blank -%}
+      <div style="margin-block: 2rem; text-align: center;">
+        <a class="button" style="padding-inline: 2.5rem; padding-block: 0.9rem; display: block; width: fit-content; margin-inline: auto;" {% if s.button_link != blank %}href="{{ s.button_link }}"{% endif %}>{{ s.button_label }}</a>
+      </div>
+    {%- endif -%}
+  {%- endcapture -%}
   <div class="cmn-cta__inner">
     {%- if s.heading != blank -%}
       <h2 class="cmn-cta__heading" style="margin: 0 0 1.75rem; text-align: center; font-weight: 800;">{{ s.heading }}</h2>
     {%- endif -%}
+    {%- if s.button_position == 'top' -%}{{ cta_button }}{%- endif -%}
     {%- if s.body != blank -%}
       <div class="cmn-cta__body" style="text-align: left;">{{ s.body }}</div>
     {%- endif -%}
     {%- if s.phone_number != blank -%}
       <p class="cmn-cta__phone" style="text-align: left;">{{ s.phone_label }} <a href="tel:{{ s.phone_number | remove: ' ' }}">{{ s.phone_number }}</a></p>
     {%- endif -%}
-    {%- if s.button_label != blank -%}
-      <div style="margin-top: 2rem; text-align: center;">
-        <a class="button" style="padding-inline: 2.5rem; padding-block: 0.9rem; display: block; width: fit-content; margin-inline: auto;" {% if s.button_link != blank %}href="{{ s.button_link }}"{% endif %}>{{ s.button_label }}</a>
-      </div>
-    {%- endif -%}
+    {%- unless s.button_position == 'top' -%}{{ cta_button }}{%- endunless -%}
   </div>
 </div>
 
@@ -42,10 +47,13 @@
     { "type": "text", "id": "heading", "label": "Heading", "default": "Solicită un calcul personalizat" },
     { "type": "text", "id": "button_label", "label": "Button label", "default": "Cere ofertă" },
     { "type": "url", "id": "button_link", "label": "Button link" },
+    { "type": "select", "id": "button_position", "label": "Button position", "options": [{ "value": "top", "label": "Below heading" }, { "value": "bottom", "label": "Below text" }], "default": "bottom" },
     { "type": "richtext", "id": "body", "label": "Body", "default": "<p><strong>Ne uităm concret pe proiectul tău și îți recomandăm soluția potrivită, nu doar un calcul generic.</strong> Te ajutăm să faci lucrurile bine din prima: detalii corecte de execuție, compatibilitate între straturi și soluții verificate pe șantiere reale, ca să eviți greșeli costisitoare.</p>" },
     { "type": "text", "id": "phone_label", "label": "Phone label", "default": "Dacă vrei să discutăm direct, ne poți suna:" },
     { "type": "text", "id": "phone_number", "label": "Phone number", "default": "0745055558" },
     { "type": "header", "content": "Appearance" },
+    { "type": "range", "id": "content_width", "label": "Content max width", "min": 600, "max": 1200, "step": 20, "unit": "px", "default": 880 },
+    { "type": "select", "id": "body_weight", "label": "Body weight", "options": [{ "value": "400", "label": "Regular" }, { "value": "600", "label": "Semibold" }, { "value": "700", "label": "Bold" }], "default": "400" },
     { "type": "color", "id": "background_color", "label": "Background", "default": "#ffffff" },
     { "type": "range", "id": "padding_top", "label": "Padding top", "min": 0, "max": 160, "step": 4, "unit": "px", "default": 72 },
     { "type": "range", "id": "padding_bottom", "label": "Padding bottom", "min": 0, "max": 160, "step": 4, "unit": "px", "default": 112 }

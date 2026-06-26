@@ -1,61 +1,74 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
-    "main": {
-      "type": "main-page",
-      "blocks": {
-        "heading": {
-          "type": "text",
-          "name": "Title",
-          "settings": {
-            "text": "<h1>{{ closest.page.title }}</h1>",
-            "width": "100%",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "h2",
-            "font": "var(--font-primary--family)",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "page-content": {
-          "type": "page-content",
-          "settings": {},
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "heading",
-        "page-content"
-      ],
+    "intro": {
+      "type": "rich-text",
       "settings": {
-        "content_direction": "column",
-        "gap": 32,
-        "background_color": "{{ settings.color_palette.background }}",
-        "padding-block-start": 40,
-        "padding-block-end": 80
+        "heading": "Despre noi",
+        "heading_tag": "h1",
+        "youtube_id": "o74TE1Tyeho",
+        "video_width": 640,
+        "body": "<p>Interviu - povestea Caminota – viziune, pasiune și meșteșug, în dialog cu <a href=\"https://adelaparvu.com\">Adela Pârvu</a>.</p>",
+        "alignment": "center",
+        "max_width": 820,
+        "heading_color": "#606452",
+        "background_color": "#ffffff",
+        "padding_top": 64,
+        "padding_bottom": 40
+      }
+    },
+    "cum": {
+      "type": "rich-text",
+      "settings": {
+        "heading": "Cum am început",
+        "heading_tag": "h2",
+        "body": "<p>Ne-am asumat misiunea de a contribui activ la tranziția către o societate mai sustenabilă, unde sustenabilitatea înseamnă folosirea responsabilă a resurselor naturale, fără a le epuiza sau a afecta echilibrul mediului pentru generațiile viitoare.</p><p>Cum facem asta? Punând la dispoziția construcțiilor materiale naturale, prietenoase atât cu mediul, cât și cu bugetul.</p><p>Între 2013 și 2016, am desfășurat un amplu proces de cercetare-dezvoltare în colaborare cu Institutul Național URBAN-INCERC, care a condus la prima noastră tehnologie de „beton de pământ” – un sistem inovator de pereți autoportanți realizați din pământ prelucrat și turnat în cofraje, similar betonului. În perioada 2016-2020, sub <a href=\"https://www.facebook.com/ecobordei\">brandul Ecobordei, am construit și vândut opt locuințe experimentale</a>, testând și perfecționând soluții alternative pentru construcții durabile.</p>",
+        "float_image_asset": "despre-vlad-andrei.webp",
+        "float_width": 520,
+        "float_caption": "Vlad și Andrei, co-fondatori Caminota",
+        "alignment": "justify",
+        "max_width": 1160,
+        "heading_color": "#606452",
+        "background_color": "#ffffff",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "tencuiala": {
+      "type": "rich-text",
+      "settings": {
+        "heading": "O tencuială pe cinste",
+        "heading_tag": "h2",
+        "body": "<p>Din 2019, ne-am concentrat pe dezvoltarea și comercializarea materialelor naturale pentru construcții. Începând cu o tencuială tradițională de pe o casă de chirpici din județul Timiș, care a rezistat 70 de ani, am realizat sute de rețete și mii de teste de laborator și pe șantiere. Așa a luat naștere <a href=\"/pages/case-moderne\">sistemul Caminota:</a></p><ul><li><a href=\"/pages/caminota-tencuiala-cu-paie\"><strong>Caminota Tencuială cu Paie</strong></a></li><li><a href=\"/pages/caminota-finisaj-rustic\"><strong>Caminota Finisaj Rustic</strong></a></li><li><a href=\"/pages/vopsea-de-var\"><strong>Vopseaua de var</strong></a></li></ul><p>Materialele Caminota sunt certificate conform normativului german pentru mortare de argilă DIN 18947 și beneficiază de Agrement Tehnic. Din 2021, le producem în Timișoara și le livrăm în toată țara, fiind folosite atât în case noi, cât și în renovări de clădiri tradiționale. Exportăm în Bulgaria, Grecia, Ungaria și Republica Moldova, iar în vara lui 2024 am atins pragul de 1.000 de clienți în România (B2C), excluzând proiectele realizate prin partenerii noștri B2B.</p>",
+        "float_image_asset": "despre-saci.webp",
+        "float_position": "left",
+        "float_top": true,
+        "float_width": 680,
+        "alignment": "justify",
+        "max_width": 1320,
+        "heading_color": "#606452",
+        "background_color": "#ffffff",
+        "padding_top": 80,
+        "padding_bottom": 48
+      }
+    },
+    "ultimii": {
+      "type": "rich-text",
+      "settings": {
+        "heading": "Ultimii ani",
+        "heading_tag": "h2",
+        "body": "<p>În 2023, alături de Clusterul TEC și mai mulți parteneri de cercetare, am început un nou proiect de inovare: <strong>iREBBELS – innovative Raw Earth Bricks, Blocks and Panels</strong>. Obiectivul nostru este să dezvoltăm noi materiale naturale, ideale pentru aplicații specifice, în următorii trei ani.</p><p>Din 2024, în parteneriat cu comunitatea <a href=\"https://www.facebook.com/asociatiacolibaverde\">Coliba Verde</a> și sub îndrumarea lui Janos Nemeth, am început colaborarea cu SSH System kft. din Ungaria pentru a introduce în România termoizolația din <a href=\"https://www.placidepaie.ro\">Plăci de paie</a> – o alternativă 100% naturală, oferită cu un sistem complet de prinderi, tencuială de var și accesorii specializate pentru etanșare.</p>",
+        "float_image_asset": "despre-ultimii.webp",
+        "float_position": "right",
+        "float_width": 380,
+        "float_gap": 84,
+        "alignment": "justify",
+        "max_width": 960,
+        "heading_color": "#606452",
+        "background_color": "#ffffff",
+        "padding_top": 48,
+        "padding_bottom": 72
       }
     }
   },
-  "order": [
-    "main"
-  ]
+  "order": ["intro", "cum", "tencuiala", "ultimii"]
 }

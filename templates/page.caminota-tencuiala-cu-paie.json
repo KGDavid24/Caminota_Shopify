@@ -1,0 +1,48 @@
+{
+  "sections": {
+    "detail": {
+      "type": "product-detail",
+      "settings": {
+        "heading": "Caminota Tencuială cu Paie",
+        "heading_tag": "h1",
+        "body": "<p>Tencuiala Caminota se așterne pe ziduri pentru a înfrumuseța și proteja. Pe de o parte, obține suprafața netedă, cu aspect plăcut, iar pe de cealaltă, oferă suport straturilor de finisaj. În condiții ideale, adică dacă zidăria a fost bine făcută și dacă se folosesc profile de pontaj, estimăm că va fi nevoie de aplicarea unui singur strat de Caminota cu o încărcare medie de 1,5 centimetri. După preferințe, poate fi aplicată manual sau mecanizat.</p>",
+        "composition": "argilă, nisip, fibre lignocelulozice",
+        "benefits": "făcută numai și numai din materiale naturale, reglează umiditatea aerului, permite trecerea vaporilor.",
+        "download_label": "Descarcă fișa tehnică și instrucțiunile",
+        "background_color": "#ffffff",
+        "heading_color": "#606452",
+        "text_color": "#606452",
+        "link_color": "#b1a45a",
+        "content_width": 1280,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "gallery": {
+      "type": "photo-gallery",
+      "settings": {
+        "background_color": "#f4f2e4",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "proba": {
+      "type": "page-sample-cta",
+      "settings": {
+        "heading": "Probează Caminota",
+        "body": "<p>Înainte de a lua o decizie, e normal să vrei să vezi și să atingi materialul. Comandă de pe eMAG un kit de încercare, iar după o zi-două poți proba produsele.</p>",
+        "button_label": "Comandă o mostră Caminota",
+        "footnote": "*Pentru cantități mai mari livrăm direct din fabrică la șantier, contactați-ne!",
+        "background_color": "#ffffff",
+        "heading_color": "#606452",
+        "text_color": "#606452",
+        "button_bg": "#606452",
+        "button_text": "#ffffff",
+        "footnote_color": "#b1a45a",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    }
+  },
+  "order": ["detail", "gallery", "proba"]
+}

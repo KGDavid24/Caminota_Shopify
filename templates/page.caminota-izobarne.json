@@ -1,0 +1,91 @@
+{
+  "sections": {
+    "detail": {
+      "type": "product-detail",
+      "settings": {
+        "heading": "Caminota IzoBârne",
+        "heading_tag": "h1",
+        "body": "<p>Caminota IzoBârne: Mortar predozat pentru izolarea golurilor dintre bârnele de lemn, 100% natural, etanșant la vânt și respirabil. Materialul a fost creat special pentru casele și surile tradiționale de lemn, cu densitate și caracteristici termice similare cu lemnul de esență tare, astfel încât profilul termic al unui perete de bârne vechi să fie continuu - adică să aibă aceeași conductivitate termică de sus până jos, indiferent cât de strâmbe sunt bârnele. După uscare, materialul NU crapă și va avea rezistențe mecanice destul de mari pentru o izolație, dar mai mici decât un mortar.</p>",
+        "composition": "argilă, nisip cuarțos fin, fibre lignocelulozice din paie de diverse dimensiuni și consistențe.",
+        "benefits": "material natural și compatibil cu lemnul, durabil, termoizolant, etanș la vânt, complet difuziv, ușor de aplicat.",
+        "extra_line": "<strong>Ambalaj:</strong> sac rafie 15 kg. Momentan sacii sunt albi și sunt marcați cu inscripția \"IzoBârne\"",
+        "blog_link_label": "Vezi articolul complet cu beneficii, instrucțiuni și galerie foto cu peste 100 de imagini.",
+        "background_color": "#ffffff",
+        "heading_color": "#606452",
+        "text_color": "#606452",
+        "link_color": "#b1a45a",
+        "content_width": 1280,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "amestecare": {
+      "type": "rich-text",
+      "settings": {
+        "heading": "Amestecarea cu apă",
+        "heading_tag": "h2",
+        "body": "<p><strong>⚠️ IMPORTANT:</strong> Pentru amestecarea cu apă se va goli <strong>TOT</strong> conținutul sacului într-un recipient mai mare de 30 de litri!! Deci nu în găleată obișnuită de șantier, pentru că va da pe afară.</p><p>Amestecarea se va face doar cu malaxor, nu manual sau cu betonieră.</p><p>Este mai simplu de aplicat înainte de montarea șipcilor oblice (cercuială).</p><ol><li><strong>Se amestecă întregul conținut al sacului cu 7-9 litri de apă.</strong> Cantitatea de apă depinde de mai mulți factori. La primul sac începeți cu o cantitate mică de apă și verificați lipirea - vezi pasul 3.</li><li><strong>Amestecarea:</strong> Se amestecă cu malaxor de mână timp de 5 minute, se lasă la hidratat 10-15 minute, apoi se amestecă încă 5 minute.</li><li><strong>Verificăm lipirea:</strong> Se ia o cantitate de material amestecat în mână și se aruncă pe perete sau pe găleată. Dacă nu lipește suficient se mai adaugă apă. Dacă e prea multă apă și curge, se mai lasă să stea 5 minute.</li></ol><p>✅ Odată ce am determinat cantitatea de apă necesară, la următorii saci amestecăm direct cu această cantitate și nu mai trebuie să verificăm lipirea.</p>",
+        "alignment": "left",
+        "max_width": 860,
+        "heading_color": "#606452",
+        "background_color": "#f4f2e4",
+        "padding_top": 64,
+        "padding_bottom": 48
+      }
+    },
+    "instructiuni": {
+      "type": "rich-text",
+      "settings": {
+        "heading": "Instrucțiuni de aplicare",
+        "heading_tag": "h2",
+        "body": "<ol><li><strong>Curățarea golurilor:</strong> se decopertează peretele (se curăță tencuiala veche); îndepărtează resturile vechi de câlți, ciment, spumă, etc. dintre lemne; curăță praful, lemnul trebuie să fie vizibil.</li><li><strong>Umezirea moderată a lemnului:</strong> Ajută la aderență și reduce evaporarea prea rapidă. Se poate face cu un pulverizator.</li><li><strong>Umplerea golurilor:</strong> Materialul se aruncă și se îndeasă între bârne. Important: materialul trebuie <strong>împins</strong> în gol, nu doar lipit la exterior.</li><li><strong>Modelarea suprafeței:</strong> Dacă peretele va fi tencuit (se acoperă lemnele) → se lasă ușor denivelat, pentru aderență. Dacă bârnele rămân aparente → se netezește ca un rost.</li><li><strong>Uscare și finisare:</strong> Se va proteja de ploaie și se va acorda timp suficient pentru uscare (minim 5 zile). Lăsați materialul să se usuce complet, până își schimbă culoarea. Dacă nu rămân aparente bârnele, peretele se va tencui cu <a href=\"/pages/caminota-tencuiala-cu-paie\">Caminota Tencuială cu Paie</a>. Dacă rămân aparente bârnele, pentru durabilitate crescută, se poate impermeabiliza cu ulei de in pur, cu lazura cu care se tratează și lemnul, sau se poate zugrăvi materialul cu <a href=\"/pages/vopsea-de-var\">vopsea de var</a>.</li></ol>",
+        "alignment": "left",
+        "max_width": 860,
+        "heading_color": "#606452",
+        "background_color": "#ffffff",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "tehnic": {
+      "type": "rich-text",
+      "settings": {
+        "heading": "Caracteristici tehnice",
+        "heading_tag": "h2",
+        "body": "<ul><li><strong>Granulația minerală:</strong> max. 0,5 mm.</li><li><strong>Dimensiune fibre:</strong> 0,1 - 12 cm, max.18cm.</li><li><strong>Densitate:</strong> 900 kg/mc</li><li><strong>Rezistență la compresiune:</strong> &gt; 1 MPa</li><li><strong>Conductivitate termică (λ):</strong> 0,18 - 0,20 W/(m⋅K)</li><li><strong>Rezistență la difuzia de vapori (μ):</strong> 3-5</li></ul>",
+        "alignment": "left",
+        "max_width": 860,
+        "heading_color": "#606452",
+        "background_color": "#f4f2e4",
+        "padding_top": 48,
+        "padding_bottom": 64
+      }
+    },
+    "gallery": {
+      "type": "photo-gallery",
+      "settings": {
+        "background_color": "#ffffff",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "proba": {
+      "type": "page-sample-cta",
+      "settings": {
+        "heading": "Probează Caminota",
+        "body": "<p>Înainte de a lua o decizie, e normal să vrei să vezi și să atingi materialul. Comandă de pe eMAG un kit de încercare, iar după o zi-două poți proba produsele.</p>",
+        "button_label": "Comandă o mostră Caminota",
+        "footnote": "*Pentru cantități mai mari livrăm direct din fabrică la șantier, contactați-ne!",
+        "background_color": "#f4f2e4",
+        "heading_color": "#606452",
+        "text_color": "#606452",
+        "button_bg": "#606452",
+        "button_text": "#ffffff",
+        "footnote_color": "#b1a45a",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    }
+  },
+  "order": ["detail", "amestecare", "instructiuni", "tehnic", "gallery", "proba"]
+}

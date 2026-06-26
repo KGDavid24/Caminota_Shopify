@@ -1,0 +1,144 @@
+{%- liquid
+  assign s = section.settings
+-%}
+<style>
+  #shopify-section-{{ section.id }} .cpd {
+    background-color: {{ s.background_color }};
+    padding-block: {{ s.padding_top }}px {{ s.padding_bottom }}px;
+  }
+  #shopify-section-{{ section.id }} .cpd__wrap {
+    max-width: {{ s.content_width }}px;
+    margin-inline: auto;
+    padding-inline: 24px;
+  }
+  #shopify-section-{{ section.id }} .cpd__heading {
+    text-align: center;
+    margin: 0 0 {% if s.subtitle != blank %}0.25rem{% else %}2.5rem{% endif %};
+    color: {{ s.heading_color }};
+  }
+  #shopify-section-{{ section.id }} .cpd__subtitle {
+    text-align: center;
+    margin: 0 0 2.5rem;
+    color: {{ s.heading_color }};
+    font-size: 1.4rem;
+    font-family: var(--font-body--family);
+    font-weight: 400;
+  }
+  #shopify-section-{{ section.id }} .cpd__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: center;
+  }
+  {% if s.image_position == 'right' %}
+  #shopify-section-{{ section.id }} .cpd__media { order: 2; }
+  {% endif %}
+  #shopify-section-{{ section.id }} .cpd__media { text-align: center; }
+  #shopify-section-{{ section.id }} .cpd__media img {
+    max-width: {{ s.image_max_width }}px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-inline: auto;
+  }
+  #shopify-section-{{ section.id }} .cpd__body { font-size: 1.2rem; line-height: 1.7; color: {{ s.text_color }}; }
+  #shopify-section-{{ section.id }} .cpd__body p { margin: 0 0 1rem; }
+  #shopify-section-{{ section.id }} .cpd__spec { margin-top: 1.25rem; line-height: 1.6; font-size: 1.1rem; color: {{ s.text_color }}; }
+  #shopify-section-{{ section.id }} .cpd__spec strong { color: {{ s.heading_color }}; }
+  #shopify-section-{{ section.id }} .cpd__downloads { margin-top: 1.75rem; display: flex; flex-direction: column; align-items: flex-start; gap: 0.85rem; }
+  #shopify-section-{{ section.id }} .cpd__downloads a { color: {{ s.link_color }}; text-decoration: underline; font-weight: 600; font-size: 1.05rem; }
+  #shopify-section-{{ section.id }} .cpd__blog-link { margin-top: 1.5rem; font-size: 1.05rem; }
+  #shopify-section-{{ section.id }} .cpd__blog-link a { color: {{ s.link_color }}; text-decoration: underline; font-weight: 600; }
+  @media screen and (max-width: 749px) {
+    #shopify-section-{{ section.id }} .cpd__row { grid-template-columns: 1fr; gap: 32px; }
+    #shopify-section-{{ section.id }} .cpd__media { order: -1; }
+  }
+</style>
+
+<div class="cpd">
+  <div class="cpd__wrap">
+    {%- if s.heading != blank -%}
+      <{{ s.heading_tag }} class="cpd__heading">{{ s.heading }}</{{ s.heading_tag }}>
+    {%- endif -%}
+    {%- if s.subtitle != blank -%}
+      <p class="cpd__subtitle">{{ s.subtitle }}</p>
+    {%- endif -%}
+    <div class="cpd__row">
+      <div class="cpd__media">
+        {%- if s.image != blank -%}
+          {{ s.image | image_url: width: 1200 | image_tag: loading: 'lazy', sizes: '(min-width: 750px) 50vw, 100vw', widths: '400, 700, 1200' }}
+        {%- elsif s.image_asset != blank -%}
+          <img src="{{ s.image_asset | asset_url }}" loading="lazy" alt="{{ s.heading | escape }}">
+        {%- endif -%}
+      </div>
+      <div class="cpd__content">
+        {%- if s.body != blank -%}
+          <div class="cpd__body">{{ s.body }}</div>
+        {%- endif -%}
+        {%- if s.composition != blank -%}
+          <p class="cpd__spec"><strong>Compoziție:</strong> {{ s.composition }}</p>
+        {%- endif -%}
+        {%- if s.benefits != blank -%}
+          <p class="cpd__spec"><strong>Beneficii:</strong> {{ s.benefits }}</p>
+        {%- endif -%}
+        {%- if s.extra_line != blank -%}
+          <p class="cpd__spec">{{ s.extra_line }}</p>
+        {%- endif -%}
+        {%- if s.download_label != blank or s.download2_label != blank -%}
+          <div class="cpd__downloads">
+            {%- if s.download_label != blank -%}
+              <a {% if s.download_link != blank %}href="{{ s.download_link }}"{% endif %} target="_blank" rel="noopener">{{ s.download_label }}</a>
+            {%- endif -%}
+            {%- if s.download2_label != blank -%}
+              <a {% if s.download2_link != blank %}href="{{ s.download2_link }}"{% endif %} target="_blank" rel="noopener">{{ s.download2_label }}</a>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+        {%- if s.blog_link_label != blank -%}
+          <p class="cpd__blog-link">
+            <a {% if s.blog_link_url != blank %}href="{{ s.blog_link_url }}"{% endif %}>{{ s.blog_link_label }}</a>
+          </p>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Product detail",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Product name" },
+    { "type": "select", "id": "heading_tag", "label": "Heading tag", "options": [{ "value": "h1", "label": "H1" }, { "value": "h2", "label": "H2" }, { "value": "h3", "label": "H3" }], "default": "h1" },
+    { "type": "text", "id": "subtitle", "label": "Subtitle (optional)" },
+    { "type": "header", "content": "Image" },
+    { "type": "image_picker", "id": "image", "label": "Image" },
+    { "type": "text", "id": "image_asset", "label": "Image asset filename (fallback)" },
+    { "type": "range", "id": "image_max_width", "label": "Image max width", "min": 200, "max": 700, "step": 20, "unit": "px", "default": 380 },
+    { "type": "select", "id": "image_position", "label": "Image position", "options": [{ "value": "left", "label": "Left" }, { "value": "right", "label": "Right" }], "default": "left" },
+    { "type": "header", "content": "Content" },
+    { "type": "richtext", "id": "body", "label": "Description" },
+    { "type": "text", "id": "composition", "label": "Composition" },
+    { "type": "text", "id": "benefits", "label": "Benefits" },
+    { "type": "text", "id": "extra_line", "label": "Extra line (dimensions / packaging, HTML ok)" },
+    { "type": "header", "content": "Downloads" },
+    { "type": "text", "id": "download_label", "label": "Download 1 label" },
+    { "type": "url", "id": "download_link", "label": "Download 1 link" },
+    { "type": "text", "id": "download2_label", "label": "Download 2 label" },
+    { "type": "url", "id": "download2_link", "label": "Download 2 link" },
+    { "type": "header", "content": "Blog article link" },
+    { "type": "text", "id": "blog_link_label", "label": "Blog link label" },
+    { "type": "url", "id": "blog_link_url", "label": "Blog link URL" },
+    { "type": "header", "content": "Appearance" },
+    { "type": "color", "id": "background_color", "label": "Background", "default": "#ffffff" },
+    { "type": "color", "id": "heading_color", "label": "Heading color", "default": "#606452" },
+    { "type": "color", "id": "text_color", "label": "Body text color", "default": "#606452" },
+    { "type": "color", "id": "link_color", "label": "Link / download color", "default": "#b1a45a" },
+    { "type": "range", "id": "content_width", "label": "Max content width", "min": 800, "max": 1440, "step": 20, "unit": "px", "default": 1280 },
+    { "type": "range", "id": "padding_top", "label": "Padding top", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 72 },
+    { "type": "range", "id": "padding_bottom", "label": "Padding bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 72 }
+  ],
+  "presets": [{ "name": "Product detail" }]
+}
+{% endschema %}

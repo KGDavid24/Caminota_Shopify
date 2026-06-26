@@ -1,145 +1,78 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */{
+{
   "sections": {
-    "main": {
-      "type": "main-page",
+    "contact": {
+      "type": "contact-page",
       "blocks": {
-        "title": {
-          "type": "text",
-          "name": "t:names.title",
+        "bihor": {
+          "type": "location",
           "settings": {
-            "text": "<h1>{{ closest.page.title }}</h1>",
-            "width": "100%",
-            "max_width": "normal",
-            "alignment": "center",
-            "type_preset": "h2",
-            "font": "var(--font-primary--family)",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
+            "column": "right",
+            "region": "Bihor",
+            "company": "ROUTE LOGISTIC SRL",
+            "company_url": "",
+            "address": "Nr. 312, <strong>Borș</strong>",
+            "phone": "0721 284 285"
+          }
         },
-        "content": {
-          "type": "text",
-          "name": "t:names.content",
+        "covasna": {
+          "type": "location",
           "settings": {
-            "text": "{{ closest.page.content }}",
-            "width": "100%",
-            "max_width": "narrow",
-            "alignment": "center",
-            "type_preset": "rte",
-            "font": "var(--font-primary--family)",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
+            "column": "right",
+            "region": "Covasna",
+            "company": "EUROCONSTRUCT SRL",
+            "company_url": "",
+            "address": "str. Bem Jozsef 18A (DN11), <strong>Târgu Secuiesc</strong>",
+            "phone": "0788 323 012"
+          }
+        },
+        "tulcea": {
+          "type": "location",
+          "settings": {
+            "column": "right",
+            "region": "Tulcea",
+            "company": "MOISACHE-ELANIA SRL",
+            "company_url": "",
+            "address": "str. Principală nr. 125, <strong>Slava Rusă</strong>",
+            "phone": "0766 484 971"
+          }
+        },
+        "moldova": {
+          "type": "location",
+          "settings": {
+            "column": "left",
+            "region": "Republica Moldova",
+            "company": "EVECO Construction",
+            "company_url": "",
+            "address": "șos. Hincesti, km 8, <strong>Ialoveni</strong>",
+            "phone": "+373 782 08 008"
+          }
         }
       },
-      "block_order": [
-        "title",
-        "content"
-      ],
+      "block_order": ["bihor", "covasna", "tulcea", "moldova"],
       "settings": {
-        "content_direction": "column",
-        "gap": 32,
-        "background_color": "{{ settings.color_palette.background }}",
-        "padding-block-start": 40,
-        "padding-block-end": 0
-      }
-    },
-    "form": {
-      "type": "section",
-      "blocks": {
-        "contact_form_UwiCkQ": {
-          "type": "contact-form",
-          "settings": {
-            "width": "custom",
-            "custom_width": 50,
-            "width_mobile": "custom",
-            "custom_width_mobile": 100,
-            "input_style": "default",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "submit-button": {
-              "type": "contact-form-submit-button",
-              "static": true,
-              "settings": {
-                "label": "Submit",
-                "style_class": "button",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": []
-        }
-      },
-      "block_order": [
-        "contact_form_UwiCkQ"
-      ],
-      "name": "t:names.contact_form",
-      "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 32,
-        "section_width": "page-width",
-        "section_height_custom": 50,
-        "background_media": "none",
-        "background_color": "{{ settings.color_palette.background }}",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 32,
-        "padding-block-end": 84
+        "heading": "Contactează-ne",
+        "phone1_label": "Consultanță materiale:",
+        "phone1": "0745 055 558",
+        "phone2_label": "Comenzi / livrări:",
+        "phone2": "0748 204 324",
+        "email": "contact@caminota.ro",
+        "info_card_color": "#c9bd7e",
+        "stoc_heading": "↓ Stoc materiale ↓",
+        "stoc_intro": "<p>Vă rugăm să <strong>sunați în prealabil</strong> la numerele afișate pentru a confirma stocurile și programul de lucru.</p>",
+        "loc_card_color": "#f4f2e4",
+        "note": "<p>For <strong>Bulgaria</strong> and <strong>Greece</strong> inquiries please contact <strong>SEVAREX Ltd.</strong></p><p><a href=\"mailto:info@sevarex.com\">info@sevarex.com</a> | +49 176 44472284</p>",
+        "form_heading": "Formular de contact",
+        "label_name": "Nume și prenume",
+        "label_email": "Email",
+        "label_message": "Mesaj",
+        "gdpr_text": "Sunt de acord cu politica de confidențialitate.",
+        "submit_label": "Trimite mesaj",
+        "success_text": "Mulțumim! Mesajul tău a fost trimis.",
+        "background_color": "#ffffff",
+        "padding_top": 56,
+        "padding_bottom": 80
       }
     }
   },
-  "order": [
-    "main",
-    "form"
-  ]
+  "order": ["contact"]
 }

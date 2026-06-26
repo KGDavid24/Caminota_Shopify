@@ -1,0 +1,21 @@
+{%- comment -%} Renders one stock-location card for the contact page. {%- endcomment -%}
+<div class="cmn-contact__card cmn-contact__card--loc">
+  {%- if block.settings.region != blank -%}
+    <p class="cmn-contact__region">{{ block.settings.region }}</p>
+  {%- endif -%}
+  {%- if block.settings.company != blank -%}
+    <p class="cmn-contact__company">
+      {%- if block.settings.company_url != blank -%}
+        <a href="{{ block.settings.company_url }}">{{ block.settings.company }}</a>
+      {%- else -%}
+        {{ block.settings.company }}
+      {%- endif -%}
+    </p>
+  {%- endif -%}
+  {%- if block.settings.address != blank -%}
+    <p class="cmn-contact__address">{{ block.settings.address }}</p>
+  {%- endif -%}
+  {%- if block.settings.phone != blank -%}
+    <p class="cmn-contact__phone"><a href="tel:{{ block.settings.phone | remove: ' ' }}">{{ block.settings.phone }}</a></p>
+  {%- endif -%}
+</div>
