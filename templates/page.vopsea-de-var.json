@@ -5,7 +5,10 @@
       "settings": {
         "heading": "Vopseaua BioCalce",
         "heading_tag": "h1",
+        "image_asset": "vopsea-hero.webp",
+        "image_max_width": 520,
         "body": "<p>Kerakoll Biocalce® Tinteggio, pastă de var naturală, este o zugrăveală murală naturală eco compatibilă de hume colorate naturale și pastă selecționată din var pur. Este ideală în Green Building și în Restaurarea Istorică.</p>",
+        "body_alignment": "justify",
         "composition": "var, ulei de pin",
         "benefits": "sprijină sănătatea mediului interior, un bacteriostatic și fungistatic natural, permite trecerea vaporilor, nu permite trecerea apei lichide",
         "download_label": "Descarcă fișa tehnică",
@@ -15,14 +18,25 @@
         "text_color": "#606452",
         "link_color": "#b1a45a",
         "content_width": 1280,
-        "padding_top": 72,
-        "padding_bottom": 72
+        "padding_top": 96,
+        "padding_bottom": 200
       }
     },
     "gallery": {
-      "type": "photo-gallery",
+      "type": "photo-bento",
+      "blocks": {
+        "g0": { "type": "photo", "settings": { "image_asset": "vopsea-gallery-00.webp" } },
+        "g1": { "type": "photo", "settings": { "image_asset": "vopsea-gallery-01.webp" } },
+        "g2": { "type": "photo", "settings": { "image_asset": "vopsea-gallery-02.webp" } },
+        "g3": { "type": "photo", "settings": { "image_asset": "vopsea-gallery-03.webp" } },
+        "g4": { "type": "photo", "settings": { "image_asset": "vopsea-gallery-04.webp" } }
+      },
+      "block_order": ["g0", "g1", "g2", "g3", "g4"],
       "settings": {
-        "background_color": "#f4f2e4",
+        "layout": "uniform",
+        "columns": 5,
+        "uniform_ratio": "3 / 2",
+        "background_color": "#ffffff",
         "padding_top": 72,
         "padding_bottom": 72
       }
@@ -30,10 +44,12 @@
     "proba": {
       "type": "page-sample-cta",
       "settings": {
+        "image_asset": "mostra-caminota-emag.webp",
         "heading": "Probează Caminota",
         "body": "<p>Înainte de a lua o decizie, e normal să vrei să vezi și să atingi materialul. Comandă de pe eMAG un kit de încercare, iar după o zi-două poți proba produsele.</p>",
         "button_label": "Comandă o mostră de Caminota",
         "footnote": "*Atenție: pentru cantități mai mari livrăm direct din fabrică la șantier, contactați-ne!",
+        "body_alignment": "justify",
         "background_color": "#ffffff",
         "heading_color": "#606452",
         "text_color": "#606452",
@@ -43,7 +59,18 @@
         "padding_top": 72,
         "padding_bottom": 72
       }
+    },
+    "reviews": {
+      "type": "reviews-google",
+      "settings": {
+        "embed_id": "25510686",
+        "background_color": "#f4f2e4",
+        "heading_color": "#606452",
+        "max_width": 1320,
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
     }
   },
-  "order": ["detail", "gallery", "proba"]
+  "order": ["detail", "gallery", "proba", "reviews"]
 }

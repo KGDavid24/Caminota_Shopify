@@ -1,0 +1,91 @@
+{%- liquid
+  assign s = section.settings
+-%}
+<style>
+  #shopify-section-{{ section.id }} .cmn-article {
+    background-color: {{ s.background_color }};
+    padding-block: {{ s.padding_top }}px {{ s.padding_bottom }}px;
+  }
+  #shopify-section-{{ section.id }} .cmn-article__body {
+    max-width: {{ s.max_width }}px;
+    margin-inline: auto;
+    padding-inline: 24px;
+    color: {{ s.text_color }};
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+  #shopify-section-{{ section.id }} .cmn-article__body h2 {
+    font-family: var(--font-heading--family);
+    color: {{ s.heading_color }};
+    margin: 0 0 1.25rem;
+  }
+  #shopify-section-{{ section.id }} .cmn-article__body h3 {
+    font-family: var(--font-heading--family);
+    color: {{ s.heading_color }};
+    font-size: 1.6rem;
+    line-height: 1.2;
+    margin: 2rem 0 1rem;
+  }
+  #shopify-section-{{ section.id }} .cmn-article__body p { margin: 0 0 1rem; text-align: {{ s.body_alignment }}; }
+  #shopify-section-{{ section.id }} .cmn-article__body a { color: {{ s.link_color }}; text-decoration: underline; font-weight: 600; }
+  #shopify-section-{{ section.id }} .cmn-article__body ul,
+  #shopify-section-{{ section.id }} .cmn-article__body ol { margin: 0 0 1rem; padding-left: 1.5rem; }
+  #shopify-section-{{ section.id }} .cmn-article__body li { margin-bottom: 0.5rem; }
+
+  /* Accordion (native <details>/<summary>) */
+  #shopify-section-{{ section.id }} .cmn-article__body details {
+    border-bottom: 1px solid {{ s.accordion_border }};
+    padding: 0.9rem 0;
+  }
+  #shopify-section-{{ section.id }} .cmn-article__body details:first-of-type { border-top: 1px solid {{ s.accordion_border }}; }
+  #shopify-section-{{ section.id }} .cmn-article__body summary {
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    color: {{ s.text_color }};
+    font-weight: 400;
+  }
+  #shopify-section-{{ section.id }} .cmn-article__body summary::-webkit-details-marker { display: none; }
+  #shopify-section-{{ section.id }} .cmn-article__body summary::before {
+    content: '';
+    flex: 0 0 auto;
+    width: 0.55rem;
+    height: 0.55rem;
+    margin-top: 0.45rem;
+    border-right: 2px solid {{ s.link_color }};
+    border-bottom: 2px solid {{ s.link_color }};
+    transform: rotate(-45deg);
+    transition: transform 0.2s ease;
+  }
+  #shopify-section-{{ section.id }} .cmn-article__body details[open] summary::before { transform: rotate(45deg); }
+  #shopify-section-{{ section.id }} .cmn-article__body details > *:not(summary) { margin: 0.85rem 0 0; }
+</style>
+
+<div class="cmn-article">
+  <div class="cmn-article__body">
+    {{ s.body }}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Article",
+  "tag": "section",
+  "settings": [
+    { "type": "html", "id": "body", "label": "Body (HTML: h2/h3, p, ul/ol, a, details/summary)" },
+    { "type": "select", "id": "body_alignment", "label": "Paragraph alignment", "options": [{ "value": "left", "label": "Left" }, { "value": "justify", "label": "Justify" }], "default": "justify" },
+    { "type": "range", "id": "max_width", "label": "Max width", "min": 700, "max": 1400, "step": 20, "unit": "px", "default": 1000 },
+    { "type": "header", "content": "Appearance" },
+    { "type": "color", "id": "background_color", "label": "Background", "default": "#ffffff" },
+    { "type": "color", "id": "heading_color", "label": "Heading color", "default": "#606452" },
+    { "type": "color", "id": "text_color", "label": "Body text color", "default": "#606452" },
+    { "type": "color", "id": "link_color", "label": "Link & accent color", "default": "#b1a45a" },
+    { "type": "color", "id": "accordion_border", "label": "Accordion divider color", "default": "#d9d5c2" },
+    { "type": "range", "id": "padding_top", "label": "Padding top", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 64 },
+    { "type": "range", "id": "padding_bottom", "label": "Padding bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 64 }
+  ],
+  "presets": [{ "name": "Article" }]
+}
+{% endschema %}

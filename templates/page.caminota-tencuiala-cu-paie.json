@@ -5,11 +5,13 @@
       "settings": {
         "heading": "Caminota Tencuială cu Paie",
         "heading_tag": "h1",
+        "image": "shopify://shop_images/t-fata.png",
+        "image_asset": "tencuiala-hero.webp",
         "body": "<p>Tencuiala Caminota se așterne pe ziduri pentru a înfrumuseța și proteja. Pe de o parte, obține suprafața netedă, cu aspect plăcut, iar pe de cealaltă, oferă suport straturilor de finisaj. În condiții ideale, adică dacă zidăria a fost bine făcută și dacă se folosesc profile de pontaj, estimăm că va fi nevoie de aplicarea unui singur strat de Caminota cu o încărcare medie de 1,5 centimetri. După preferințe, poate fi aplicată manual sau mecanizat.</p>",
         "composition": "argilă, nisip, fibre lignocelulozice",
         "benefits": "făcută numai și numai din materiale naturale, reglează umiditatea aerului, permite trecerea vaporilor.",
         "download_label": "Descarcă fișa tehnică și instrucțiunile",
-        "background_color": "#ffffff",
+        "background_color": "#f4f2e4",
         "heading_color": "#606452",
         "text_color": "#606452",
         "link_color": "#b1a45a",
@@ -19,7 +21,16 @@
       }
     },
     "gallery": {
-      "type": "photo-gallery",
+      "type": "photo-bento",
+      "blocks": {
+        "g0": { "type": "photo", "settings": { "image_asset": "tencuiala-gallery-00.webp" } },
+        "g1": { "type": "photo", "settings": { "image_asset": "tencuiala-gallery-01.webp" } },
+        "g2": { "type": "photo", "settings": { "image_asset": "tencuiala-gallery-02.webp" } },
+        "g3": { "type": "photo", "settings": { "image_asset": "tencuiala-gallery-03.webp" } },
+        "g4": { "type": "photo", "settings": { "image_asset": "tencuiala-gallery-04.webp" } },
+        "g5": { "type": "photo", "settings": { "image_asset": "tencuiala-gallery-05.webp" } }
+      },
+      "block_order": ["g0", "g1", "g2", "g3", "g4", "g5"],
       "settings": {
         "background_color": "#f4f2e4",
         "padding_top": 72,
@@ -29,6 +40,7 @@
     "proba": {
       "type": "page-sample-cta",
       "settings": {
+        "image_asset": "mostra-caminota-emag.webp",
         "heading": "Probează Caminota",
         "body": "<p>Înainte de a lua o decizie, e normal să vrei să vezi și să atingi materialul. Comandă de pe eMAG un kit de încercare, iar după o zi-două poți proba produsele.</p>",
         "button_label": "Comandă o mostră Caminota",
@@ -42,7 +54,18 @@
         "padding_top": 72,
         "padding_bottom": 72
       }
+    },
+    "reviews": {
+      "type": "reviews-google",
+      "settings": {
+        "embed_id": "25510686",
+        "background_color": "#b1a45a",
+        "heading_color": "#ffffff",
+        "max_width": 1320,
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
     }
   },
-  "order": ["detail", "gallery", "proba"]
+  "order": ["detail", "gallery", "proba", "reviews"]
 }

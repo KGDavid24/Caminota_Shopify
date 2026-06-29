@@ -1,0 +1,106 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "cards": {
+      "type": "link-cards",
+      "blocks": {
+        "c1": {
+          "type": "card",
+          "settings": {
+            "image_asset": "instructiuni-00.webp",
+            "label": "Fișă tehnică și instrucțiuni - Caminota Tencuială cu Paie",
+            "link": "https://cdn.shopify.com/s/files/1/1085/3561/1741/files/Fisa_tehnica_Caminota_Tencuiala_06.2026.pdf?v=1782730572",
+            "new_tab": true
+          }
+        },
+        "c2": {
+          "type": "card",
+          "settings": {
+            "image_asset": "instructiuni-01.webp",
+            "label": "Fișă tehnică și instrucțiuni - Caminota Finisaj Rustic",
+            "link": "https://cdn.shopify.com/s/files/1/1085/3561/1741/files/Fisa_tehnica_Caminota_Finisaj_06.2026.pdf?v=1782730572",
+            "new_tab": true
+          }
+        },
+        "c3": {
+          "type": "card",
+          "settings": {
+            "image_asset": "instructiuni-02.webp",
+            "label": "Fișă tehnică și instrucțiuni - Caminota IzoBârne",
+            "link": "https://cdn.shopify.com/s/files/1/1085/3561/1741/files/Fisa_tehnica_Caminota_IzoBarne_06.2026.pdf?v=1782730571",
+            "new_tab": true
+          }
+        },
+        "c4": {
+          "type": "card",
+          "settings": {
+            "image_asset": "instructiuni-03.webp",
+            "label": "Procedura de uscare și timpii de lucru a materialelor Caminota",
+            "link": "/blogs/news/uscarea-pe-santier-timpii-de-prelucrare-tencuiala-lut",
+            "new_tab": false
+          }
+        },
+        "c5": {
+          "type": "card",
+          "settings": {
+            "image_asset": "instructiuni-04.webp",
+            "label": "Cum desfacem cel mai ușor sacii de rafie de la Caminota",
+            "link": "https://www.youtube.com/shorts/eWMzUTR-WVA",
+            "new_tab": true
+          }
+        },
+        "c6": {
+          "type": "card",
+          "settings": {
+            "image_asset": "instructiuni-05.webp",
+            "label": "Ce unelte folosim - Sistemul Caminota",
+            "link": "/blogs/news/ce-unelte-folosim-la-tencuit-cu-sistemul-caminota",
+            "new_tab": false
+          }
+        },
+        "c7": {
+          "type": "card",
+          "settings": {
+            "image_asset": "instructiuni-06.webp",
+            "label": "Instrucțiuni video aplicare - Kerakoll Biocalce Tinteggio",
+            "link": "https://www.youtube.com/watch?v=WfzIrGjaxKI",
+            "new_tab": true
+          }
+        },
+        "c8": {
+          "type": "card",
+          "settings": {
+            "image_asset": "instructiuni-07.webp",
+            "label": "Fișă tehnică și instrucțiuni - Kerakoll Biocalce Tinteggio",
+            "link": "https://cdn.shopify.com/s/files/1/1085/3561/1741/files/Fisa_tehnica_Kerakoll_Biocalce_Tinteggio.pdf?v=1782730573",
+            "new_tab": true
+          }
+        }
+      },
+      "block_order": ["c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8"],
+      "settings": {
+        "heading": "Fișe tehnice și instrucțiuni",
+        "heading_tag": "h1",
+        "columns": 3,
+        "image_height": 220,
+        "column_gap": 48,
+        "row_gap": 64,
+        "max_width": 1100,
+        "background_color": "#ffffff",
+        "heading_color": "#606452",
+        "link_color": "#b1a45a",
+        "padding_top": 80,
+        "padding_bottom": 96
+      }
+    }
+  },
+  "order": ["cards"]
+}

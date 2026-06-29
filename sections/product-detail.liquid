@@ -20,9 +20,10 @@
     text-align: center;
     margin: 0 0 2.5rem;
     color: {{ s.heading_color }};
-    font-size: 1.4rem;
-    font-family: var(--font-body--family);
+    font-size: 2rem;
+    font-family: var(--font-heading--family);
     font-weight: 400;
+    line-height: 1.1;
   }
   #shopify-section-{{ section.id }} .cpd__row {
     display: grid;
@@ -41,7 +42,7 @@
     display: block;
     margin-inline: auto;
   }
-  #shopify-section-{{ section.id }} .cpd__body { font-size: 1.2rem; line-height: 1.7; color: {{ s.text_color }}; }
+  #shopify-section-{{ section.id }} .cpd__body { font-size: 1.2rem; line-height: 1.7; color: {{ s.text_color }}; text-align: {{ s.body_alignment }}; }
   #shopify-section-{{ section.id }} .cpd__body p { margin: 0 0 1rem; }
   #shopify-section-{{ section.id }} .cpd__spec { margin-top: 1.25rem; line-height: 1.6; font-size: 1.1rem; color: {{ s.text_color }}; }
   #shopify-section-{{ section.id }} .cpd__spec strong { color: {{ s.heading_color }}; }
@@ -119,6 +120,7 @@
     { "type": "select", "id": "image_position", "label": "Image position", "options": [{ "value": "left", "label": "Left" }, { "value": "right", "label": "Right" }], "default": "left" },
     { "type": "header", "content": "Content" },
     { "type": "richtext", "id": "body", "label": "Description" },
+    { "type": "select", "id": "body_alignment", "label": "Body alignment", "options": [{ "value": "left", "label": "Left" }, { "value": "justify", "label": "Justify" }], "default": "left" },
     { "type": "text", "id": "composition", "label": "Composition" },
     { "type": "text", "id": "benefits", "label": "Benefits" },
     { "type": "text", "id": "extra_line", "label": "Extra line (dimensions / packaging, HTML ok)" },

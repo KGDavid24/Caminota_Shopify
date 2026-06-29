@@ -21,7 +21,7 @@
   #shopify-section-{{ section.id }} .cmn-sample__media { order: 2; }
   {% endif %}
   #shopify-section-{{ section.id }} .cmn-sample__heading { margin: 0 0 1.5rem; color: {{ s.heading_color }}; }
-  #shopify-section-{{ section.id }} .cmn-sample__body { font-size: 1.15rem; line-height: 1.7; color: {{ s.text_color }}; }
+  #shopify-section-{{ section.id }} .cmn-sample__body { font-size: 1.15rem; line-height: 1.7; color: {{ s.text_color }}; text-align: {{ s.body_alignment | default: 'left' }}; }
   #shopify-section-{{ section.id }} .cmn-sample__cta { margin-top: 1.75rem; text-align: center; }
   #shopify-section-{{ section.id }} .cmn-sample__cta a.button {
     background-color: {{ s.button_bg }};
@@ -43,6 +43,8 @@
     <div class="cmn-sample__media">
       {%- if s.image != blank -%}
         {{ s.image | image_url: width: 1000 | image_tag: loading: 'lazy', sizes: '(min-width: 750px) 50vw, 100vw', widths: '400, 700, 1000' }}
+      {%- elsif s.image_asset != blank -%}
+        <img src="{{ s.image_asset | asset_url }}" loading="lazy" alt="{{ s.heading | escape }}">
       {%- endif -%}
     </div>
     <div class="cmn-sample__content">
@@ -70,10 +72,12 @@
   "tag": "section",
   "settings": [
     { "type": "image_picker", "id": "image", "label": "Image" },
+    { "type": "text", "id": "image_asset", "label": "Image asset filename (fallback)" },
     { "type": "range", "id": "image_max_width", "label": "Image max width", "min": 240, "max": 700, "step": 20, "unit": "px", "default": 480 },
     { "type": "select", "id": "image_position", "label": "Image position", "options": [{ "value": "left", "label": "Left" }, { "value": "right", "label": "Right" }], "default": "left" },
     { "type": "text", "id": "heading", "label": "Heading", "default": "Probează Caminota" },
     { "type": "richtext", "id": "body", "label": "Body", "default": "<p>Înainte de a lua o decizie, e normal să vrei să vezi și să atingi materialul. Așa că facem să-ți fie mai ușor și îți punem la dispoziție posibilitatea de a încerca mai întâi Caminota. Comandă de pe eMAG un kit de încercare, iar după o zi-două poți proba produsele. Noi nu mai zicem nimic, le lăsăm pe ele să-ți vorbească.</p>" },
+    { "type": "select", "id": "body_alignment", "label": "Body alignment", "options": [{ "value": "left", "label": "Left" }, { "value": "justify", "label": "Justify" }], "default": "left" },
     { "type": "text", "id": "button_label", "label": "Button label", "default": "Comandă o mostră de Caminota" },
     { "type": "url", "id": "button_link", "label": "Button link" },
     { "type": "text", "id": "footnote", "label": "Footnote", "default": "* Pentru cantități mai mari livrăm direct din fabrică la șantier, contactați-ne!" },

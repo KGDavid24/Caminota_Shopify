@@ -6,11 +6,13 @@
         "heading": "Var Calcic Hidratat CL 90-S",
         "heading_tag": "h1",
         "subtitle": "(Var Stins)",
+        "image_asset": "varcalcic-hero.webp",
         "body": "<p>Prepararea mortarului de var presupune amestecarea varului împreună cu nisip și apă. Mortarul de var are o serie de avantaje, și anume: pereții respiră (asigură difuzie foarte bună a vaporilor de apă) și nu este afectat de apa lichidă; igienizează și dezinfectează sporind protecția față de bacterii și mucegaiuri; oferă o aderență bună; preia mici șocuri (are proprietăți de autoreparare, închide microfisuri) datorită elasticității sale; este ușor de aplicat și rezistent la umezeală.</p><p>Produsul este realizat în conformitate cu standardul SR EN 459-1:2011 - Var pentru construcții.</p>",
+        "body_alignment": "justify",
         "composition": "var calcic hidratat CL 90-S",
         "benefits": "reglează umiditatea aerului, rezistent la umezeală, asigură o porozitate ridicată care permite trecerea vaporilor, ușor de aplicat, igienizează și dezinfectează.",
         "download_label": "Descarcă fișa tehnică",
-        "background_color": "#ffffff",
+        "background_color": "#f4f2e4",
         "heading_color": "#606452",
         "text_color": "#606452",
         "link_color": "#b1a45a",
@@ -20,41 +22,148 @@
       }
     },
     "info": {
-      "type": "rich-text",
+      "type": "article",
       "settings": {
-        "heading": "Informații utile despre tencuiala de var",
-        "heading_tag": "h2",
-        "body": "<p><strong>Proporție recomandată pentru mortarul / tencuiala de var: 1 parte var la 2-3 părți nisip.</strong></p><p>Proporția poate varia astfel:</p><ul><li>Dacă nisipul este grunjos (pentru încărcare), atunci proporția va fi mai apropiată de 1:3 (o parte var la 3 părți nisip)</li><li>Dacă nisipul este mai fin (pentru finisaj sau strat final), dacă este cernut sau achiziționat special pentru tencuială (0-1mm), atunci proporția va fi mai apropiată de 1:2 (1 parte var la 2 părți nisip)</li></ul><p><strong>Cum vă dați seama de proporția corectă?</strong></p><p>Recomandăm ca înaintea lucrării să faceți un test la fața locului, mai ales dacă nu aveți control asupra calității nisipului. Realizați o probă pe o suprafață mică a peretelui și lăsați-o să se usuce minim o zi.</p><p>La pierderea apei (prima etapă de uscare) apar cel mai des defectele vizibile date de contracții, în timp ce în etapa 2 (carbonatarea) sunt șanse mai mici să apară defecte majore.</p><p><strong>Ce ne poate spune un test rapid?</strong></p><ul><li><strong>Dacă apar crăpături, iar tencuiala de var nu se desprinde de pe suport și nu prăfuie</strong> → Prea puțin nisip.</li><li><strong>Dacă apar crăpături iar tencuiala de var se desprinde de pe suport</strong> → Suportul nu este destul de stabil, iar la uscare (la contracție) tencuiala s-a încovoiat și desprins de pe suport.</li><li><strong>Dacă tencuiala de var prăfuie, este friabilă sau se ia pe degete</strong> → Prea mult nisip.</li><li><strong>Dacă apar crăpături, iar tencuiala prăfuie și este friabilă</strong> → Granulația nisipului este prea săracă și trebuie completată (de obicei cu fracție mai fină)</li></ul>",
-        "alignment": "left",
-        "max_width": 900,
+        "body": "<h2>Informații utile despre tencuiala de var</h2><h3>Proporție recomandată pentru mortarul / tencuiala de var: 1 parte var la 2-3 părți nisip.</h3><p>Proporția poate varia astfel:</p><ul><li>Dacă nisipul este grunjos (pentru încărcare), atunci proporția va fi mai apropiată de 1:3 (o parte var la 3 părți nisip)</li><li>Dacă nisipul este mai fin (pentru finisaj sau strat final), dacă este cernut sau achiziționat special pentru tencuială (0-1mm), atunci proporția va fi mai apropiată de 1:2 (1 parte var la 2 părți nisip)</li></ul><h3>Cum vă dați seama de proporția corectă?</h3><p>Recomandăm ca înaintea lucrării să faceți un test la fața locului, mai ales dacă nu aveți control asupra calității nisipului. Realizați o probă pe o suprafață mică a peretelui și lăsați-o să se usuce minim o zi. Evident, să nu stea în ploaie sau îngheț.</p><p>La pierderea apei (prima etapă de uscare) apar cel mai des defectele vizibile date de contracții, în timp ce în etapa 2 (carbonatarea) sunt șanse mai mici să apară defecte majore.</p><p>Astfel, la inspecția de a doua zi avem ocazia să verificăm rețeta prin inspecție vizuală și mecanică.</p><h3>Ce ne poate spune un test rapid?</h3><details><summary>Dacă apar crăpături, iar tencuiala de var nu se desprinde de pe suport și nu prăfuie (nu se ia pe degete)</summary><p>Prea puțin nisip.</p></details><details><summary>Dacă apar crăpături iar tencuiala de var se desprinde de pe suport</summary><p>Suportul nu este destul de stabil, iar la uscare (la contracție) tencuiala s-a incovoiat si desprins de pe suport.</p></details><details><summary>Dacă tencuiala de var prăfuie, este friabilă sau se ia pe degete</summary><p>Prea mult nisip.</p></details><details><summary>Dacă apar crăpături, iar tencuiala prăfuie (se ia pe degete) și este friabilă</summary><p>Granulația nisipului este prea săracă și trebuie completată (de obicei cu fracție mai fină)</p></details>",
+        "body_alignment": "justify",
+        "max_width": 1240,
+        "background_color": "#ffffff",
         "heading_color": "#606452",
-        "background_color": "#f4f2e4",
+        "text_color": "#606452",
+        "link_color": "#b1a45a",
+        "accordion_border": "#d9d5c2",
         "padding_top": 64,
         "padding_bottom": 64
       }
     },
     "renovare": {
-      "type": "rich-text",
+      "type": "article",
       "settings": {
-        "heading": "Renovarea fațadelor la casele de pământ",
-        "heading_tag": "h2",
-        "body": "<p>Aceste sisteme constructive aveau structura de rezistență a peretelui acoperită cu un strat de tencuială de pământ cu paie pentru îndreptare, iar apoi peretele era zugrăvit cu vopsea de var.</p><p>Variații ale acestei stratificații întâlnite astăzi pot include:</p><ul><li>nenumărate straturi succesive de zugrăveală, adesea instabilă și care prăfuie (se ia pe degete);</li><li>tencuială de var-nisip (în loc de lut) pe peretele de pământ și apoi zugrăveala;</li><li>tencuială de ciment sau var-ciment direct peste peretele de pământ, cu un ultim strat colorat stropit;</li><li>straturi succesive de tencuială diferite, pe măsură ce casa a fost renovată în generații diferite</li></ul><p><strong>Ghid renovare – pas cu pas</strong></p><p>Pentru o renovare temeinică, peretele trebuie uniformizat, respectiv trebuie dat jos tot ce nu stă bine. Adică degeaba avem un finisaj rezistent și dur, dacă în spatele acestuia straturile sunt compromise.</p><p>Dacă peretele este tencuit doar cu lut și are straturi multiple de zugrăveală, atunci <a href=\"/blogs/sfaturi/curarea-pereilor-de-pmnt-zugrvii-cu-var\">acest articol vă poate fi de folos</a>, referitor la curățarea pereților de pământ zugrăviți cu var.</p><p>După ce s-a înlăturat tot ce nu stă bine, atunci se va realiza sau se va completa tencuiala de lut peste structura de rezistență, utilizând <a href=\"/pages/caminota-tencuiala-cu-paie\">Tencuiala cu Paie Caminota</a>.</p><p>După uscarea integrală a tencuielii de lut (schimbarea vizibilă a culorii), se poate aplica tencuiala de var-nisip. <strong>Atenție!</strong> După uscarea tencuielii de var-nisip, peretele nu este în totalitate protejat la apa lichidă! Protecția finală se obține doar după zugrăveală!</p><p>Stratul final se poate drișcui pentru a obține o suprafață netedă și uniformă, iar după uscarea completă, se va înlătura nisipul rezultat din drișcuire.</p><p>La final, fațada se va zugrăvi cu o vopsea de var. Noi recomandăm <a href=\"/pages/vopsea-de-var\">vopseaua naturală de var Biocalce Tinteggio de la Kerakoll</a>.</p>",
-        "alignment": "justify",
-        "max_width": 900,
+        "body": "<h2>Renovarea fațadelor la casele de pământ, cu pereți din cărămidă de chirpici/văioagă sau pământ compactat (bătut).</h2><p>Aceste sisteme constructive aveau structura de rezistență a peretelui acoperită cu un strat de tencuială de pământ cu paie pentru îndreptare, iar apoi peretele era zugrăvit cu vopsea de var.</p><p>Variații ale acestei stratificații întâlnite astăzi pot include:</p><ul><li>nenumărate straturi succesive de zugrăveală, adesea instabilă și care prăfuie (se ia pe degete);</li><li>tencuială de var-nisip (în loc de lut) pe peretele de pământ și apoi zugrăveala;</li><li>tencuială de ciment sau var-ciment direct peste peretele de pământ, cu un ultim strat colorat stropit;</li><li>straturi succesive de tencuială diferite, pe măsură ce casa a fost renovată în generații diferite</li></ul>",
+        "body_alignment": "justify",
+        "max_width": 1240,
+        "background_color": "#f4f2e4",
         "heading_color": "#606452",
-        "background_color": "#ffffff",
+        "text_color": "#606452",
+        "link_color": "#b1a45a",
         "padding_top": 64,
+        "padding_bottom": 24
+      }
+    },
+    "ghid": {
+      "type": "article",
+      "settings": {
+        "body": "<h2>Ghid renovare – pas cu pas</h2><p>Pentru o renovare temeinică, peretele trebuie uniformizat, respectiv trebuie dat jos tot ce nu stă bine. Adică degeaba avem un finisaj rezistent și dur, dacă în spatele acestuia straturile sunt compromise.</p><p>Dacă peretele este tencuit doar cu lut și are straturi multiple de zugrăveală, atunci <a href=\"/blogs/sfaturi/curarea-pereilor-de-pmnt-zugrvii-cu-var\">acest articol vă poate fi de folos</a>, referitor la curățarea pereților de pământ zugrăviți cu var.</p><p>După ce s-a înlăturat tot ce nu stă bine, atunci se va realiza sau se va completa tencuiala de lut peste structura de rezistență, utilizând <a href=\"/pages/caminota-tencuiala-cu-paie\">Tencuiala cu Paie Caminota</a>.</p>",
+        "body_alignment": "justify",
+        "max_width": 1240,
+        "background_color": "#f4f2e4",
+        "heading_color": "#606452",
+        "text_color": "#606452",
+        "link_color": "#b1a45a",
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
+    },
+    "gallery1": {
+      "type": "photo-bento",
+      "blocks": {
+        "g0": { "type": "photo", "settings": { "image_asset": "varcalcic-gallery-00.webp" } },
+        "g1": { "type": "photo", "settings": { "image_asset": "varcalcic-gallery-01.webp" } },
+        "g2": { "type": "photo", "settings": { "image_asset": "varcalcic-gallery-02.webp" } },
+        "g3": { "type": "photo", "settings": { "image_asset": "varcalcic-gallery-03.webp" } }
+      },
+      "block_order": ["g0", "g1", "g2", "g3"],
+      "settings": {
+        "layout": "uniform",
+        "columns": 4,
+        "uniform_ratio": "4 / 3",
+        "max_width": 1240,
+        "side_padding": 24,
+        "background_color": "#f4f2e4",
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
+    "ghidmid1": {
+      "type": "article",
+      "settings": {
+        "body": "<p>După uscarea integrală a tencuielii de lut (schimbarea vizibilă a culorii), se poate aplica tencuiala de var-nisip.</p><p><strong>Atenție! După uscarea tencuielii de var-nisip, peretele nu este în totalitate protejat la apa lichidă! Protecția finală se obține doar după zugrăveală!</strong></p><p>Stratul final se poate drișcui pentru a obține o suprafață netedă și uniformă, iar după uscarea completă, se va înlătura nisipul rezultat din drișcuire.</p>",
+        "body_alignment": "justify",
+        "max_width": 1240,
+        "background_color": "#f4f2e4",
+        "heading_color": "#606452",
+        "text_color": "#606452",
+        "link_color": "#b1a45a",
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
+    "gallery2": {
+      "type": "photo-bento",
+      "blocks": {
+        "g0": { "type": "photo", "settings": { "image_asset": "varcalcic-gallery-04.webp" } },
+        "g1": { "type": "photo", "settings": { "image_asset": "varcalcic-gallery-05.webp" } },
+        "g2": { "type": "photo", "settings": { "image_asset": "varcalcic-gallery-06.webp" } },
+        "g3": { "type": "photo", "settings": { "image_asset": "varcalcic-gallery-07.webp" } },
+        "g4": { "type": "photo", "settings": { "image_asset": "varcalcic-gallery-08.webp" } },
+        "g5": { "type": "photo", "settings": { "image_asset": "varcalcic-gallery-09.webp" } },
+        "g6": { "type": "photo", "settings": { "image_asset": "varcalcic-gallery-10.webp" } }
+      },
+      "block_order": ["g0", "g1", "g2", "g3", "g4", "g5", "g6"],
+      "settings": {
+        "layout": "uniform",
+        "columns": 4,
+        "uniform_ratio": "4 / 3",
+        "max_width": 1240,
+        "side_padding": 24,
+        "background_color": "#f4f2e4",
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
+    "ghidmid2": {
+      "type": "article",
+      "settings": {
+        "body": "<p>La final, fațada se va zugrăvi cu o vopsea de var.</p><p>Noi recomandăm vopseaua naturală de var <a href=\"/pages/vopsea-de-var\">Biocalce Tinteggio</a> de la Kerakoll.</p>",
+        "body_alignment": "justify",
+        "max_width": 1240,
+        "background_color": "#f4f2e4",
+        "heading_color": "#606452",
+        "text_color": "#606452",
+        "link_color": "#b1a45a",
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
+    "gallery3": {
+      "type": "photo-bento",
+      "blocks": {
+        "g0": { "type": "photo", "settings": { "image_asset": "varcalcic-gallery-11.webp" } },
+        "g1": { "type": "photo", "settings": { "image_asset": "varcalcic-gallery-12.webp" } },
+        "g2": { "type": "photo", "settings": { "image_asset": "varcalcic-gallery-13.webp" } }
+      },
+      "block_order": ["g0", "g1", "g2"],
+      "settings": {
+        "layout": "uniform",
+        "columns": 3,
+        "uniform_ratio": "4 / 3",
+        "max_width": 1240,
+        "side_padding": 24,
+        "background_color": "#f4f2e4",
+        "padding_top": 16,
         "padding_bottom": 64
       }
     },
     "proba": {
       "type": "page-sample-cta",
       "settings": {
+        "image_asset": "mostra-caminota-emag.webp",
         "heading": "Probează Caminota",
         "body": "<p>Înainte de a lua o decizie, e normal să vrei să vezi și să atingi materialul. Comandă de pe eMAG un kit de încercare, iar după o zi-două poți proba produsele.</p>",
         "button_label": "Comandă o mostră Caminota",
         "footnote": "*Atenție: pentru cantități mai mari livrăm direct din fabrică la șantier, contactați-ne!",
-        "background_color": "#f4f2e4",
+        "body_alignment": "justify",
+        "background_color": "#ffffff",
         "heading_color": "#606452",
         "text_color": "#606452",
         "button_bg": "#606452",
@@ -65,5 +174,5 @@
       }
     }
   },
-  "order": ["detail", "info", "renovare", "proba"]
+  "order": ["detail", "info", "renovare", "ghid", "gallery1", "ghidmid1", "gallery2", "ghidmid2", "gallery3", "proba"]
 }

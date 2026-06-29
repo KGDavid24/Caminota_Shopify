@@ -1,0 +1,78 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "q1": {
+          "type": "item",
+          "settings": {
+            "question": "Cum știu dacă sistemul Caminota este pentru mine/casa mea?",
+            "answer": "<ul><li>Sistemul Caminota este compatibil cu pereții din zidărie de cărămidă, BCA, pământ nears (chirpici, paiantă, văiugă, etc.), hempcrete și paie.</li><li>Caminota deține certificare pentru aplicațiile recomandate.</li><li>Dezvoltarea produselor a fost făcută în colaborare cu Institutul Național De Cercetare-Dezvoltare în Construcții URBAN-INCERC, precum și cu experți internaționali.</li><li>Materialele au fost testate atât în laboratoarele de specialitate, cât și în case cu sistemele constructive compatibile.</li><li>Sistemul Caminota a fost conceput pentru a contribui la un mediu construit mai sănătos și prietenos cu natura.</li></ul>"
+          }
+        },
+        "q2": {
+          "type": "item",
+          "settings": {
+            "question": "La ce temperaturi se pot aplica materialele Caminota?",
+            "answer": "<p>Materialele pe bază de argilă se usucă exclusiv natural, fără reacții chimice.</p><p><strong>La interior: Temperatura minimă de aplicare este 10°C.</strong> Se va asigura o ventilație intensă a încăperilor tencuite pe toată perioada uscării.</p><p><strong>La exterior</strong> (recomandăm doar la case tradiționale, unde a fost tencuit și în trecut cu lut): <strong>Temperatura minimă de aplicare este 10°C, obligatoriu în perioade în care nu îngheață noaptea.</strong> Totuși, uscarea este lentă la această temperatură. Din acest motiv recomandăm minim 20°C pentru aplicare la exterior.</p><p><strong>Procedura de uscare pe șantier</strong></p><p>Principiul de bază: uscarea tencuielii de argilă depinde de <strong>căldură + ventilație + umiditate scăzută a aerului</strong>. Dacă unul dintre aceste elemente lipsește, uscarea încetinește dramatic.</p><ul><li>👉 <strong>Vara, cu ventilație bună</strong> (geamuri deschise permanent pe două laturi): un strat de 1,5 cm ajunge la uscarea inițială în 2–3 zile.</li><li>👉 <strong>Vara, spații fără ventilație:</strong> dezumidificator industrial cu furtun + ventilatoare care să circule aerul prin șantier.</li><li>👉 <strong>Sub 15°C, case cu sobă:</strong> soba pentru căldură + ventilație (tiraj).</li><li>👉 <strong>Sub 15°C, fără sobă:</strong> încălzire electrică + dezumidificator cu furtun.</li></ul><p>✅ Asigură ventilație — geamuri deschise pe două laturi sau ventilatoare.<br>❌ Nu închide casa etanș — fără schimb de aer uscarea durează săptămâni.<br>✅ Menține temperatura peste 15°C în încăpere.<br>❌ Nu te baza pe uscarea materialelor peste noapte.<br>❌ Evită încălzitoarele pe gaz: produc umiditate → încetinesc uscarea.</p><p>Pentru mai multe detalii <a href=\"/pages/instructiuni-tencuiala\">consultați fișele tehnice</a> ale produselor.</p>"
+          }
+        },
+        "q3": {
+          "type": "item",
+          "settings": {
+            "question": "Cum trebuie să fie un perete pentru a putea fi tencuit cu Caminota?",
+            "answer": "<ul><li>Este obligatorie îndepărtarea temeinică a oricărui material instabil sau prăfos de pe perete.</li><li>Este necesară finalizarea eventualelor lucrări de consolidare înaintea aplicării.</li><li>Traseele pentru instalații trebuie să fie finalizate și bine fixate pe pereți. Cutiile de la doze și prize trebuie fixate având în vedere nivelul final al peretelui.</li><li>Se recomandă montajul tâmplăriei înainte de aplicare.</li><li>Este necesară menținerea unei temperaturi de minimum 15°C pe șantier până la uscarea completă după aplicare.</li><li>Înainte de aplicare, pereții trebuie umeziți cu un pulverizator de apă.</li><li>Pentru mai multe detalii, fișa tehnică stă la dispoziție.</li></ul>"
+          }
+        },
+        "q4": {
+          "type": "item",
+          "settings": {
+            "question": "Cum se aplică produsele Caminota?",
+            "answer": "<ul><li>Se vor respecta <a href=\"/pages/instructiuni-tencuiala\">instrucțiunile de aplicare din Fișa tehnică a produselor.</a></li><li>Amestecarea materialelor se poate face manual, cu malaxorul de mână, cu betoniera sau cu malaxorul cu amestecare forțată.</li><li>Se poate aplica manual (cu gletiera), semi-mecanizat (cu mașina de tencuit pneumatică) sau mecanizat (cu orice model de betonieră cu cădere liberă și sistem închis de tencuit).</li><li>Pentru planeitate perfectă se pot monta profile de pontaj și se va răzui cu profil „h”.</li><li>Pentru un aspect rustic, se poate aplica la liber, fără profile de pontaj.</li></ul>"
+          }
+        },
+        "q5": {
+          "type": "item",
+          "settings": {
+            "question": "Pot aplica eu Caminota, unde eu egal „nemeseriaș”?",
+            "answer": "<ul><li>O bună parte din clienții Caminota au aplicat tencuiala și finisajele singuri sau cu prietenii.</li><li>Orice greșeală se repară cu apă.</li><li>Poți aduce împreună oameni care să te ajute — află ce este o <a href=\"https://ro.metapedia.org/wiki/Clac%C4%83\" target=\"_blank\">clacă</a>.</li><li>Iată un <a href=\"https://www.youtube.com/watch?v=YBNZwwjxtNw\" target=\"_blank\">video</a> despre cum am renovat o casă într-un weekend.</li><li>Secțiunea de <a href=\"/pages/instructiuni-tencuiala\">instrucțiuni și fișe tehnice</a> conține (aproape) toate răspunsurile legate de aplicarea materialelor.</li><li>Pentru orice altă întrebare, <a href=\"/pages/contact\">ne puteți contacta</a>.</li></ul>"
+          }
+        },
+        "q6": {
+          "type": "item",
+          "settings": {
+            "question": "De unde cumpăr Caminota?",
+            "answer": "<ol><li>Primul pas pentru achiziție direct de la producător este <a href=\"https://comenzi.caminota.ro/\" target=\"_blank\">completarea calculatorului de necesar de materiale</a>. După ce calculul ajunge la noi, vă sunăm pentru a confirma comanda, timp în care vă răspundem și la orice întrebare.</li><li>De la unul din <a href=\"/pages/contact\">distribuitorii Caminota</a>. Recomandăm să sunați în prealabil pentru a confirma stocurile.</li></ol>"
+          }
+        },
+        "q7": {
+          "type": "item",
+          "settings": {
+            "question": "Putem tencui în băi și bucătării cu Caminota?",
+            "answer": "<p>Da, însă trebuie respectați următorii pași după ce tencuim. Suprafețele adiacente chiuvetei și dușului trebuie placate cu faianță. Tencuiala de lut trebuie tratată în una din următoarele variante:</p><p><strong>Varianta 1:</strong></p><ul><li>amorsă de profunzime (ex. CT 17)</li><li>hidroizolație lichidă pentru placare ceramică (ex. CL 51)</li><li>montare plăci ceramice cu adeziv obișnuit.</li></ul><p><strong>Varianta 2:</strong></p><ul><li>montare plăci de fibrociment cu dibluri peste tencuiala de lut</li><li>placare faianță cu adeziv obișnuit.</li></ul><p><strong>Varianta 3:</strong></p><ul><li>tencuire deasupra cu var hidraulic sau var-ciment, respectând fișa tehnică a produsului ales</li><li>montare plăci ceramice cu adeziv obișnuit.</li></ul>"
+          }
+        }
+      },
+      "block_order": ["q1", "q2", "q3", "q4", "q5", "q6", "q7"],
+      "settings": {
+        "heading": "Întrebări frecvente (FAQ)",
+        "max_width": 800,
+        "background_color": "#ffffff",
+        "heading_color": "#606452",
+        "question_color": "#606452",
+        "padding_top": 80,
+        "padding_bottom": 96
+      }
+    }
+  },
+  "order": ["faq"]
+}

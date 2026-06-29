@@ -1,0 +1,71 @@
+{%- liquid
+  assign s = section.settings
+-%}
+<style>
+  #shopify-section-{{ section.id }} .cmn-post {
+    background-color: {{ s.background_color }};
+    padding-block: {{ s.padding_top }}px {{ s.padding_bottom }}px;
+  }
+  #shopify-section-{{ section.id }} .cmn-post__wrap {
+    max-width: {{ s.max_width }}px;
+    margin-inline: auto;
+    padding-inline: 24px;
+  }
+  #shopify-section-{{ section.id }} .cmn-post__meta {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+    color: {{ s.meta_color }};
+    font-size: 0.95rem;
+    margin: 0 0 1.5rem;
+  }
+  #shopify-section-{{ section.id }} .cmn-post__title {
+    font-family: var(--font-heading--family);
+    color: {{ s.heading_color }};
+    text-align: center;
+    margin: 0 0 2.5rem;
+  }
+  #shopify-section-{{ section.id }} .cmn-post__content { font-size: 1.1rem; line-height: 1.7; color: {{ s.text_color }}; }
+  #shopify-section-{{ section.id }} .cmn-post__content h2 { font-family: var(--font-heading--family); color: {{ s.heading_color }}; margin: 2.25rem 0 1rem; }
+  #shopify-section-{{ section.id }} .cmn-post__content h3 { font-family: var(--font-heading--family); color: {{ s.heading_color }}; font-size: 1.5rem; margin: 1.75rem 0 0.75rem; }
+  #shopify-section-{{ section.id }} .cmn-post__content p { margin: 0 0 1rem; }
+  #shopify-section-{{ section.id }} .cmn-post__content a { color: {{ s.link_color }}; text-decoration: underline; }
+  #shopify-section-{{ section.id }} .cmn-post__content ul, #shopify-section-{{ section.id }} .cmn-post__content ol { margin: 0 0 1rem; padding-left: 1.5rem; }
+  #shopify-section-{{ section.id }} .cmn-post__content li { margin-bottom: 0.4rem; }
+  #shopify-section-{{ section.id }} .cmn-post__content img { max-width: 100%; height: auto; }
+</style>
+
+<article class="cmn-post">
+  <div class="cmn-post__wrap">
+    {%- if s.show_date or s.show_author -%}
+      <div class="cmn-post__meta">
+        {%- if s.show_date -%}<span>{{ article.published_at | date: s.date_format }}</span>{%- endif -%}
+        {%- if s.show_author and article.author != blank -%}<span>{{ s.byline_prefix }} {{ article.author }}</span>{%- endif -%}
+      </div>
+    {%- endif -%}
+    <h1 class="cmn-post__title">{{ article.title }}</h1>
+    <div class="cmn-post__content">{{ article.content }}</div>
+  </div>
+</article>
+
+{% schema %}
+{
+  "name": "Blog post",
+  "tag": "section",
+  "settings": [
+    { "type": "checkbox", "id": "show_date", "label": "Show date", "default": true },
+    { "type": "text", "id": "date_format", "label": "Date format", "default": "%-d %b" },
+    { "type": "checkbox", "id": "show_author", "label": "Show author", "default": true },
+    { "type": "text", "id": "byline_prefix", "label": "Author byline prefix", "default": "Written By" },
+    { "type": "header", "content": "Appearance" },
+    { "type": "color", "id": "background_color", "label": "Background", "default": "#ffffff" },
+    { "type": "color", "id": "heading_color", "label": "Title & heading color", "default": "#606452" },
+    { "type": "color", "id": "text_color", "label": "Body text color", "default": "#606452" },
+    { "type": "color", "id": "meta_color", "label": "Date / author color", "default": "#8a8a7a" },
+    { "type": "color", "id": "link_color", "label": "Link color", "default": "#b1a45a" },
+    { "type": "range", "id": "max_width", "label": "Content max width", "min": 700, "max": 1300, "step": 20, "unit": "px", "default": 1080 },
+    { "type": "range", "id": "padding_top", "label": "Padding top", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 56 },
+    { "type": "range", "id": "padding_bottom", "label": "Padding bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 80 }
+  ]
+}
+{% endschema %}
